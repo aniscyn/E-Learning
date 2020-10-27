@@ -1,0 +1,39 @@
+.form-profile {
+    margin-top: 20px;
+}
+
+.form-control {
+    margin-left: -10%;
+}
+
+.lb-profile {
+    margin-left: -10%;
+}
+
+.foto-profile {
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.card-profile-isi {
+    height: 87%;
+}
+
+.card-profile {
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+.card-profile-isi {
+    box-shadow: 2px 2px 3px black;
+}
+
+.btn-upload {
+    margin-left: 100px;
+    margin-top: -10px
+}
+
+.btn-ubah-profile {
+    margin-left: -10%;
+}

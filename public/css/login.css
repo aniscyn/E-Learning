@@ -1,0 +1,98 @@
+@import url("//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css");
+
+.login-block {
+    background: #c5ffff;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to bottom, #f8f8f8, #dedee0);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #076070, #e2e7e7, );
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    float: center;
+    width: 100%;
+    padding: 65px;
+    position: fixed;
+    z-index: 1;
+}
+
+.container {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 30px 20px 0px rgba(0, 0, 0, 0.1);
+}
+
+.caption_banner {
+    text-align: left;
+    left: 10%;
+}
+
+.login-sec {
+    padding: 40px 30px;
+    position: relative;
+}
+
+.login-sec .copy-text {
+    position: absolute;
+    bottom: 20px;
+    font-size: 13px;
+    text-align: center;
+}
+
+.login-sec .copy-text i {
+    color: #3ef5d6;
+}
+
+.login-sec .copy-text a {
+    color: #2eddc6;
+}
+
+
+
+.login-sec h2:after {
+    content: " ";
+    width: 100px;
+    height: 5px;
+    background: #15bfdd;
+    display: block;
+    margin-top: 20px;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.btn-masuk {
+    width: 105%;
+    margin-left: -20px;
+}
+
+.logo {
+    width: 36%;
+    height: 25%;
+    margin-left: 32%;
+}
+
+.fa-eye {
+    float: right;
+    margin-top: -25px;
+    margin-right: 20px;
+}
+
+.fa-eye-slash {
+    float: right;
+    margin-top: -25px;
+    margin-right: 20px;
+}
+
+.card {
+    width: 30%;
+    margin-left: 8%;
+    margin-top: -12px;
+    left: 25%;
+}
+
+.login-form {
+    margin-left: 20px;
+}
+
+.btn-kembali {
+    width: 20%;
+}
