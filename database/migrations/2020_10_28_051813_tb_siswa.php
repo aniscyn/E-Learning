@@ -14,8 +14,8 @@ class TbSiswa extends Migration
     public function up()
     {
         Schema::create('tb_siswa', function(Blueprint $table){
-            $table->integer('nis');
-            $table->string('pass', 12);
+            $table->string('nis')->primary();
+            $table->string('user_id');
             $table->string('nm_lengkap', 50);
             $table->date('tgl_lahir');
             $table->string('jk', 10);

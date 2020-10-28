@@ -22,6 +22,8 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 });
+Route::post('/login', "App\Http\Controllers\LoginController@processLogin");
+Route::get('/logout', "App\Http\Controllers\LoginController@processLogout");
 
 
 //siswa
@@ -40,3 +42,15 @@ Route::get('/siswa/profile', function(){
 Route::get('/siswa/profile/ubah', function(){
     return view('siswa/ubahprofile-siswa');
 });
+
+
+
+
+
+// Halaman Untuk Generate Data
+Route::get('/generator/siswa', "App\Http\Controllers\Generators\SiswaController@viewAdd");
+Route::post('/generator/siswa', "App\Http\Controllers\Generators\SiswaController@processAdd");
+
+// TODO: Guru belum berfungsi
+Route::get('/generator/guru', "App\Http\Controllers\Generators\GuruController@viewAdd");
+Route::post('/generator/guru', "App\Http\Controllers\Generators\GuruController@processAdd");
