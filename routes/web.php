@@ -31,6 +31,9 @@ Route::get('/siswa', function () {
 Route::get('/siswa/jadwal', function(){
     return view('siswa/jadwal-siswa');
 });
+Route::get('/siswa/jadwal/belajar', function(){
+    return view('siswa/belajar-siswa');
+});
 Route::get('/siswa/profile', function(){
     return view('siswa/profile-siswa');
 });

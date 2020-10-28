@@ -10,30 +10,26 @@
 
 
 <body data-spy="scroll" data-target=".navbar" data-offset="50">
-<nav class="navbar navbar-expand-sm bg-info navbar-dark fixed-top">  
-  <ul class="navbar-nav">
+<nav class="navbar navbar-expand-sm bg-info navbar-dark fixed-top navbar-sg">  
+  <ul class="navbar-nav nav-sg">
     <li class="nav-item">
-      <a class="nav-link" href="#section1">Section 1</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#section2">Section 2</a>
+      <a class="nav-link" href="#beranda">Beranda</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#section3">Section 3</a>
+      <a class="nav-link" href="#jadwal">Jadwal</a>
     </li>
-    <li class="nav-item dropdown">
-      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-        Section 4
-      </a>
-      <div class="dropdown-menu">
-        <a class="dropdown-item" href="#section41">Link 1</a>
-        <a class="dropdown-item" href="#section42">Link 2</a>
-      </div>
+    <li class="nav-item">
+      <a class="nav-link" href="#kontak">Kontak Kami</a>
     </li>
+
+    <li class="nav-item">
+      <a class="nav-link" href="/login"> Login</a>
+    </li>
+
   </ul>
 </nav>
 
-<div id="section1">
+<div id="beranda">
   <img src="https://essentialsiteskills.co.uk/storage/app/uploads/public/5e7/df4/b83/thumb_1512_960_480_0_0_crop.jpg" 
   class="img-fluid">
   <div class="text-block">
@@ -44,17 +40,19 @@
   </div>
 </div>
 
-<div id="section2" class="container-fluid">
-
-  <div class="jadwal-container section-container">
-    <div class="container">
+<!-- Jadwal -->
+<div id="jadwal">
+<div class=" card jadwal-container">
+  <div class="card section-container">
+    <div class="container "><br><br>
+    <h2 class="txt-jdwl" >Jadwal</h2><hr>
         <div class="row">
         <div class="col-md-6 jadwal-box">
-        <h2 style="text-align: center;">Jadwal</h2>
-            <img src="{{ asset ('img/img1.jpg') }} " class="jdwl">
+            <img src="{{ asset ('img/img1.jpg') }} " class="jdwl"><br><br>
             </div>
-            <div class="col-md-6 jadwal-box wow fadeInLeft">
-            <div class="card border-primary mb-3" style="max-width: 18rem;">
+            
+            <div class="col-md-6 jadwal-box">
+            <div class="card border-primary mb-3 card1">
             <div class="card-header"> Keterangan</div>
             <div class="card-body text-primary">
             <p class="card-text">
@@ -75,23 +73,41 @@
 
     </div>
 </div>
+</div>
+</div><br>
 
-</div>
-
-<div id="section3" class="container-fluid bg-secondary" style="padding-top:70px;padding-bottom:70px">
-  <h1>Section 3</h1>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-</div>
-<div id="section41" class="container-fluid bg-danger" style="padding-top:70px;padding-bottom:70px">
-  <h1>Section 4 Submenu 1</h1>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-</div>
-<div id="section42" class="container-fluid bg-info" style="padding-top:70px;padding-bottom:70px">
-  <h1>Section 4 Submenu 2</h1>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
-</div>
-
+ <!-- Kontak -->
+<div id="kontak" class="container-fluid">
+<br>
+<div class=" card kontak-container">
+<div class="card section-container">
+    <div class="container">
+        <div class="row">
+            <div class="col kontak section-description"><br><br>
+                <h2>Kontak Kami</h2>
+                <hr><br>
+            </div>
+        </div>
+        <div class="row" style="font-size: 25px;">
+            <div class="col-md-4 kontak-box wow fadeInUp">
+            <i class="fa fa-envelope" aria-hidden="true" style="font-size: 25px;"> <label> smahutama@gmail.com</label></i>            
+        </div>
+            <div class="col-md-4 kontak-box wow fadeInDown">
+            <i class="fa fa-phone-square" aria-hidden="true"> <label>(021) 8475461 </label></i>
+            </div>
+            <div class="col-md-4 kontak-box wow fadeInUp">
+            <i class="fa fa-clock-o" aria-hidden="true"> <label> Senin - Sabtu (07.00-17.00) </label></i>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col section-bottom-button wow fadeInUp">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.8066908889227!2d106.91345986413828!3d-6.289120763306353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698d53a8a535e7%3A0xed5731a15f49b83c!2sHutama%20Senior%20High%20School!5e0!3m2!1sen!2sid!4v1603261003825!5m2!1sen!2sid" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+           <br><br>
+            </div>
+        </div>
+    </div><br>
+</div></div><br>
+</div><br>
 </body>
+
+@include('footer')

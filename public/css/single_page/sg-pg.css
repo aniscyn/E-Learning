@@ -1,6 +1,11 @@
+.nav-sg {
+    margin-left: 75%;
+
+}
+
 .img-fluid {
     width: 100%;
-    height: 100%;
+    height: 110%;
     opacity: 1;
 }
 
@@ -16,17 +21,21 @@
 }
 
 /***** Jadwal *****/
+
+#jadwal {
+    box-shadow: 2px 2px 5px black;
+}
+
 .jadwal-container {
     padding: 20px;
-    margin-bottom: 20px;
+
 }
 
 .jdwl {
     width: 100%;
-    margin-left: 15%;
-    box-shadow: 2px 2px 5px black;
-}
 
+    margin-left: 20%;
+}
 
 .jadwal-box {
     margin-top: 30px;
@@ -34,7 +43,6 @@
 }
 
 .jadwal-box .jadwal-box-icon {
-    width: 60px;
     height: 60px;
     margin: 0 auto;
     font-size: 28px;
@@ -44,14 +52,18 @@
     border-radius: 22px;
 }
 
+.card1 {
+    max-width: 18rem;
+    margin-left: 20%
+}
+
+.txt-jdwl {
+    text-align: center;
+}
+
 .jadwal-box h3 {
     margin-top: 0;
     padding: 0 0 10px 0;
-}
-
-.card {
-    margin-left: 20%;
-    box-shadow: 2px 2px 5px black;
 }
 
 .card-text {
@@ -66,4 +78,45 @@
     color: rgb(173, 40, 40);
     font-style: italic;
     text-align: justify;
+}
+
+/***** Kontak *****/
+#kontak {
+    box-shadow: 2px 2px 5px black;
+    margin-top: -20px;
+}
+
+.kontak {
+    text-align: center;
+    font-style: underline;
+
+}
+
+hr {
+    width: 25%;
+}
+
+.kontak-box {
+
+    text-align: left;
+    color: rgb(80, 80, 80);
+
+}
+
+.kontak-box h3 {
+    margin-top: 30px;
+}
+
+.kontak-box h3 i {
+    padding-left: 10px;
+    color: #ccc;
+    -o-transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -ms-transition: all .3s;
+    transition: all .3s;
+}
+
+.kontak-container .section-bottom-button {
+    padding-top: 40px;
 }

@@ -18,8 +18,13 @@ section .section-title {
 
 }
 
+.list-unstyled {
+    margin-left: 20px;
+    text-align: justify;
+}
+
 #footer h5 {
-    padding-left: 10px;
+    padding-left: 25px;
     border-left: 3px solid #eeeeee;
     padding-bottom: 6px;
     margin-bottom: 20px;
@@ -60,7 +65,8 @@ section .section-title {
 }
 
 #footer ul.quick-links li {
-    padding: 3px 0;
+    padding: 5px 0;
+    margin-left: 10px;
     -webkit-transition: .5s all ease;
     -moz-transition: .5s all ease;
     transition: .5s all ease;
@@ -74,7 +80,7 @@ section .section-title {
 }
 
 #footer ul.quick-links li a i {
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 #footer ul.quick-links li:hover a i {

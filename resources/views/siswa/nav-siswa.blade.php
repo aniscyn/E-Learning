@@ -1,8 +1,8 @@
-      <!-- Scripts -->
-      <script src="{{ asset('js/app.js') }}" defer></script>
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css"> 
-    <link href="{{ asset('css/navbar.css') }}" rel="stylesheet" type="text/css"> 
+<!-- Scripts -->
+<script src="{{ asset('js/app.js') }}" defer></script>
+<!-- Styles -->
+<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css"> 
+<link href="{{ asset('css/navbar.css') }}" rel="stylesheet" type="text/css"> 
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -42,37 +42,48 @@
         <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
         <!-- Bootstrap List Group -->
         <ul class="list-group bg-light" >
-            <!-- Separator with title -->
-            <li class="list-group-item bg-light" style="text-align: center;"> <small> NAMA</small></li>
-            <li class="list-group-item bg-light" style="text-align: center;">    
-            <img src="https://mpng.subpng.com/20180404/sqe/kisspng-computer-icons-user-profile-clip-art-big-5ac5283827d286.2570974715228703281631.jpg" 
-            width="100" height="100" class="rounded-circle" style="background-position:center center">
-            </li>
-            <!-- /END Separator -->
-  
             <a href="/siswa" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-dashboard fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Beranda</span>
+                    <span class="menu-collapsed">PERTEMUAN 1</span>
                 </div>
             </a>
-         
-            <!-- /END Separator -->
+    
             <a href="#" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-calendar fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Absensi</span>
+                    <span class="menu-collapsed">PERTEMUAN 2</span>
                 </div>
             </a>
 
-            <a href="/siswa/jadwal" class="bg-light list-group-item list-group-item-action">
+            <a href="#" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-envelope-o fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Jadwal Ku </span>
+                    <span class="menu-collapsed">PERTEMUAN 3 </span>
                 </div>
             </a>
           
+            <a href="#" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">PERTEMUAN 4 </span>
+                </div>
+            </a>
           
+            <a href="#" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">PERTEMUAN 5 </span>
+                </div>
+            </a>
+
+            <a href="#" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">PERTEMUAN 6 </span>
+                </div>
+            </a>
+
+            <a href="#" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="menu-collapsed">PERTEMUAN 7 </span>
+                </div>
+            </a>
+
         </ul><!-- List Group END-->
     </div><!-- sidebar-container END -->
 
