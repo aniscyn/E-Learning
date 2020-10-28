@@ -1,8 +1,8 @@
 <!-- Scripts -->
 <script src="{{ asset('js/app.js') }}" defer></script>
 <!-- Styles -->
-<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css"> 
-<link href="{{ asset('css/navbar.css') }}" rel="stylesheet" type="text/css"> 
+<link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
+<link href="{{ asset('css/navbar.css') }}" rel="stylesheet" type="text/css">
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -17,19 +17,19 @@
     </button>
     <a class="navbar-brand" href="#">
         <img src="{{ asset ('img/logo.png') }}" width="30" height="30" class="d-inline-block align-top" alt="">
-        
+
     </a>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
         <div class="dropdown show">
   <a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Kelas - Nama 
+    Kelas - Nama
   </a>
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <a class="dropdown-item" href="/siswa/profile">Profile</a>
     <a class="dropdown-item" href="#">Nilai</a>
-    <a class="dropdown-item" href="#">Keluar</a>
+    <a class="dropdown-item" href="/logout">Keluar</a>
   </div>
 </div>
 
@@ -47,7 +47,7 @@
                     <span class="menu-collapsed">PERTEMUAN 1</span>
                 </div>
             </a>
-    
+
             <a href="#" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="menu-collapsed">PERTEMUAN 2</span>
@@ -59,13 +59,13 @@
                     <span class="menu-collapsed">PERTEMUAN 3 </span>
                 </div>
             </a>
-          
+
             <a href="#" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="menu-collapsed">PERTEMUAN 4 </span>
                 </div>
             </a>
-          
+
             <a href="#" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="menu-collapsed">PERTEMUAN 5 </span>

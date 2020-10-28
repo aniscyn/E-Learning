@@ -1,8 +1,8 @@
       <!-- Scripts -->
       <script src="{{ asset('js/app.js') }}" defer></script>
     <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css"> 
-    <link href="{{ asset('css/navbar.css') }}" rel="stylesheet" type="text/css"> 
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('css/navbar.css') }}" rel="stylesheet" type="text/css">
 
 <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -17,19 +17,19 @@
     </button>
     <a class="navbar-brand" href="#">
         <img src="{{ asset ('img/logo.png') }}" width="30" height="30" class="d-inline-block align-top" alt="">
-        
+
     </a>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
         <div class="dropdown show">
   <a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Kelas - Nama 
+    Kelas - Nama
   </a>
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <a class="dropdown-item" href="/siswa/profile">Profile</a>
     <a class="dropdown-item" href="#">Nilai</a>
-    <a class="dropdown-item" href="#">Keluar</a>
+    <a class="dropdown-item" href="/logout">Keluar</a>
   </div>
 </div>
 
@@ -44,19 +44,19 @@
         <ul class="list-group bg-light" >
             <!-- Separator with title -->
             <li class="list-group-item bg-light" style="text-align: center;"> <small> NAMA</small></li>
-            <li class="list-group-item bg-light" style="text-align: center;">    
-            <img src="https://mpng.subpng.com/20180404/sqe/kisspng-computer-icons-user-profile-clip-art-big-5ac5283827d286.2570974715228703281631.jpg" 
+            <li class="list-group-item bg-light" style="text-align: center;">
+            <img src="https://mpng.subpng.com/20180404/sqe/kisspng-computer-icons-user-profile-clip-art-big-5ac5283827d286.2570974715228703281631.jpg"
             width="100" height="100" class="rounded-circle" style="background-position:center center">
             </li>
             <!-- /END Separator -->
-  
+
             <a href="/siswa" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-dashboard fa-fw mr-3"></span>
                     <span class="menu-collapsed">Beranda</span>
                 </div>
             </a>
-         
+
             <!-- /END Separator -->
             <a href="#" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
@@ -71,8 +71,8 @@
                     <span class="menu-collapsed">Jadwal Ku </span>
                 </div>
             </a>
-          
-          
+
+
         </ul><!-- List Group END-->
     </div><!-- sidebar-container END -->
 

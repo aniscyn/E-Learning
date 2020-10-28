@@ -14,8 +14,8 @@ class TbGuru extends Migration
     public function up()
     {
         Schema::create('tb_guru', function(Blueprint $table){
-            $table->integer('nip', 16);
-            $table->string('pass', 12);
+            $table->string('nip', 16)->primary();
+            $table->string('user_id');
             $table->string('nm_lengkap', 50);
             $table->date('tgl_lahir');
             $table->string('jk', 10);
