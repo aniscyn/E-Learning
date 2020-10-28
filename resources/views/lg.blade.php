@@ -39,6 +39,9 @@
                 
 			</div>
 			<div class="register-show">
+            <div class="alert alert-danger alert-dismissible fade show">
+            <button type="button" class="close" data-dismiss="alert">&times; {{$errors->first()}}</button>
+             </div>
                 <h1>Login Guru</h1>
                 <img class="logo" src="{{ asset ('img/logo.png') }} " alt="logo">
 				<input type="text" placeholder="Masukkan NIP">
