@@ -1,4 +1,4 @@
-<title>Jadwalku - Siswa</title>
+<title>Jadwal - Siswa</title>
 <link href="{{ asset('css/siswa/jadwal-siswa.css') }}" rel="stylesheet" type="text/css"> 
 
 <!-- Navbar -->
