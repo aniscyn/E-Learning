@@ -30,6 +30,11 @@ Route::get('/logout', "App\Http\Controllers\LoginController@processLogout");
 Route::get('/siswa', function () {
     return view('beranda');
 });
+
+Route::get('/lg', function () {
+    return view('lg');
+});
+
 Route::get('/siswa/jadwal', function(){
     return view('siswa/jadwal-siswa');
 });

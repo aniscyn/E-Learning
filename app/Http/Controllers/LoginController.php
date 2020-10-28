@@ -16,7 +16,7 @@ class LoginController extends Controller
         ]);
 
         if (! $auth) {
-            return back()->withErrors(["Gagal Login"]);
+            return back()->withErrors(["NIS dan Kata sandi tidak sesuai"]);
         }
 
         return redirect('/siswa');
