@@ -2,7 +2,7 @@
 
 <link href="{{ asset('css/siswa/belajar.css') }}" rel="stylesheet" type="text/css">
 
-@include('navbar')
+@include('siswa.nav-siswa')
 
 <div class="col p-4" style="margin-top: 40px;">
 <div class="card">
@@ -19,7 +19,7 @@
 <div class="card text-center">
     <a href=""> <label class="txt"> Jadwal - Kelas - Nama Guru</label></a>
 </div>
-</div>  
+</div>
 
 <!--- Pertemuan 1--->
 <div class="container"><br>
