@@ -26,7 +26,7 @@ Route::post('/login', "App\Http\Controllers\LoginController@processLogin");
 Route::get('/logout', "App\Http\Controllers\LoginController@processLogout");
 
 
-//siswa
+// Siswa
 Route::get('/siswa', function () {
     return view('beranda');
 });
@@ -46,6 +46,12 @@ Route::get('/siswa/profile', function(){
 });
 Route::get('/siswa/profile/ubah', function(){
     return view('siswa/ubahprofile-siswa');
+});
+
+
+// Guru
+Route::get('/guru', function() {
+    echo "Beranda Guru";
 });
 
 

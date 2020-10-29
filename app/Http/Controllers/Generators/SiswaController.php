@@ -22,7 +22,7 @@ class SiswaController extends Controller
 
         $user = User::create([
             'username' => $faker->randomNumber(6),
-            'password' => bcrypt('password'),
+            'password' => bcrypt('1997-08-28'),
             'role' => 'siswa',
         ]);
 
