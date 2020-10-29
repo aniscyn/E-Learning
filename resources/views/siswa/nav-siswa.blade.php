@@ -44,43 +44,100 @@
         <ul class="list-group bg-light" >
             <a href="/siswa" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-dashboard fa-fw mr-3"></span>
+                    <span class="menu-collapsed">BERANDA</span>
+                </div>
+            </a>
+
+            <a href="/siswa/jadwal" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-file-text-o fa-fw mr-3"></span>
+                    <span class="menu-collapsed">JADWAL</span>
+                </div>
+            </a>
+
+            <a href="#" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fa fa-pencil-square fa-fw mr-3"></span>
+                    <span class="menu-collapsed">UTS</span>
+                </div>
+            </a>
+
+            <a href="#" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fa fa-pencil-square fa-fw mr-3"></span>
+                    <span class="menu-collapsed">UAS</span>
+                </div>
+            </a>
+
+
+            <a href="/siswa" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-files-o fa-fw mr-3"></span>
                     <span class="menu-collapsed">PERTEMUAN 1</span>
                 </div>
             </a>
 
             <a href="#" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-files-o fa-fw mr-3"></span>
                     <span class="menu-collapsed">PERTEMUAN 2</span>
                 </div>
             </a>
 
             <a href="#" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-files-o fa-fw mr-3"></span>
                     <span class="menu-collapsed">PERTEMUAN 3 </span>
                 </div>
             </a>
 
             <a href="#" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-files-o fa-fw mr-3"></span>
                     <span class="menu-collapsed">PERTEMUAN 4 </span>
                 </div>
             </a>
 
             <a href="#" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-files-o fa-fw mr-3"></span>
                     <span class="menu-collapsed">PERTEMUAN 5 </span>
                 </div>
             </a>
 
             <a href="#" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-files-o fa-fw mr-3"></span>
                     <span class="menu-collapsed">PERTEMUAN 6 </span>
                 </div>
             </a>
 
             <a href="#" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-files-o fa-fw mr-3"></span>
                     <span class="menu-collapsed">PERTEMUAN 7 </span>
+                </div>
+            </a>
+
+            <a href="#" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-files-o fa-fw mr-3"></span>
+                    <span class="menu-collapsed">PERTEMUAN 8 </span>
+                </div>
+            </a>
+
+            <a href="#" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-files-o fa-fw mr-3"></span>
+                    <span class="menu-collapsed">PERTEMUAN 9 </span>
+                </div>
+            </a>
+
+            <a href="#" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                <span class="fa fa-files-o fa-fw mr-3"></span>
+                    <span class="menu-collapsed">PERTEMUAN 10 </span>
                 </div>
             </a>
 

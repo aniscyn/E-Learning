@@ -58,20 +58,35 @@
             </a>
 
             <!-- /END Separator -->
+
             <a href="#" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-calendar fa-fw mr-3"></span>
                     <span class="menu-collapsed">Absensi</span>
                 </div>
-            </a>
+            </a>           
+            
 
             <a href="/siswa/jadwal" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-envelope-o fa-fw mr-3"></span>
+                    <span class="fa fa-file-text-o fa-fw mr-3"></span>
                     <span class="menu-collapsed">Jadwal Ku </span>
                 </div>
             </a>
 
+            <a href="#" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fa fa-pencil-square fa-fw mr-3"></span>
+                    <span class="menu-collapsed">UTS</span>
+                </div>
+            </a>
+
+            <a href="#" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fa fa-pencil-square fa-fw mr-3"></span>
+                    <span class="menu-collapsed">UAS</span>
+                </div>
+            </a>
 
         </ul><!-- List Group END-->
     </div><!-- sidebar-container END -->

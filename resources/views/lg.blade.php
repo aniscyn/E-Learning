@@ -23,8 +23,11 @@
         <span class="text-lg"> SMA HUTAMA</span><br><br>
 			<label id="label-login" for="log-login-show">Login Sebagai Guru</label>
 			<input type="radio" name="active-log-panel" id="log-login-show">
-		</div>
-							
+    </div>
+</form>
+    
+    < class="login-form" action="/login" method="post">
+        @csrf
 		<div class="white-panel">
 			<div class="login-show">
             <div class="alert alert-danger alert-dismissible fade show">
@@ -50,8 +53,8 @@
 				<button type="button" class="btn btn-primary float-right"> Login </button>
 			</div>
         </div>
-</form>
     </div>
+</form>
     
     <script>
         
