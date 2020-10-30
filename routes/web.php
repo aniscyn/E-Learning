@@ -30,11 +30,6 @@ Route::get('/logout', "App\Http\Controllers\LoginController@processLogout");
 Route::get('/siswa', function () {
     return view('beranda');
 });
-
-Route::get('/lg', function () {
-    return view('lg');
-});
-
 Route::get('/siswa/jadwal', function(){
     return view('siswa/jadwal-siswa');
 });
@@ -51,10 +46,15 @@ Route::get('/siswa/profile/ubah', function(){
 
 // Guru
 Route::get('/guru', function() {
-    echo "Beranda Guru";
+    return view('guru/beranda-guru');
 });
 
-
+Route::get('/guru/profile', function(){
+    return view('guru/profile-guru');
+});
+Route::get('/guru/profile/ubah', function(){
+    return view('guru/ubahprofile-guru');
+});
 
 
 

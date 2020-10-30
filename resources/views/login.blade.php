@@ -19,38 +19,45 @@
   <div class="card border-dark">
     <div class="container">
 	<div class="row">
-		<div class="login-sec">
+    <div class="login-sec">
+    
+    <div class="alert alert-warning fade show" role="alert">
+    <label>{{$errors->first()}}</label>
+     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+     <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
         <h2 class="text-center"> SMA HUTAMA</h2>
         <img class="logo" src="{{ asset ('img/logo.png') }} " alt="logo">
         <form class="login-form" action="/login" method="post">
         @csrf
-        <div class="form-group">
-        <label style="color:red">{{$errors->first()}}</label><br />
-        <label>Username</label>
-        <input type="text" class="form-control" name="username" placeholder="Masukkan Username" >
+        <div class="form-group"><br>
+      
+        <input type="text" class="form-control" name="username" placeholder="Masukkan NIS/ NIP" >
 
        </div>
         <div class="form-group">
-       <label>Kata Sandi</label>
       <span class="btn-show-pass">
-      <input type="password" class="form-control" name="password" id="pass" placeholder="Masukkan Kata Sandi">
-      <i class="fa fa-eye"></i></span>
+      <input type="password" class="form-control" name="password" id="myInput" placeholder="Masukkan Kata Sandi"><br>
+      <input type="checkbox" onclick="myFunction()"> Lihat Kata Sandi
       </div>
-
-
-    <div class="form-check">
-    <label class="form-check-label">
-      <input type="checkbox" class="form-check-input">
-      <small>Ingat Username</small>
-    </label><br><br>
     <button type="submit" class="btn btn-primary btn-masuk">Login</button>
-  </div>
 </form>
 
 		</div>
 </div>
     </div>
 </section>
-
+<script>
+function myFunction() {
+  var x = document.getElementById("myInput");
+  if (x.type === "password") {
+    x.type = "text";
+  } else {
+    x.type = "password";
+  }
+}
+</script>
 </body>
 </html>

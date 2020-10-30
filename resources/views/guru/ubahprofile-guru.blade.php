@@ -3,7 +3,7 @@
 <link href="{{ asset('css/siswa/ubahprofile-siswa.css') }}" rel="stylesheet" type="text/css"> 
 
 <!-- Navbar -->
-@include('navbar')
+@include('guru.nav-guru')
 
 <div class="col p-4" style="margin-top: 40px;">
 <div class="card border-dark card-profile">
@@ -11,8 +11,8 @@
 <br>
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/siswa">Beranda</a></li>
-    <li class="breadcrumb-item"><a href="/siswa/profile">Profile</a></li>
+    <li class="breadcrumb-item"><a href="/guru">Beranda</a></li>
+    <li class="breadcrumb-item"><a href="/guru/profile">Profile</a></li>
     <li class="breadcrumb-item active" aria-current="page">Ubah</li>
   </ol>
 </nav> 
@@ -31,7 +31,7 @@
       <form action="" class="form-profile">
 
       <div class="form-group">
-         <label for="nis" class="lb-profile">NIS</label>
+         <label for="nis" class="lb-profile">NIP</label>
          <input type="text" class="form-control" readonly id="nmn_lengkap">
         </div>
 

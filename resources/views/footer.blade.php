@@ -8,19 +8,19 @@
 				<div class="col-xs-12 col-sm-4 col-md-4">
                     <h5> Alamat</h5>
 					<ul class="list-unstyled quick-links">
-					<li><i class="fa fa-angle-double-right"></i>Jl. Raya Hankam No.68, RT.003/RW.006, Jatirahayu, Kec. Pd. Melati, Kota Bks, Jawa Barat 17414</li>
+					<li><i class="fa fa-location-arrow"></i> Jl. Raya Hankam No.68, RT.003/RW.006, Jatirahayu, Kec. Pd. Melati, Kota Bks, Jawa Barat 17414</li>
 					</ul>
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">
-					<h5> Telephone </h5>
+					<h5> Telepone </h5>
 					<ul class="list-unstyled quick-links">
-                        <li><i class="fa fa-angle-double-right"></i> (021) 8475461</li>				
+                        <li><i class="fa fa-phone"></i> (021) 8475461</li>				
                     </ul>
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">
 					<h5>Jam Kerja</h5>
 					<ul class="list-unstyled quick-links">
-						<li><i class="fa fa-angle-double-right"></i> Senin - Sabtu (07.00-17.00) </li>
+						<li><i class="fa fa-clock-o"></i> Senin - Sabtu (07.00-17.00) </li>
 						</ul>
 				</div>
 			</div>

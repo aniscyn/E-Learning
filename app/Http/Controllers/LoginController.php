@@ -17,7 +17,7 @@ class LoginController extends Controller
         ]);
 
         if (!$auth) {
-            return back()->withErrors(["Username dan Kata sandi tidak sesuai"]);
+            return back()->withErrors(["NIS/ NIP dan Kata sandi tidak sesuai"]);
         }
 
         /**

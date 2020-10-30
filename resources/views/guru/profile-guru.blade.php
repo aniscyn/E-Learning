@@ -1,9 +1,9 @@
 <title>Profile - Siswa</title>
 
-<link href="{{ asset('css/siswa/profile-siswa.css') }}" rel="stylesheet" type="text/css"> 
+<link href="{{ asset('css/guru/profile-guru.css') }}" rel="stylesheet" type="text/css"> 
 
 <!-- Navbar -->
-@include('navbar')
+@include('guru.nav-guru')
 
 <div class="col p-4" style="margin-top: 40px;">
 <div class="card border-dark card-profile">
@@ -11,11 +11,11 @@
 <br>
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="/siswa">Beranda</a></li>
+    <li class="breadcrumb-item"><a href="/guru">Beranda</a></li>
     <li class="breadcrumb-item active" aria-current="page">Profile</li>
   </ol>
 </nav> 
-<a href="/siswa/profile/ubah"><button type="button" class="btn btn-success float-right"><i class="fa fa-pencil-square-o" aria-hidden="true"> 
+<a href="/guru/profile/ubah"><button type="button" class="btn btn-success float-right"><i class="fa fa-pencil-square-o" aria-hidden="true"> 
     Ubah </i></button></a>
 <br><br>
 
@@ -35,7 +35,7 @@
   <tbody>
 
   <tr>
-      <td>NIS</td>
+      <td>NIP</td>
       <td>123456789</td>
     </tr>
 

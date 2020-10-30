@@ -1,0 +1,30 @@
+.foto-profile {
+    width: 50%;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.card-profile-isi {
+    height: 70%;
+    box-shadow: 2px 2px 3px black;
+}
+
+.card-profile {
+    margin-bottom: 20px;
+    height: 100%;
+}
+
+.btn-upload {
+    margin-left: 100px;
+    margin-top: -10px
+}
+
+.table-profile {
+    margin-top: 10%;
+    margin-left: -15%;
+}
+
+.btn-success {
+    width: 10%;
+    height: 40px;
+}
