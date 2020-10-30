@@ -23,7 +23,7 @@
         <ul class="navbar-nav ml-auto">
         <div class="dropdown show">
   <a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Kelas - Nama
+    {{auth()->user()->siswa->kelas->nm_kelas}} - {{auth()->user()->siswa->nm_lengkap}}
   </a>
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
@@ -64,8 +64,8 @@
                     <span class="fa fa-calendar fa-fw mr-3"></span>
                     <span class="menu-collapsed">Absensi</span>
                 </div>
-            </a>           
-            
+            </a>
+
 
             <a href="/siswa/jadwal" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">

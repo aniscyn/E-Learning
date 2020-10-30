@@ -14,7 +14,7 @@ class TbMapel extends Migration
     public function up()
     {
         Schema::create('tb_mapel', function(Blueprint $table){
-            $table->integer('id_mapel')->primary();
+            $table->integer('id_mapel')->autoIncrement();
             $table->string('nm_mapel', 50);
         });
     }

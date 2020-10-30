@@ -9,13 +9,26 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
+    use HasFactory;
+
     public const ROLE_SISWA = "siswa";
     public const ROLE_GURU = 'guru';
 
-    public $increments = true;
+    public $incrementing = true;
 
     protected $table = 'users';
     protected $guarded = [];
+
+    // Relations
+    public function siswa()
+    {
+        return $this->hasOne(Siswa::class, 'user_id', 'id');
+    }
+
+    public function guru()
+    {
+        return $this->hasOne(Guru::class, 'user_id', 'id');
+    }
 
     public function isRoleSiswa()
     {

@@ -23,7 +23,7 @@
         <ul class="navbar-nav ml-auto">
         <div class="dropdown show">
   <a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    Kelas - Nama
+    {{auth()->user()->siswa->kelas->nm_kelas}} - {{auth()->user()->siswa->nm_lengkap}}
   </a>
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
