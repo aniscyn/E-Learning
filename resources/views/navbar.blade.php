@@ -59,7 +59,7 @@
 
             <!-- /END Separator -->
 
-            <a href="#" class="bg-light list-group-item list-group-item-action">
+            <a href="/siswa/absensi" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-calendar fa-fw mr-3"></span>
                     <span class="menu-collapsed">Absensi</span>
@@ -88,7 +88,7 @@
                 </div>
             </a>
 
-        </ul><!-- List Group END-->
+        </ul><!-- List Group END--><br>
     </div><!-- sidebar-container END -->
 
 

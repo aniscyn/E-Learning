@@ -1,4 +1,4 @@
-<title>Profile - Siswa</title>
+<title>Profile - Guru</title>
 
 <link href="{{ asset('css/siswa/ubahprofile-siswa.css') }}" rel="stylesheet" type="text/css"> 
 
@@ -61,7 +61,7 @@
         </div>
 
          <button type="submit" class="btn btn-primary btn-ubah-profile"> Simpan</button>
-        </form>
+        </form><br>
 
       </div>
       </div>

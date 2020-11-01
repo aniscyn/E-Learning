@@ -1,4 +1,4 @@
-<title>Profile - Siswa</title>
+<title>Profile - Guru</title>
 
 <link href="{{ asset('css/guru/profile-guru.css') }}" rel="stylesheet" type="text/css"> 
 

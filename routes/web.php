@@ -36,6 +36,9 @@ Route::get('/siswa/jadwal', function(){
 Route::get('/siswa/jadwal/belajar', function(){
     return view('siswa/belajar-siswa');
 });
+Route::get('/siswa/absensi', function(){
+    return view('siswa/absen-siswa');
+});
 Route::get('/siswa/profile', function(){
     return view('siswa/profile-siswa');
 });
@@ -48,7 +51,9 @@ Route::get('/siswa/profile/ubah', function(){
 Route::get('/guru', function() {
     return view('guru/beranda-guru');
 });
-
+Route::get('/guru/jadwal', function() {
+    return view('guru/jadwal-guru');
+});
 Route::get('/guru/profile', function(){
     return view('guru/profile-guru');
 });
