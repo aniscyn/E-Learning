@@ -30,9 +30,7 @@ Route::get('/logout', "App\Http\Controllers\LoginController@processLogout");
 Route::get('/siswa', function () {
     return view('beranda');
 });
-Route::get('/siswa/jadwal', function(){
-    return view('siswa/jadwal-siswa');
-});
+Route::get('/siswa/jadwal', "App\Http\Controllers\Siswa\JadwalController@viewJadwal");
 Route::get('/siswa/jadwal/belajar', function(){
     return view('siswa/belajar-siswa');
 });

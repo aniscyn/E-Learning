@@ -14,8 +14,12 @@ class TbJadwal extends Migration
     public function up()
     {
         Schema::create('tb_jadwal', function(Blueprint $table){
-            $table->integer('id_jadwal')->primary();
-            $table->string('hari', 10);
+            $table->id('id_jadwal');
+            $table->integer('id_guru');
+            $table->integer('id_kelas');
+            $table->integer('id_mapel');
+            $table->integer('urutan_hari');
+            $table->string('nama_hari', 10);
             $table->time('jm_mulai');
             $table->time('jm_selesai');
         });

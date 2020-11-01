@@ -13,10 +13,10 @@ class TbAbsen extends Migration
      */
     public function up()
     {
-        Schema::create('tb_jadwal', function(Blueprint $table){
+        Schema::create('tb_absen', function(Blueprint $table){
             $table->integer('id_absen')->primary();
-            $table->timestamp('jm_masuk');
-            $table->timestamp('jm_keluar');
+            $table->timestamp('jm_masuk')->nullable();
+            $table->timestamp('jm_keluar')->nullable();
         });
     }
 

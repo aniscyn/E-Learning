@@ -18,6 +18,7 @@ class GuruSeeder extends Seeder
         $user = User::factory()->create([
             'password' => bcrypt('1997-08-28'),
             'role' => 'guru',
+            'username' => 11190552
         ]);
 
         $siswa = Guru::factory()->create([
