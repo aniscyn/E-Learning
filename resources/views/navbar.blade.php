@@ -43,7 +43,7 @@
         <!-- Bootstrap List Group -->
         <ul class="list-group bg-light" >
             <!-- Separator with title -->
-            <li class="list-group-item bg-light" style="text-align: center;"> <small> NAMA</small></li>
+            <li class="list-group-item bg-light" style="text-align: center;"> <h5 style="width:11rem"> {{auth()->user()->siswa->nm_lengkap}} </h5></li>
             <li class="list-group-item bg-light" style="text-align: center;">
             <img src="https://mpng.subpng.com/20180404/sqe/kisspng-computer-icons-user-profile-clip-art-big-5ac5283827d286.2570974715228703281631.jpg"
             width="100" height="100" class="rounded-circle" style="background-position:center center">
