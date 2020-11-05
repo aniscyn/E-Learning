@@ -9,7 +9,7 @@ class Kelas extends Model
 {
     use HasFactory;
 
-    public $incrementing = false;
+    public $incrementing = true;
     public $timestamps = false;
 
     protected $table = 'tb_kelas';

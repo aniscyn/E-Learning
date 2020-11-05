@@ -14,7 +14,7 @@ class TbKelas extends Migration
     public function up()
     {
         Schema::create('tb_kelas', function(Blueprint $table){
-            $table->integer('id_kelas')->primary();
+            $table->integer('id_kelas')->autoIncrement();
             $table->string('nm_kelas', 6);
             $table->string('jurusan', 4);
         });

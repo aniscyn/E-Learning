@@ -30,9 +30,7 @@ Route::get('/logout', "App\Http\Controllers\LoginController@processLogout");
 Route::get('/siswa', function () {
     return view('beranda');
 });
-Route::get('/siswa/jadwal', function(){
-    return view('siswa/jadwal-siswa');
-});
+Route::get('/siswa/jadwal', "App\Http\Controllers\Siswa\JadwalController@viewJadwal");
 Route::get('/siswa/jadwal/belajar', function(){
     return view('siswa/belajar-siswa');
 });
@@ -42,9 +40,8 @@ Route::get('/siswa/absensi', function(){
 Route::get('/siswa/profile', function(){
     return view('siswa/profile-siswa');
 });
-Route::get('/siswa/profile/ubah', function(){
-    return view('siswa/ubahprofile-siswa');
-});
+Route::get('/siswa/profile', "App\Http\Controllers\Siswa\ProfileController@viewProfile");
+Route::get('/siswa/profile/ubah', "App\Http\Controllers\Siswa\ProfileController@viewEdit");
 
 
 // Guru
