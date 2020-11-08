@@ -11,28 +11,51 @@
     <li class="breadcrumb-item"><a href="/siswa">Beranda</a></li>
     <li class="breadcrumb-item active" aria-current="page">Absensi Siswa</li>
   </ol>
-</nav> 
+</nav>
 
-<div class="container-fluid">    
+<div class="container-fluid">
 <div class="row">
 <div class="card card-absen" style="width: 100%;">
-<div class="card-header bg-light"><h3>hari - Tanggal - Kelas</h3></div>
+<div class="card-header bg-light"><h3>{{date("l, d F Y")}} - {{auth()->user()->siswa->kelas->nm_kelas}}</h3></div>
   <div class="card-body">
   <table class="table table-striped text-center">
   <thead>
     <tr>
-      <th scope="col">No </th>
+      <th scope="col">Keterangan </th>
       <th scope="col">Jam </th>
       <th scope="col">Absensi</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th scope="row">1</th>
-      <td>07.30 - 08.30</td>
-      <td><a href="#"> <button type="button" class="btn btn-outline-primary">Absen Masuk</button></a></td>
+      <td>Jam Masuk</td>
+      <td>
+          {{$absen->jm_masuk}}
+      </td>
+      <td>
+          @if ($absen->jm_masuk == null)
+          <form action="/siswa/absensi/{{$absen->id_absen}}/masuk" method="post">
+            @csrf
+            <button type="submit" class="btn btn-outline-primary">Absen Masuk</button>
+          </form>
+          @endif
+      </td>
     </tr>
- 
+    <tr>
+      <td>Jam Keluar</td>
+      <td>
+        {{$absen->jm_keluar}}
+    </td>
+      <td>
+          @if ($absen->jm_masuk != null && $absen->jm_keluar == null)
+            <form action="/siswa/absensi/{{$absen->id_absen}}/keluar" method="post">
+                @csrf
+                <button type="submit" class="btn btn-outline-primary">Absen Keluar</button>
+            </form>
+          @endif
+      </td>
+    </tr>
+
   </tbody>
 </table><hr>
   </div>
