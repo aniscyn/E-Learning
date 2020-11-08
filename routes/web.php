@@ -34,9 +34,9 @@ Route::get('/siswa/jadwal', "App\Http\Controllers\Siswa\JadwalController@viewJad
 Route::get('/siswa/jadwal/belajar', function(){
     return view('siswa/belajar-siswa');
 });
-Route::get('/siswa/absensi', function(){
-    return view('siswa/absen-siswa');
-});
+Route::get('/siswa/absensi', "App\Http\Controllers\Siswa\AbsenController@viewAbsen");
+Route::post('/siswa/absensi/{absen}/masuk', "App\Http\Controllers\Siswa\AbsenController@postAbsenMasuk");
+Route::post('/siswa/absensi/{absen}/keluar', "App\Http\Controllers\Siswa\AbsenController@postAbsenKeluar");
 Route::get('/siswa/profile', function(){
     return view('siswa/profile-siswa');
 });
