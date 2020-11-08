@@ -28,26 +28,26 @@
       </div>
 
       <div class="col-sm-6">
-      <form action="" class="form-profile">
-
+      <form action="/siswa/profile/ubah/{{$user->id}}/process" method="post" class="form-profile">
+      @csrf
       <div class="form-group">
          <label for="nis" class="lb-profile">NIS</label>
-         <input type="text" class="form-control" readonly id="nmn_lengkap" value={{$user->siswa->nis}}>
+         <input type="text" class="form-control" readonly id="nm_lengkap" value={{$user->siswa->nis}}>
         </div>
-
+        Tolong cek nama lengkap ini di text box tidak muncul nama belakangnya: harusnya {{$user->siswa->nm_lengkap}}
         <div class="form-group">
          <label for="Nama" class="lb-profile">Nama Lengkap</label>
-         <input type="text" class="form-control" placeholder="Masukkan Nama Lengkap" id="nmn_lengkap" value={{$user->siswa->nm_lengkap}}>
+         <input type="text" class="form-control" placeholder="Masukkan Nama Lengkap" id="nm_lengkap" name="nama_lengkap" value={{$user->siswa->nm_lengkap}}>
         </div>
 
         <div class="form-group">
          <label for="tgl-lahir"class="lb-profile">Tanggal Lahir</label>
-         <input type="date" class="form-control" placeholder="Masukkan Tanggal Lahir" id="tgl_lahir" value={{$user->siswa->tgl_lahir}}>
+         <input type="date" class="form-control" placeholder="Masukkan Tanggal Lahir" name="tgl_lahir" id="tgl_lahir" value={{$user->siswa->tgl_lahir}}>
         </div>
 
         <div class="form-group">
          <label for="email" class="lb-profile">Email</label>
-         <input type="email" class="form-control" placeholder="Masukkan Email" id="email" value={{$user->siswa->email}}>
+         <input type="email" class="form-control" placeholder="Masukkan Email" name="email" id="email" value={{$user->siswa->email}}>
         </div>
 
         <div class="form-group">
@@ -57,7 +57,7 @@
 
         <div class="form-group">
          <label for="tlp" class="lb-profile">Telepone/ HP</label>
-         <input type="text" class="form-control" placeholder="Masukkan Nomor Telepon/ HP" id="no_telp" value={{$user->siswa->tlp}}>
+         <input type="text" class="form-control" placeholder="Masukkan Nomor Telepon/ HP" name="no_telp" id="no_telp" value={{$user->siswa->tlp}}>
         </div>
 
          <button type="submit" class="btn btn-primary btn-ubah-profile"> Simpan</button>
