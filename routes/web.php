@@ -42,6 +42,7 @@ Route::get('/siswa/profile', function(){
 });
 Route::get('/siswa/profile', "App\Http\Controllers\Siswa\ProfileController@viewProfile");
 Route::get('/siswa/profile/ubah', "App\Http\Controllers\Siswa\ProfileController@viewEdit");
+Route::post('/siswa/profile/ubah/{user}/process', "App\Http\Controllers\Siswa\ProfileController@postEdit");
 
 
 // Guru
