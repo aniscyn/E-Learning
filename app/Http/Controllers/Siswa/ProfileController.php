@@ -29,7 +29,7 @@ class ProfileController extends Controller
     {
         $siswa = $user->siswa;
 
-        $siswa->nm_lengkap = request()->get('nama_lengkap');
+        $siswa->nm_lengkap = request()->get('nm_siswa');
         $siswa->tgl_lahir = request()->get('tgl_lahir');
         $siswa->email = request()->get('email');
         $siswa->alamat_siswa = request()->get('alamat');

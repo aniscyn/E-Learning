@@ -36,31 +36,31 @@
 
   <tr>
       <td>NIP</td>
-      <td>123456789</td>
+      <td>{{$user->guru->nip}}</td>
     </tr>
 
     <tr>
       <td>Nama Lengkap</td>
-      <td>Anisa</td>
+      <td>{{$user->guru->nm_lengkap}}</td>
     </tr>
 
     <tr>
       <td>Tanggal Lahir</td>
-      <td>06-Juni-1996</td>
+      <td>{{$user->guru->tgl_lahir}}</td>
 
     </tr>
     <tr>
       <td>Email</td>
-      <td>anisa@gmail.com</td>
+      <td>{{$user->guru->email}}</td>
     </tr>
 
     <tr>
       <td>Alamat</td>
-      <td>Wahana Kota Bekasi</td>
+      <td>{{$user->guru->alamat_guru}}</td>
     </tr>
     <tr>
       <td>Telepone/ HP</td>
-      <td>02183443435</td>
+      <td>{{$user->guru->tlp}}</td>
     </tr>
   </tbody>
 </table>

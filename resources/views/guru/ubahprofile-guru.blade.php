@@ -28,36 +28,37 @@
       </div>
 
       <div class="col-sm-6">
-      <form action="" class="form-profile">
+      <form action="/guru/profile/ubah/{{$user->id}}/process" method="post" class="form-profile">
+      @csrf
 
       <div class="form-group">
-         <label for="nis" class="lb-profile">NIP</label>
-         <input type="text" class="form-control" readonly id="nmn_lengkap">
+         <label for="nip" class="lb-profile">NIP</label>
+         <input type="text" class="form-control" readonly id="nip" value={{$user->guru->nip}}>
         </div>
 
         <div class="form-group">
          <label for="Nama" class="lb-profile">Nama Lengkap</label>
-         <input type="text" class="form-control" placeholder="Masukkan Nama Lengkap" id="nmn_lengkap">
+         <input type="text" class="form-control"  id="nm_guru" name="nm_guru" value={{$user->guru->nm_lengkap}}>
         </div>
    
         <div class="form-group">
          <label for="tgl-lahir"class="lb-profile">Tanggal Lahir</label>
-         <input type="date" class="form-control" placeholder="Masukkan Tanggal Lahir" id="tgl_lahir">
+         <input type="date" class="form-control" id="tgl_lahir" name="tgl_lahir" value={{$user->guru->tgl_lahir}}>
         </div>
 
         <div class="form-group">
          <label for="email" class="lb-profile">Email</label>
-         <input type="email" class="form-control" placeholder="Masukkan Email" id="email">
+         <input type="email" class="form-control" id="email" name="email_guru" value={{$user->guru->email}}>
         </div>
    
         <div class="form-group">
          <label for="alamat" class="lb-profile">Alamat</label><br>
-         <textarea name="alamat" id="alamat" cols="50" rows="5" placeholder="Masukkan Alamat" class="form-control"></textarea>
+         <textarea cols="50" rows="5"  class="form-control" name="alamat_guru" id="alamat_guru"> {{$user->guru->alamat_guru}} </textarea>
         </div>
 
         <div class="form-group">
          <label for="tlp" class="lb-profile">Telepone/ HP</label>
-         <input type="text" class="form-control" placeholder="Masukkan Nomor Telepon/ HP" id="no_telp">
+         <input type="text" class="form-control" id="no_tlp" name="tlp_guru" value={{$user->guru->tlp}}>
         </div>
 
          <button type="submit" class="btn btn-primary btn-ubah-profile"> Simpan</button>

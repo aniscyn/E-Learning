@@ -32,12 +32,12 @@
       @csrf
       <div class="form-group">
          <label for="nis" class="lb-profile">NIS</label>
-         <input type="text" class="form-control" readonly id="nm_lengkap" value={{$user->siswa->nis}}>
+         <input type="text" class="form-control" readonly id="nis" value={{$user->siswa->nis}}>
         </div>
         Tolong cek nama lengkap ini di text box tidak muncul nama belakangnya: harusnya {{$user->siswa->nm_lengkap}}
-        <div class="form-group">
-         <label for="Nama" class="lb-profile">Nama Lengkap</label>
-         <input type="text" class="form-control" placeholder="Masukkan Nama Lengkap" id="nm_lengkap" name="nama_lengkap" value={{$user->siswa->nm_lengkap}}>
+        <div class="form-group"> 
+         <label class="lb-profile">Nama Lengkap</label> 
+         <input type="text" class="form-control" id="nm_lengkap" name="nm_siswa" value={{$user->siswa->nm_lengkap}}>
         </div>
 
         <div class="form-group">

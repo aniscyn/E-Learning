@@ -27,28 +27,13 @@
 <div class="card">
   <div class="card-body">
     <h3 class="card-title" id="pertemuan1">PERTEMUAN 1</h3><br>
-    <h5><i class="fa fa-file-text" aria-hidden="true"> Ringkuman Materi </i></h5>
+    <h5><i class="fa fa-file-text" aria-hidden="true"> Rangkuman Materi </i></h5>
     <p class="card-text">ini materi</p>
     <a href="#" class="btn btn-primary"> Unduh Materi</a>
-
-    <div class="absen-bljr"><br>
-    <h4><a href=""><i class="fa fa-check-square-o" aria-hidden="true"> Absensi Pertemuan 1</i></a></h4>
-    <p>Klik untuk melakukan absensi pertemuan 1</p>
-    </div>
 
     <div class="lth-bljr"><br>
     <h4><a href=""><i class="fa fa-pencil-square" aria-hidden="true"> Latihan Soal Pertemuan 2</i></a></h4>
     <p>Klik untuk melakukan latihan soal</p>
-    </div>
-
-    <div class="forum-bljr"><br>
-    <h4><a href=""><i class="fa fa-comments" aria-hidden="true"> Forum Diskusi Pertemuan 1</i></a></h4>
-    <p>Klik untuk melakukan diskusi</p>
-    </div>
-
-    <div class="upload-bljr"><br>
-    <h4><a href=""><i class="fa fa-upload" aria-hidden="true"> Upload Tugas Pertemuan 1</i></a></h4>
-    <p>Klik untuk melakukan upload tugas</p>
     </div>
   </div>
 </div>
@@ -65,25 +50,11 @@
     <p class="card-text">ini materi</p>
     <a href="#" class="btn btn-primary"> Unduh Materi</a>
 
-    <div class="absen-bljr"><br>
-    <h4><a href=""><i class="fa fa-check-square-o" aria-hidden="true"> Absensi Pertemuan 2</i></a></h4>
-    <p>Klik untuk melakukan absensi pertemuan 2</p>
-    </div>
-
     <div class="lth-bljr"><br>
     <h4><a href=""><i class="fa fa-pencil-square" aria-hidden="true"> Latihan Soal Pertemuan 2</i></a></h4>
     <p>Klik untuk melakukan latihan soal</p>
     </div>
 
-    <div class="forum-bljr"><br>
-    <h4><a href=""><i class="fa fa-comments" aria-hidden="true"> Forum Diskusi Pertemuan 2</i></a></h4>
-    <p>Klik untuk melakukan diskusi</p>
-    </div>
-
-    <div class="upload-bljr"><br>
-    <h4><a href=""><i class="fa fa-upload" aria-hidden="true"> Upload Tugas Pertemuan 2</i></a></h4>
-    <p>Klik untuk melakukan upload tugas</p>
-    </div>
   </div>
 </div>
   </div>
