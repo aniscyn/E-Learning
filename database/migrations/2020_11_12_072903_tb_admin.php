@@ -16,7 +16,6 @@ class TbAdmin extends Migration
         Schema::create('tb_admin', function(Blueprint $table){
             $table->integer('id_admin')->autoIncrement();
             $table->string('username', 15);
-            $table->string('nm_admin', 50);
             $table->string('password');
         });
     }

@@ -63,11 +63,10 @@ class DataAdminController extends Controller
         $user->delete();
         if($user){
             //redirect dengan pesan sukses
-            return redirect()->route('/admin/data-admin')->with(['success' => 'Data Berhasil Dihapus!']);
+            return back()->with(['success' => 'Data Berhasil Dihapus!']);
          }else{
            //redirect dengan pesan error
-           return redirect()->route('admin/data-admin')->with(['error' => 'Data Gagal Dihapus!']);
+           return back()->with(['error' => 'Data Gagal Dihapus!']);
          }
-        return back();
     }
 }

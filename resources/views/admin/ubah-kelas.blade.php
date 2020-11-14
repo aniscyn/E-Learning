@@ -12,7 +12,7 @@
     <li class="breadcrumb-item active" aria-current="page"> Ubah Data Kelas</li>
      </ol>
     </nav>
-    <form method="POST" action="/admin/data-kelas/{{$data->id}}/ubah">
+    <form method="POST" action="/admin/data-kelas/{{$data->id_kelas}}/ubah">
      @csrf
     <div class="card">
     <h5 class="card-header font-weight bg-info" style="color: white;">Ubah Data Kelas</h5>

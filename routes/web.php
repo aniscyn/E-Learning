@@ -82,22 +82,13 @@ Route::get('/admin/data-admin/{user}/ubah', 'App\Http\Controllers\Admin\DataAdmi
 Route::post('/admin/data-admin/{user}/ubah', 'App\Http\Controllers\Admin\DataAdminController@postEdit');
 Route::post('/admin/data-admin/{user}/hapus', 'App\Http\Controllers\Admin\DataAdminController@postDelete');
 
+
 Route::get('/admin/data-kelas', 'App\Http\Controllers\Admin\DataKelasController@viewDataKelas');
 Route::get('/admin/data-kelas/tambah', 'App\Http\Controllers\Admin\DataKelasController@viewTambah');
 Route::post('/admin/data-kelas/tambah', 'App\Http\Controllers\Admin\DataKelasController@postTambah');
-Route::get('/admin/data-kelas/{user}/ubah', 'App\Http\Controllers\Admin\DataKelasController@viewEdit');
-Route::post('/admin/data-kelas/{user}/ubah', 'App\Http\Controllers\Admin\DataKelasController@postEdit');
-Route::post('/admin/data-kelas/{user}/hapus', 'App\Http\Controllers\Admin\DataKelasController@postDelete');
-
-Route::get('/admin/data-kelas', function(){
-    return view('admin/data-kelas');
-});
-Route::get('/admin/data-kelas/tambah', function(){
-    return view('admin/tambah-kelas');
-});
-Route::get('/admin/data-kelas/ubah', function(){
-    return view('admin/ubah-kelas');
-});
+Route::get('/admin/data-kelas/{kelas}/ubah', 'App\Http\Controllers\Admin\DataKelasController@viewEdit');
+Route::post('/admin/data-kelas/{kelas}/ubah', 'App\Http\Controllers\Admin\DataKelasController@postEdit');
+Route::post('/admin/data-kelas/{kelas}/hapus', 'App\Http\Controllers\Admin\DataKelasController@postDelete');
 
 // Halaman Untuk Generate Data
 Route::get('/generator/siswa', "App\Http\Controllers\Generators\SiswaController@viewAdd");

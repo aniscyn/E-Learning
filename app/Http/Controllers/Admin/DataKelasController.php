@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
+use App\Models\Kelas;
 use App\Models\User;
 
 class DataKelasController extends Controller
 {
     public function viewDataKelas()
     {
-        $dataKelas = User::query()
-        ->where('role', 'kelas')
-        ->get();
+        $dataKelas = Kelas::query()
+        ->Paginate(2);
 
         return view('admin/data-kelas', [
             'data' => $dataKelas,
@@ -26,38 +26,41 @@ class DataKelasController extends Controller
     {
         $request = request()->all();
 
-        $user = User::create([
+        $user = Kelas::create([
             'nm_kelas' => $request['nm_kelas'],
             'jurusan' => $request['jurusan'],
-            'role' => 'admin',
         ]);
 
         return redirect('/admin/data-kelas');
     }
 
-    public function viewEdit(User $user)
+    public function viewEdit(Kelas $kelas)
     {
         return view('admin/ubah-kelas', [
-            'data' => $user,
+            'data' => $kelas,
         ]);
     }
 
-    public function postEdit(User $user)
+    public function postEdit(Kelas $kelas)
     {
         $request = request()->all();
-        $user->username = $request['username'];
-        $user ->nm_kelas = request()->get('nm_kelas');
-        $user ->jurusan = request()->get('jurusan');
+        $kelas ->nm_kelas = request()->get('nm_kelas');
+        $kelas ->jurusan = request()->get('jurusan');
 
-        $user->save();
+        $kelas->save();
 
         return redirect('/admin/data-kelas');
     }
 
-    public function postDelete(User $user)
+    public function postDelete(Kelas $kelas)
     {
-        $user->delete();
-
-        return back();
+        $kelas->delete();
+        if($kelas){
+            //redirect dengan pesan sukses
+            return back()->with(['success' => 'Data Berhasil Dihapus!']);
+         }else{
+           //redirect dengan pesan error
+           return back()->with(['error' => 'Data Gagal Dihapus!']);
+         }
     }
 }

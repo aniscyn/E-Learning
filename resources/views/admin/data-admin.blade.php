@@ -1,10 +1,12 @@
   <title> Data Admin </title>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+
 @include('admin.menu-adm')
 
     <!-- MAIN -->
     <div class="col p-4">
-
     <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Beranda</a></li>
@@ -15,8 +17,21 @@
     <div class="card">
     <h5 class="card-header font-weight bg-info" style="color: white;">Data Admin</h5>
     <div class="card-body">
-    <a href="/admin/data-admin/tambah"> <button type="button" class="btn btn-secondary"> Tambah Data Admin</button> </a> <br><br>
-    <table class="table table-bordered table-striped">
+    <a href="/admin/data-admin/tambah"> <button type="button" class="btn btn-secondary"> Tambah Data Admin</button> </a>
+
+    @if (session('success'))
+    <div class="alert alert-success alert-dismissible" style="width: 30%;margin-left:70%;margin-top:-40px">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{session('success')}}</div>
+    @endif
+
+    @if (session('error'))
+    <div class="alert alert-warning alert-dismissible" style="width: 30%;margin-left:70%;margin-top:-40px">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{session('error')}}</div>
+    @endif
+
+    <table class="table table-bordered table-striped" style="margin-top: 20px">
     <thead class="text-center">
       <tr>
         <th>No</th>
@@ -37,8 +52,7 @@
             <form action="/admin/data-admin/{{$item->id}}/hapus" method="post">
             @csrf
 
-            <button type="submit" class="btn btn-outline-danger" > Hapus</button></td>
-        </form>
+            <button type="submit"  onclick="archiveFunction()" name="archive" class="btn btn-outline-danger" > Hapus</button></td>
 
       </tr>
       @endforeach
@@ -56,3 +70,28 @@
 </div><!-- body-row END -->
 
 @include('admin.footer-adm')
+
+<script>
+function archiveFunction() {
+event.preventDefault(); // prevent form submit
+var form = event.target.form; // storing the form
+        swal({
+  title: "Anda yakin ingin hapus?",
+  text: "Data anda akan dihapus secara permanen.",
+  type: "warning",
+  showCancelButton: true,
+  confirmButtonColor: "#DD6B55",
+  confirmButtonText: "Iya",
+  cancelButtonText: "Tidak",
+  closeOnConfirm: false,
+  closeOnCancel: false
+},
+function(isConfirm){
+  if (isConfirm) {
+    form.submit();          // submitting the form when user press yes
+  } else {
+    swal("Batal", "Data anda aman", "error");
+  }
+});
+}
+</script>
