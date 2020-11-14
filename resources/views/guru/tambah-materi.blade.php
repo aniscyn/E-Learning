@@ -42,6 +42,13 @@
     </div>
 
     <div class="form-group row">
+    <label class="col-2 col-form-label"> Keterangan</label>
+    <div class="col-10">
+    <textarea class="form-control" name="ket"></textarea>
+    </div>
+    </div>
+
+    <div class="form-group row">
     <label class="col-2 col-form-label"> Upload Materi</label>
      <div class="col-10">
     <input type="file" value="" id="file-materi">
@@ -49,7 +56,7 @@
     </div>
 
     <button type="button" class="btn btn-primary" style="margin-left: 17%"> Simpan Data</button>
-    
+
 
     </form>
     </div>

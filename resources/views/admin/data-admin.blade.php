@@ -20,19 +20,29 @@
     <thead class="text-center">
       <tr>
         <th>No</th>
-        <th>Nama Lengkap</th>
         <th>Username</th>
-        <th>Aksi</th>
+        <th colspan="4">Aksi</th>
       </tr>
     </thead>
     <tbody>
+
+      @foreach ($data as $item)
       <tr>
-        <td class="text-center" width="5%">1</td>
-        <td>aaaaa</td>
-        <td>bbbbbb</td>
-        <td class="text-center" width="25%"><a href="/admin/data-admin/ubah"><button type="button" class="btn btn-outline-primary"> Ubah </button></a>
-        <button type="button" class="btn btn-outline-danger"  style="margin-left: 10px;"> Hapus</button></td>
+        <td class="text-center" width="5%">{{$loop->iteration}}</td>
+        <td>{{$item->username}}</td>
+        <td class="text-center" width="10%">
+            <a href="/admin/data-admin/{{$item->id}}/ubah">
+            <button type="button" class="btn btn-outline-primary"> Ubah </button></a></td>
+            <td class="text-center" width="10%">
+            <form action="/admin/data-admin/{{$item->id}}/hapus" method="post">
+            @csrf
+
+            <button type="submit" class="btn btn-outline-danger" > Hapus</button></td>
+        </form>
+
       </tr>
+      @endforeach
+
     </tbody>
   </table>
   <ul class="pagination ">

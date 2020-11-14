@@ -26,7 +26,7 @@
       <div class="col-sm-6">
           <div><img src="https://mpng.subpng.com/20180404/sqe/kisspng-computer-icons-user-profile-clip-art-big-5ac5283827d286.2570974715228703281631.jpg"
              class="img-rounded foto-profile" alt="profile"></div><br>
-            <button type="button" class="btn btn-outline-primary btn-upload"> Upload Foto</button>
+             <input type="file" class="btn-upload">
       </div>
 
       <div class="col-sm-6">

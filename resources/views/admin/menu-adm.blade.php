@@ -22,11 +22,11 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <label class="fa fa-calendar nav-link">  
+                <label class="fa fa-calendar nav-link">
                 <?php echo date  ('l, d F Y'); ?></label>
             </li>
             <li class="nav-item">
-                <label class="nav-link fa fa-clock-o" > 
+                <label class="nav-link fa fa-clock-o" >
                 <?php echo date('H:i:s'); ?></label>
             </li>
             <li class="nav-item">
@@ -55,7 +55,7 @@
                     <span class="menu-collapsed"> Beranda</span>
                 </div>
             </a>
-         
+
             <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-tasks fa-fw mr-3"></span>
@@ -65,10 +65,10 @@
             </a>
             <!-- Submenu content -->
             <div id='submenu2' class="collapse sidebar-submenu">
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                <a href="/admin/data-admin" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"> Data Admin</span>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                <a href="/admin/data-kelas" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"> Data Kelas</span>
                 </a>
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white">

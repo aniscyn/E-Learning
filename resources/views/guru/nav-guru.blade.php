@@ -68,6 +68,12 @@
 
             <a href="#" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fa fa-check-square-o fa-fw mr-3"></span>
+                    <span class="menu-collapsed">Absensi Siswa</span>
+                </div>
+            </a>
+            <a href="#" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-pencil-square fa-fw mr-3"></span>
                     <span class="menu-collapsed">UTS</span>
                 </div>
@@ -77,6 +83,13 @@
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-pencil-square fa-fw mr-3"></span>
                     <span class="menu-collapsed">UAS</span>
+                </div>
+            </a>
+
+            <a href="#" class="bg-light list-group-item list-group-item-action">
+                <div class="d-flex w-100 justify-content-start align-items-center">
+                    <span class="fa fa-clone fa-fw mr-3"></span>
+                    <span class="menu-collapsed">Nilai Siswa</span>
                 </div>
             </a>
 

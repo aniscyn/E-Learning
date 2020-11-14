@@ -14,7 +14,7 @@
     </nav>
 
     <div class="card">
-    <h5 class="card-header font-weight bg-primary" style="color: white;"> Kelas - Mata Pelajaran - 
+    <h5 class="card-header font-weight bg-primary" style="color: white;"> Kelas - Mata Pelajaran -
     {{auth()->user()->guru->nm_lengkap}} {{auth()->user()->guru->nip}} </h5>
     <div class="card-body">
 
@@ -26,6 +26,7 @@
         <th>Nama Materi</th>
         <th>Jenis Materi</th>
         <th>Ringkasan Materi</th>
+        <th>Keterangan</th>
         <th>Aksi</th>
       </tr>
     </thead>
@@ -36,6 +37,7 @@
         <td>Pertemuan 1</td>
         <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        <td> Catatan untuk siswa : </td>
         </td>
         <td class="text-center"><a href="/guru/jadwal/materi/ubah"><button type="button" class="btn btn-outline-primary"> Ubah </button></a> <br><br>
         <button type="button" class="btn btn-outline-danger" > Hapus</button></td>

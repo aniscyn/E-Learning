@@ -35,7 +35,7 @@ Route::get('/siswa/jadwal/belajar', function(){
     return view('siswa/belajar-siswa');
 });
 
-//Absensi Siswa 
+//Absensi Siswa
 Route::get('/siswa/absensi', "App\Http\Controllers\Siswa\AbsenController@viewAbsen");
 Route::post('/siswa/absensi/{absen}/masuk', "App\Http\Controllers\Siswa\AbsenController@postAbsenMasuk");
 Route::post('/siswa/absensi/{absen}/keluar', "App\Http\Controllers\Siswa\AbsenController@postAbsenKeluar");
@@ -72,15 +72,22 @@ Route::get('/guru/profile/ubah', "App\Http\Controllers\Guru\ProfileGuruControlle
 Route::post('/guru/profile/ubah/{user}/process', "App\Http\Controllers\Guru\ProfileGuruController@postEdit");
 
 // Admin
-Route::get('/admin/data-admin', function(){
-    return view('admin/data-admin');
+Route::get('/admin', function(){
+    return view('admin/login-adm');
 });
-Route::get('/admin/data-admin/tambah', function(){
-    return view('admin/tambah-admin');
-});
-Route::get('/admin/data-admin/ubah', function(){
-    return view('admin/ubah-admin');
-});
+Route::get('/admin/data-admin', 'App\Http\Controllers\Admin\DataAdminController@viewDataAdmin');
+Route::get('/admin/data-admin/tambah', 'App\Http\Controllers\Admin\DataAdminController@viewTambah');
+Route::post('/admin/data-admin/tambah', 'App\Http\Controllers\Admin\DataAdminController@postTambah');
+Route::get('/admin/data-admin/{user}/ubah', 'App\Http\Controllers\Admin\DataAdminController@viewEdit');
+Route::post('/admin/data-admin/{user}/ubah', 'App\Http\Controllers\Admin\DataAdminController@postEdit');
+Route::post('/admin/data-admin/{user}/hapus', 'App\Http\Controllers\Admin\DataAdminController@postDelete');
+
+Route::get('/admin/data-kelas', 'App\Http\Controllers\Admin\DataKelasController@viewDataKelas');
+Route::get('/admin/data-kelas/tambah', 'App\Http\Controllers\Admin\DataKelasController@viewTambah');
+Route::post('/admin/data-kelas/tambah', 'App\Http\Controllers\Admin\DataKelasController@postTambah');
+Route::get('/admin/data-kelas/{user}/ubah', 'App\Http\Controllers\Admin\DataKelasController@viewEdit');
+Route::post('/admin/data-kelas/{user}/ubah', 'App\Http\Controllers\Admin\DataKelasController@postEdit');
+Route::post('/admin/data-kelas/{user}/hapus', 'App\Http\Controllers\Admin\DataKelasController@postDelete');
 
 Route::get('/admin/data-kelas', function(){
     return view('admin/data-kelas');

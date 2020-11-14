@@ -1,6 +1,6 @@
 <title>Profile - Guru</title>
 
-<link href="{{ asset('css/guru/profile-guru.css') }}" rel="stylesheet" type="text/css"> 
+<link href="{{ asset('css/guru/profile-guru.css') }}" rel="stylesheet" type="text/css">
 
 <!-- Navbar -->
 @include('guru.nav-guru')
@@ -14,8 +14,8 @@
     <li class="breadcrumb-item"><a href="/guru">Beranda</a></li>
     <li class="breadcrumb-item active" aria-current="page">Profile</li>
   </ol>
-</nav> 
-<a href="/guru/profile/ubah"><button type="button" class="btn btn-success float-right"><i class="fa fa-pencil-square-o" aria-hidden="true"> 
+</nav>
+<a href="/guru/profile/ubah"><button type="button" class="btn btn-success float-right"><i class="fa fa-pencil-square-o" aria-hidden="true">
     Ubah </i></button></a>
 <br><br>
 
@@ -24,9 +24,9 @@
     <!-- Control the column width, and how they should appear on different devices -->
     <div class="row">
       <div class="col-sm-6">
-          <div><img src="https://mpng.subpng.com/20180404/sqe/kisspng-computer-icons-user-profile-clip-art-big-5ac5283827d286.2570974715228703281631.jpg" 
-             class="img-rounded foto-profile" alt="profile"></div><br>
-            <button type="button" class="btn btn-outline-primary btn-upload"> Upload Foto</button>
+          <div><img src="https://mpng.subpng.com/20180404/sqe/kisspng-computer-icons-user-profile-clip-art-big-5ac5283827d286.2570974715228703281631.jpg"
+             class="img-rounded foto-profile" alt="profile"></div><br><br>
+            <input type="file" class="btn-upload">
       </div>
 
       <div class="col-sm-6">

@@ -12,36 +12,26 @@
     <li class="breadcrumb-item active" aria-current="page"> Tambah Data Admin</li>
      </ol>
     </nav>
+    <form action="/admin/data-admin/tambah" method="post">
+        @csrf
+        <div class="card">
+            <h5 class="card-header font-weight bg-info" style="color: white;">Tambah Data Admin</h5>
+            <div class="card-body">
 
-    <div class="card">
-    <h5 class="card-header font-weight bg-info" style="color: white;">Tambah Data Admin</h5>
-    <div class="card-body">
+            <div class="form-group row">
+            <label class="col-2 col-form-label"> Username</label>
+             <div class="col-10">
+            <input class="form-control" type="text" value="" id="user_admin" name="username" placeholder="Masukkan Username">
+            </div>
+            </div>
 
-    <form>
-    <div class="form-group row">
-    <label class="col-2 col-form-label"> Nama Lengkap</label>
-     <div class="col-10">
-    <input class="form-control" type="text" value="" id="nm_admin" placeholder="Masukkan Nama Lengkap">
-    </div>
-    </div>
-
-    <div class="form-group row">
-    <label class="col-2 col-form-label"> Username</label>
-     <div class="col-10">
-    <input class="form-control" type="text" value="" id="user_admin" placeholder="Masukkan Username">
-    </div>
-    </div>
-
-    <div class="form-group row">
-    <label class="col-2 col-form-label"> Kata Sandi</label>
-     <div class="col-10">
-    <input class="form-control" type="password" value="" id="pas_admin" placeholder="Masukkan Kata Sandi">
-    </div>
-    </div>
-
-    <button type="button" class="btn btn-info" style="margin-left: 17%"> Simpan Data</button>
-    
-
+            <div class="form-group row">
+            <label class="col-2 col-form-label"> Kata Sandi</label>
+             <div class="col-10">
+            <input class="form-control" type="password" value="" name="password" id="pas_admin" placeholder="Masukkan Kata Sandi">
+            </div>
+            </div>
+            <button type="submit" class="btn btn-info" style="margin-left: 17%"> Simpan Data</button>
     </form>
     </div>
     </div>

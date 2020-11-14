@@ -12,7 +12,8 @@
     <li class="breadcrumb-item active" aria-current="page"> Tambah Data Kelas</li>
      </ol>
     </nav>
-
+    <form action="/admin/data-kelas/tambah" method="post">
+    @csrf
     <div class="card">
     <h5 class="card-header font-weight bg-info" style="color: white;">Tambah Data Kelas</h5>
     <div class="card-body">
@@ -21,19 +22,19 @@
     <div class="form-group row">
     <label class="col-2 col-form-label"> Nama Kelas</label>
      <div class="col-10">
-    <input class="form-control" type="text" value="" id="nm_kelas" placeholder="Masukkan Nama Kelas">
+    <input class="form-control" type="text" name="nm_kelas" id="nm_kelas" placeholder="Masukkan Nama Kelas">
     </div>
     </div>
 
     <div class="form-group row">
     <label class="col-2 col-form-label"> Jurusan</label>
      <div class="col-10">
-    <input class="form-control" type="text" value="" id="jurusan" placeholder="Masukkan Jurusan">
+    <input class="form-control" type="text" name="jurusan" id="jurusan" placeholder="Masukkan Jurusan">
     </div>
     </div>
 
-    <button type="button" class="btn btn-info" style="margin-left: 17%"> Simpan Data</button>
-    
+    <button type="submit" class="btn btn-info" style="margin-left: 17%"> Simpan Data</button>
+
 
     </form>
     </div>
