@@ -71,13 +71,13 @@
                 <a href="/admin/data-kelas" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"> Data Kelas</span>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                <a href="/admin/data-mapel" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"> Data Mata Pelajaran</span>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                <a href="/admin/data-siswa" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"> Data Siswa</span>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                <a href="/admin/data-guru" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"> Data Guru</span>
                 </a>
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
@@ -85,6 +85,9 @@
                 </a>
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"> Data Absen</span>
+                </a>
+                <a href="" class="list-group-item list-group-item-action bg-dark text-white">
+                    <span class="menu-collapsed"> Data Materi</span>
                 </a>
                 <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"> Data Soal</span>

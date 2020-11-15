@@ -12,7 +12,8 @@ class DataAdminController extends Controller
     {
         $dataAdmin = User::query()
         ->where('role', 'admin')
-        ->get();
+        ->orderBy('username', 'asc')
+        ->Paginate(5);
 
         return view('admin/data-admin', [
             'data' => $dataAdmin,

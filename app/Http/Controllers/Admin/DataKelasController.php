@@ -10,7 +10,9 @@ class DataKelasController extends Controller
     public function viewDataKelas()
     {
         $dataKelas = Kelas::query()
-        ->Paginate(2);
+        ->orderBy('nm_kelas', 'asc')
+        ->orderBy('jurusan', 'asc')
+        ->Paginate(5);
 
         return view('admin/data-kelas', [
             'data' => $dataKelas,

@@ -19,7 +19,7 @@ class TbSiswa extends Migration
             $table->string('kelas_id');
             $table->string('nm_lengkap', 50);
             $table->date('tgl_lahir');
-            $table->string('jk', 10);
+            $table->string('jk', 10)->nullable();
             $table->text('alamat_siswa');
             $table->string('email' , 50)->nullable();
             $table->string('tlp', 13)->nullable();
