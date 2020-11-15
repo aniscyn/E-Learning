@@ -21,6 +21,7 @@ class SiswaSeeder extends Seeder
     public function run()
     {
         $user = User::factory()->create([
+            'id' => 3,
             'password' => bcrypt('1997-08-28'),
             'role' => 'siswa',
             'username' => 11190551
@@ -36,7 +37,7 @@ class SiswaSeeder extends Seeder
 
         $jadwal = Jadwal::factory(5)->create([
             'id_kelas' => $kelas->id_kelas,
-            'id_guru' => 11190552,
+            'id_guru' => 2,
             'id_mapel' => rand(1, 4),
         ])->each(function ($item) {
             $item->id_mapel = rand(1, 4);

@@ -15,6 +15,7 @@ class AdminSeeder extends Seeder
     public function run()
     {
         $user = User::factory()->create([
+            'id' => 1,
             'password' => bcrypt('admin'),
             'role' => 'admin',
             'username' => 'admin'

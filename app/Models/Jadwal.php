@@ -50,4 +50,14 @@ class Jadwal extends Model
     public function mataPelajaran() {
         return $this->hasOne(MataPelajaran::class, 'id_mapel', 'id_mapel');
     }
+
+    public function kelas()
+    {
+        return $this->hasOne(Kelas::class, 'id_kelas', 'id_kelas');
+    }
+
+    public function materi()
+    {
+        return $this->hasMany(Materi::class, 'id_jadwal', 'id_jadwal');
+    }
 }
