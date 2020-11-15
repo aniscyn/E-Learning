@@ -14,7 +14,7 @@
     </nav>
 
     <div class="card">
-    <h5 class="card-header font-weight bg-primary" style="color: white;"> Kelas - Mata Pelajaran -
+    <h5 class="card-header font-weight bg-primary" style="color: white;"> {{$jadwal->kelas->nm_kelas}} - {{$jadwal->mataPelajaran->nm_mapel}} -
     {{auth()->user()->guru->nm_lengkap}} {{auth()->user()->guru->nip}} </h5>
     <div class="card-body">
 
@@ -31,23 +31,25 @@
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td class="text-center" width="5%">1</td>
-        <td>Bahasa Indonesia</td>
-        <td>Pertemuan 1</td>
-        <td>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        <td> Catatan untuk siswa : </td>
-        </td>
-        <td class="text-center"><a href="/guru/jadwal/materi/ubah"><button type="button" class="btn btn-outline-primary"> Ubah </button></a> <br><br>
-        <button type="button" class="btn btn-outline-danger" > Hapus</button></td>
-      </tr>
+        @foreach ($dataMateri as $materi)
+        <tr>
+            <td class="text-center" width="5%">{{$loop->iteration + (($dataMateri->currentPage() - 1) * $dataMateri->perPage())}}</td>
+            <td>{{$materi->nm_materi}}</td>
+            <td>{{$materi->js_materi}}</td>
+            <td>{{$materi->rs_materi}}</td>
+            <td>{{$materi->keterangan}}</td>
+            </td>
+            <td class="text-center"><a href="/guru/jadwal/materi/ubah"><button type="button" class="btn btn-outline-primary"> Ubah </button></a> <br><br>
+            <button type="button" class="btn btn-outline-danger" > Hapus</button></td>
+          </tr>
+        @endforeach
     </tbody>
   </table>
-  <ul class="pagination ">
+  {{$dataMateri->links()}}
+  {{-- <ul class="pagination ">
   <li class="page-item"><a class="page-link" href="#">1</a></li>
   <li class="page-item"><a class="page-link" href="#">2</a></li>
-</ul>
+</ul> --}}
 
     </div>
     </div>

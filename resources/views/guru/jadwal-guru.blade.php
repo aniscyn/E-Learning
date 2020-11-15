@@ -30,6 +30,7 @@
           <thead>
             <tr>
               <th scope="col">Jam Ke </th>
+              <th scope="col">Kelas </th>
               <th scope="col">keterangan </th>
               <th scope="col">Mata Pelajaran</th>
             </tr>
@@ -38,8 +39,9 @@
               @foreach ($item as $mapel)
               <tr>
                 <th scope="row">{{$loop->iteration}}</th>
+                <td>{{ $mapel->kelas->nm_kelas }}</td>
                 <td>{{$mapel->jm_mulai}} - {{$mapel->jm_selesai}}</td>
-                <td><a href=""> <button type="button" class="btn btn-primary" >{{$mapel->mataPelajaran->nm_mapel}}</button></a></td>
+                <td><a href="/guru/jadwal/{{$mapel->id_jadwal}}/materi"> <button type="button" class="btn btn-primary" >{{$mapel->mataPelajaran->nm_mapel}}</button></a></td>
               </tr>
               @endforeach
           </tbody>

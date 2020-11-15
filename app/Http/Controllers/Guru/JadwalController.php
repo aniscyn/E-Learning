@@ -3,6 +3,7 @@ namespace App\Http\Controllers\Guru;
 
 use App\Models\Jadwal;
 use App\Http\Controllers\Controller;
+use App\Models\Materi;
 
 class JadwalController extends Controller
 {
@@ -21,6 +22,18 @@ class JadwalController extends Controller
 
         return view('guru/jadwal-guru', [
             'jadwal' => $jadwal,
+        ]);
+    }
+
+    public function viewMateri(Jadwal $jadwal)
+    {
+        $materi = Materi::query()
+        ->where('id_jadwal', $jadwal->id_jadwal)
+        ->paginate(5);
+
+        return view('guru/materi', [
+            'jadwal' => $jadwal,
+            'dataMateri' => $materi,
         ]);
     }
 }

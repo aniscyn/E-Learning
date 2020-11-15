@@ -54,9 +54,7 @@ Route::get('/guru', function() {
     return view('guru/beranda-guru');
 });
 Route::get('/guru/jadwal', "App\Http\Controllers\Guru\JadwalController@viewJadwal");
-Route::get('/guru/jadwal/materi', function() {
-    return view('guru/materi');
-});
+Route::get('/guru/jadwal/{jadwal}/materi', "App\Http\Controllers\Guru\JadwalController@viewMateri");
 Route::get('/guru/jadwal/materi/tambah', function() {
     return view('guru/tambah-materi');
 });
