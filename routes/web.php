@@ -53,9 +53,7 @@ Route::post('/siswa/profile/ubah/{user}/process', "App\Http\Controllers\Siswa\Pr
 Route::get('/guru', function() {
     return view('guru/beranda-guru');
 });
-Route::get('/guru/jadwal', function() {
-    return view('guru/jadwal-guru');
-});
+Route::get('/guru/jadwal', "App\Http\Controllers\Guru\JadwalController@viewJadwal");
 Route::get('/guru/jadwal/materi', function() {
     return view('guru/materi');
 });
