@@ -20,7 +20,7 @@ class TbMateri extends Migration
             $table->string('js_materi', 15);
             $table->text('rs_materi');
             $table->string('keterangan', 50)->nullable();
-            $table->string('upload_materi', 12);
+            $table->text('upload_materi');
         });
     }
 

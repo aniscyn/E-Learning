@@ -18,7 +18,7 @@
     {{auth()->user()->guru->nm_lengkap}} {{auth()->user()->guru->nip}} </h5>
     <div class="card-body">
 
-    <a href="/guru/jadwal/materi/tambah"> <button type="button" class="btn btn-secondary"> Tambah Materi</button> </a> <br><br>
+    <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/tambah"> <button type="button" class="btn btn-secondary"> Tambah Materi</button> </a> <br><br>
     <table class="table table-bordered table-striped table-responsive">
     <thead class="text-center">
       <tr>
@@ -36,11 +36,14 @@
             <td class="text-center" width="5%">{{$loop->iteration + (($dataMateri->currentPage() - 1) * $dataMateri->perPage())}}</td>
             <td>{{$materi->nm_materi}}</td>
             <td>{{$materi->js_materi}}</td>
-            <td>{{$materi->rs_materi}}</td>
+            <td>{!!$materi->rs_materi!!}</td>
             <td>{{$materi->keterangan}}</td>
             </td>
-            <td class="text-center"><a href="/guru/jadwal/materi/ubah"><button type="button" class="btn btn-outline-primary"> Ubah </button></a> <br><br>
-            <button type="button" class="btn btn-outline-danger" > Hapus</button></td>
+            <td class="text-center"><a href="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/{{$materi->id_materi}}/ubah"><button type="button" class="btn btn-outline-primary"> Ubah </button></a> <br><br>
+            <form action="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/{{$materi->id_materi}}/hapus" method="post">
+                @csrf
+                <button type="submit" class="btn btn-outline-danger" > Hapus</button></td>
+            </form>
           </tr>
         @endforeach
     </tbody>

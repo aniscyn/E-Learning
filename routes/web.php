@@ -55,12 +55,12 @@ Route::get('/guru', function() {
 });
 Route::get('/guru/jadwal', "App\Http\Controllers\Guru\JadwalController@viewJadwal");
 Route::get('/guru/jadwal/{jadwal}/materi', "App\Http\Controllers\Guru\JadwalController@viewMateri");
-Route::get('/guru/jadwal/materi/tambah', function() {
-    return view('guru/tambah-materi');
-});
-Route::get('/guru/jadwal/materi/ubah', function() {
-    return view('guru/ubah-materi');
-});
+Route::get('/guru/jadwal/{jadwal}/materi/tambah', "App\Http\Controllers\Guru\JadwalController@viewTambahMateri");
+Route::post('/guru/jadwal/{jadwal}/materi/tambah', "App\Http\Controllers\Guru\JadwalController@postTambahMateri");
+Route::get('/guru/jadwal/{jadwal}/materi/{materi}/ubah', "App\Http\Controllers\Guru\JadwalController@viewEditMateri");
+Route::post('/guru/jadwal/{jadwal}/materi/{materi}/ubah', "App\Http\Controllers\Guru\JadwalController@postEditMateri");
+Route::post('/guru/jadwal/{jadwal}/materi/{materi}/hapus', "App\Http\Controllers\Guru\JadwalController@postHapusMateri");
+
 
 //Profile Guru
 Route::get('/guru/profile', "App\Http\Controllers\Guru\ProfileGuruController@viewProfile");

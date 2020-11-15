@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Jadwal;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Materi extends Model
 {
@@ -16,4 +17,9 @@ class Materi extends Model
     protected $primaryKey = 'id_materi';
     // protected $keyType = 'string';
     protected $guarded = [];
+
+    public function jadwal()
+    {
+        return $this->hasOne(Jadwal::class, 'id_jadwal', 'id_jadwal');
+    }
 }
