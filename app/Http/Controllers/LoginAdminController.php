@@ -13,6 +13,7 @@ class LoginAdminController extends Controller
         $auth = Auth::attempt([
             'username' => request()->get('username'),
             'password' => request()->get('password'),
+            'role' => 'admin',
         ]);
 
         if (!$auth) {

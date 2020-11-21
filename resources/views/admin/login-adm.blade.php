@@ -33,7 +33,7 @@
         src="https://st2.depositphotos.com/1688079/5662/i/600/depositphotos_56620495-stock-photo-member-icon-purple-button.jpg"
         style="width: 50%;height:40%;margin-left:25%">
 
-        <form class="login-form" action="/admin" method="post">
+        <form class="login-form" action="/admin/login" method="post">
         @csrf
         <div class="form-group"><br>
         <input type="text" class="form-control" name="username" placeholder="Masukkan Username" >
