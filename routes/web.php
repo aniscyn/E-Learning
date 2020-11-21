@@ -71,8 +71,8 @@ Route::post('/guru/profile/ubah/{user}/process', "App\Http\Controllers\Guru\Prof
 Route::get('/admin', function(){
     return view('admin/login-adm');
 });
-Route::post('/login', "App\Http\Controllers\LoginAdminController@processLogin");
-Route::get('/logout', "App\Http\Controllers\LoginAdminController@processLogout");
+Route::post('/admin/login', "App\Http\Controllers\LoginAdminController@processLogin");
+Route::get('/admin/logout', "App\Http\Controllers\LoginAdminController@processLogout");
 
 Route::get('/admin/data-absen', "App\Http\Controllers\Admin\DataAbsenController@viewAbsen");
 
@@ -80,9 +80,6 @@ Route::get('/admin/beranda', function(){
     return view('admin/beranda-admin');
 });
 
-Route::get('/admin/data-absen', function(){
-    return view('admin/data-absen');
-});
 Route::get('/admin/data-materi', function(){
     return view('admin/data-materi');
 });
@@ -129,7 +126,7 @@ Route::get('/admin/data-jadwal/{jadwal}/ubah', 'App\Http\Controllers\Admin\DataJ
 Route::post('/admin/data-jadwal/{jadwal}/ubah', 'App\Http\Controllers\Admin\DataJadwalController@postEdit');
 Route::post('/admin/data-jadwal/{jadwal}/hapus', 'App\Http\Controllers\Admin\DataJadwalController@postDelete');
 // Data Materi
-Route::get('/admin/data-materi', 'App\Http\Controllers\Admin\DataMateriController@viewDataMateri');
+Route::get('/admin/data-materi', 'App\Http\Controllers\Admin\DataMateriController@viewDataMapel');
 Route::get('/admin/data-materi/tambah', 'App\Http\Controllers\Admin\DataMateriController@viewTambah');
 Route::post('/admin/data-materi/tambah', 'App\Http\Controllers\Admin\DataMateriController@postTambah');
 Route::get('/admin/data-materi/{materi}/ubah', 'App\Http\Controllers\Admin\DataMateriController@viewEdit');
