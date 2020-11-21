@@ -71,8 +71,20 @@ Route::post('/guru/profile/ubah/{user}/process', "App\Http\Controllers\Guru\Prof
 Route::get('/admin', function(){
     return view('admin/login-adm');
 });
-Route::get('/admin/data-jadwal', function(){
-    return view('admin/data-jadwal');
+Route::post('/login', "App\Http\Controllers\LoginAdminController@processLogin");
+Route::get('/logout', "App\Http\Controllers\LoginAdminController@processLogout");
+
+Route::get('/admin/data-absen', "App\Http\Controllers\Admin\DataAbsenController@viewAbsen");
+
+Route::get('/admin/beranda', function(){
+    return view('admin/beranda-admin');
+});
+
+Route::get('/admin/data-absen', function(){
+    return view('admin/data-absen');
+});
+Route::get('/admin/data-materi', function(){
+    return view('admin/data-materi');
 });
 // Data Admin
 Route::get('/admin/data-admin', 'App\Http\Controllers\Admin\DataAdminController@viewDataAdmin');
@@ -109,6 +121,20 @@ Route::post('/admin/data-guru/tambah', 'App\Http\Controllers\Admin\DataGuruContr
 Route::get('/admin/data-guru/{guru}/ubah', 'App\Http\Controllers\Admin\DataGuruController@viewEdit');
 Route::post('/admin/data-guru/{guru}/ubah', 'App\Http\Controllers\Admin\DataGuruController@postEdit');
 Route::post('/admin/data-guru/{guru}/hapus', 'App\Http\Controllers\Admin\DataGuruController@postDelete');
+// Admin Jadwal
+Route::get('/admin/data-jadwal', 'App\Http\Controllers\Admin\DataJadwalController@viewDataJadwal');
+Route::get('/admin/data-jadwal/tambah', 'App\Http\Controllers\Admin\DataJadwalController@viewTambah');
+Route::post('/admin/data-jadwal/tambah', 'App\Http\Controllers\Admin\DataJadwalController@postTambah');
+Route::get('/admin/data-jadwal/{jadwal}/ubah', 'App\Http\Controllers\Admin\DataJadwalController@viewEdit');
+Route::post('/admin/data-jadwal/{jadwal}/ubah', 'App\Http\Controllers\Admin\DataJadwalController@postEdit');
+Route::post('/admin/data-jadwal/{jadwal}/hapus', 'App\Http\Controllers\Admin\DataJadwalController@postDelete');
+// Data Materi
+Route::get('/admin/data-materi', 'App\Http\Controllers\Admin\DataMateriController@viewDataMateri');
+Route::get('/admin/data-materi/tambah', 'App\Http\Controllers\Admin\DataMateriController@viewTambah');
+Route::post('/admin/data-materi/tambah', 'App\Http\Controllers\Admin\DataMateriController@postTambah');
+Route::get('/admin/data-materi/{materi}/ubah', 'App\Http\Controllers\Admin\DataMateriController@viewEdit');
+Route::post('/admin/data-materi/{materi}/ubah', 'App\Http\Controllers\Admin\DataMateriController@postEdit');
+Route::post('/admin/data-materi/{materi}/hapus', 'App\Http\Controllers\Admin\DataMateriController@postDelete');
 // Halaman Untuk Generate Data
 Route::get('/generator/siswa', "App\Http\Controllers\Generators\SiswaController@viewAdd");
 Route::post('/generator/siswa', "App\Http\Controllers\Generators\SiswaController@processAdd");

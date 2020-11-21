@@ -49,8 +49,8 @@
         </div>
     @endforeach
 
-<div class="row">
-<div class="col-sm-6">
+
+<div class="col-sm-6" style="margin-top: 20px">
 <div class="card card-course" style="width: 30rem;">
 <div class="card-header bg-light"><h2> Juma't </h2></div>
 <div class="card-body">
@@ -59,7 +59,7 @@
 </div>
 </div>
 
-<div class="col-sm-6">
+<div class="col-sm-6" style="margin-top: 20px">
 <div class="card card-course" style="width: 30rem;">
 <div class="card-header bg-light" > <h2> Sabtu </h2></div>
 <div class="card-body">

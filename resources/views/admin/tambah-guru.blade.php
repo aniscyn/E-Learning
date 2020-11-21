@@ -7,7 +7,7 @@
 
     <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Beranda</a></li>
+    <li class="breadcrumb-item"><a href="/admin/beranda">Beranda</a></li>
     <li class="breadcrumb-item"><a href="/admin/data-guru"> Data Guru </a></li>
     <li class="breadcrumb-item active" aria-current="page"> Tambah Data Guru </li>
      </ol>

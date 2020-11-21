@@ -10,7 +10,7 @@
     <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Beranda</a></li>
     <li class="breadcrumb-item"><a href=""> Jadwal</a></li>
-    <li class="breadcrumb-item"><a href="/guru/jadwal/materi"> Materi</a></li>
+    <li class="breadcrumb-item"><a href="/guru/jadwal/{{$jadwal->id_jadwal}}/materi"> Materi</a></li>
     <li class="breadcrumb-item active" aria-current="page"> Ubah Materi</li>
      </ol>
     </nav>

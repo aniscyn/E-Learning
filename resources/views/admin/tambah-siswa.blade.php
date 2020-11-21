@@ -7,7 +7,7 @@
 
     <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Beranda</a></li>
+    <li class="breadcrumb-item"><a href="/admin/beranda">Beranda</a></li>
     <li class="breadcrumb-item"><a href="/admin/data-siswa"> Data Siswa </a></li>
     <li class="breadcrumb-item active" aria-current="page"> Tambah Data Siswa </li>
      </ol>
@@ -68,7 +68,7 @@
     <div class="form-group row">
     <label class="col-2 col-form-label">Kelas</label>
     <div class="col-10">
-    <select name="kelas" id="kelas">
+    <select name="kelas" id="kelas" class="form-control">
         @foreach ($dataKelas as $kelas)
             <option value="{{$kelas->id_kelas}}">{{$kelas->nm_kelas}}</option>
         @endforeach

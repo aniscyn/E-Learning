@@ -13,6 +13,7 @@ class User extends Authenticatable
 
     public const ROLE_SISWA = "siswa";
     public const ROLE_GURU = 'guru';
+    public const ROLE_ADMIN = 'admin';
 
     public $incrementing = true;
 
@@ -30,6 +31,11 @@ class User extends Authenticatable
         return $this->hasOne(Guru::class, 'user_id', 'id');
     }
 
+    public function admin()
+    {
+        return $this->hasOne(Guru::class, 'user_id', 'id');
+    }
+
     public function isRoleSiswa()
     {
         return ($this->role == self::ROLE_SISWA);
@@ -38,5 +44,9 @@ class User extends Authenticatable
     public function isRoleGuru()
     {
         return ($this->role == self::ROLE_GURU);
+    }
+    public function isRoleAdmin()
+    {
+        return ($this->role == self::ROLE_ADMIN);
     }
 }

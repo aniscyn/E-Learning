@@ -7,7 +7,7 @@
 
     <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Beranda</a></li>
+    <li class="breadcrumb-item"><a href="/admin/beranda">Beranda</a></li>
     <li class="breadcrumb-item"><a href="/admin/data-mapel"> Data Mata Pelajaran</a></li>
     <li class="breadcrumb-item active" aria-current="page"> Tambah Data Mata Pelajaran</li>
      </ol>
@@ -19,6 +19,7 @@
     <div class="card-body">
 
     <form>
+
     <div class="form-group row">
     <label class="col-2 col-form-label"> Mata Pelajaran</label>
      <div class="col-10">

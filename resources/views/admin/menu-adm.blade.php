@@ -49,7 +49,7 @@
         <ul class="list-group">
 
             <!-- Menu with submenu -->
-            <a href="#submenu1" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+            <a href="/admin/beranda" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-dashboard fa-fw mr-3"></span>
                     <span class="menu-collapsed"> Beranda</span>
@@ -80,19 +80,19 @@
                 <a href="/admin/data-guru" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"> Data Guru</span>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                <a href="/admin/data-jadwal" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"> Data Jadwal</span>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                <a href="/admin/data-absen" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"> Data Absen</span>
                 </a>
-                <a href="" class="list-group-item list-group-item-action bg-dark text-white">
+                <a href="/admin/data-materi" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"> Data Materi</span>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                <a href="/admin/data-soal" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"> Data Soal</span>
                 </a>
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
+                <a href="/admin/data-nilai" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"> Data Nilai</span>
                 </a>
             </div>
