@@ -17,7 +17,7 @@ class GuruAuth
     public function handle(Request $request, Closure $next)
     {
         $user = auth()->user();
-        if ($user->role != 'guru') {
+        if (empty($user) || $user->role != 'guru') {
             return redirect('/');
         }
 

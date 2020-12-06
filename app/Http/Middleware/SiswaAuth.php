@@ -17,7 +17,7 @@ class SiswaAuth
     public function handle(Request $request, Closure $next)
     {
         $user = auth()->user();
-        if ($user->role != 'siswa') {
+        if (empty($user) || $user->role != 'siswa') {
             return redirect('/');
         }
 
