@@ -69,6 +69,10 @@ Route::group([
     Route::post('/siswa/profile/ubah/{user}/process', "App\Http\Controllers\Siswa\ProfileController@postEdit");
 });
 
+Route::get('/siswa/ubah-sandi', function () {
+    return view('siswa/ubah-sandi');
+});
+
 // Route untuk guru yang telah login
 Route::group([
     'middleware' => [

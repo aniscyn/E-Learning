@@ -28,6 +28,7 @@
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <a class="dropdown-item" href="/guru/profile">Profile</a>
+    <a class="dropdown-item" href="/guru/ubah-sandi">Ubah Kata Sandi</a>
     <a class="dropdown-item" href="#">Nilai</a>
     <a class="dropdown-item" href="/guru/logout">Keluar</a>
   </div>

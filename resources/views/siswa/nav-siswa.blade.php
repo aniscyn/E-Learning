@@ -28,6 +28,7 @@
 
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <a class="dropdown-item" href="/siswa/profile">Profile</a>
+    <a class="dropdown-item" href="/siswa/ubah-sandi">Ubah Kata Sandi</a>
     <a class="dropdown-item" href="#">Nilai</a>
     <a class="dropdown-item" href="/logout">Keluar</a>
   </div>
