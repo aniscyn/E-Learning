@@ -7,10 +7,11 @@ use App\Models\Kelas;
 use App\Models\Materi;
 use App\Models\MataPelajaran;
 use App\Http\Controllers\Controller;
+use App\Models\Jadwal;
 
 class DataMateriController extends Controller
 {
-    public function viewDataMapel()
+    public function viewDataMateri(Jadwal $jadwal)
     {
 
         $dataMateri = Materi::query()
@@ -19,10 +20,11 @@ class DataMateriController extends Controller
 
         return view('/admin/data-materi', [
             'data' => $dataMateri,
+            'jadwal' => $jadwal,
         ]);
     }
 
-    public function viewTambah()
+    public function viewTambah(Jadwal $jadwal)
     {
         $dataKelas = Kelas::all();
         $dataMapel = MataPelajaran::all();
@@ -32,26 +34,26 @@ class DataMateriController extends Controller
             'dataKelas' => $dataKelas,
             'dataMapel' => $dataMapel,
             'dataGuru' => $dataGuru,
+            'jadwal' => $jadwal,
         ]);
     }
 
-    public function postTambah()
+    public function postTambah(Jadwal $jadwal)
     {
         $request = request()->all();
         $user = Materi::create([
-            'id_guru' => $request['guru'],
-            'id_kelas' => $request['kelas'],
-            'id_mapel' => $request['mapel'],
+            'id_jadwal' => $jadwal->id_jadwal,
             'nm_materi' => $request['nm_materi'],
             'js_materi' => $request['js_materi'],
             'rs_materi' => $request['rs_materi'],
             'keterangan' => $request['keterangan'],
+            'upload_materi' => 'dummy data',
         ]);
 
-        return redirect('/admin/data-materi');
+        return redirect("/admin/data-jadwal/{$jadwal->id_jadwal}/data-materi");
     }
 
-    public function viewEdit(Materi $materi)
+    public function viewEdit(Jadwal $jadwal, Materi $materi)
     {
         $dataKelas = Kelas::all();
         $dataMapel = MataPelajaran::all();
@@ -61,15 +63,14 @@ class DataMateriController extends Controller
             'dataKelas' => $dataKelas,
             'dataMapel' => $dataMapel,
             'dataGuru' => $dataGuru,
+            'jadwal' => $jadwal,
+            'materi' => $materi,
         ]);
     }
 
-    public function postEdit(Materi $materi)
+    public function postEdit(Jadwal $jadwal, Materi $materi)
     {
         $request = request()->all();
-        $materi ->id_guru = request()->get('guru');
-        $materi ->id_kelas = request()->get('kelas');
-        $materi ->id_mapel = request()->get('mapel');
         $materi ->nm_materi = request()->get('nm_materi');
         $materi ->js_materi = request()->get('js_materi');
         $materi ->rs_materi = request()->get('rs_materi');
@@ -77,10 +78,10 @@ class DataMateriController extends Controller
 
         $materi->save();
 
-        return redirect('/admin/data-materi');
+        return redirect("/admin/data-jadwal/{$jadwal->id_jadwal}/data-materi");
     }
 
-    public function postDelete(Materi $materi)
+    public function postDelete(Jadwal $jadwal, Materi $materi)
     {
         $materi->delete();
         if($materi){

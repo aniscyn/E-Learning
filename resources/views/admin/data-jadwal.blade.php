@@ -61,15 +61,19 @@
         <td>{{$jadwal->nama_hari}} </td>
         <td>{{$jadwal->jm_mulai}} </td>
         <td>{{$jadwal->jm_selesai}} </td>
+        <td>
+            <a href="/admin/data-jadwal/{{$jadwal->id_jadwal}}/data-materi" class="btn btn-outline-warning">Materi</a>
+        </td>
         <td class="text-center" width="10%">
             <a href="/admin/data-jadwal/{{$jadwal->id_jadwal}}/ubah">
-            <button type="button" class="btn btn-outline-primary"> Ubah </button></a></td>
-            <td class="text-center" width="10%">
-
+            <button type="button" class="btn btn-outline-primary"> Ubah </button></a>
+        </td>
+        <td class="text-center" width="10%">
             <form action="/admin/data-jadwal/{{$jadwal->id_jadwal}}/hapus" method="post">
-             @csrf
-            <button type="submit"  onclick="jadwalFunction()" name="jadwal" class="btn btn-outline-danger" > Hapus</button></td>
-        </form>
+                @csrf
+                <button type="submit"  onclick="jadwalFunction()" name="jadwal" class="btn btn-outline-danger" > Hapus</button>
+            </form>
+        </td>
 
       </tr>
       @endforeach

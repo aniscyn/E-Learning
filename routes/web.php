@@ -126,12 +126,12 @@ Route::get('/admin/data-jadwal/{jadwal}/ubah', 'App\Http\Controllers\Admin\DataJ
 Route::post('/admin/data-jadwal/{jadwal}/ubah', 'App\Http\Controllers\Admin\DataJadwalController@postEdit');
 Route::post('/admin/data-jadwal/{jadwal}/hapus', 'App\Http\Controllers\Admin\DataJadwalController@postDelete');
 // Data Materi
-Route::get('/admin/data-materi', 'App\Http\Controllers\Admin\DataMateriController@viewDataMapel');
-Route::get('/admin/data-materi/tambah', 'App\Http\Controllers\Admin\DataMateriController@viewTambah');
-Route::post('/admin/data-materi/tambah', 'App\Http\Controllers\Admin\DataMateriController@postTambah');
-Route::get('/admin/data-materi/{materi}/ubah', 'App\Http\Controllers\Admin\DataMateriController@viewEdit');
-Route::post('/admin/data-materi/{materi}/ubah', 'App\Http\Controllers\Admin\DataMateriController@postEdit');
-Route::post('/admin/data-materi/{materi}/hapus', 'App\Http\Controllers\Admin\DataMateriController@postDelete');
+Route::get('/admin/data-jadwal/{jadwal}/data-materi', 'App\Http\Controllers\Admin\DataMateriController@viewDataMateri');
+Route::get('/admin/data-jadwal/{jadwal}/data-materi/tambah', 'App\Http\Controllers\Admin\DataMateriController@viewTambah');
+Route::post('/admin/data-jadwal/{jadwal}/data-materi/tambah', 'App\Http\Controllers\Admin\DataMateriController@postTambah');
+Route::get('/admin/data-jadwal/{jadwal}/data-materi/{materi}/ubah', 'App\Http\Controllers\Admin\DataMateriController@viewEdit');
+Route::post('/admin/data-jadwal/{jadwal}/data-materi/{materi}/ubah', 'App\Http\Controllers\Admin\DataMateriController@postEdit');
+Route::post('/admin/data-jadwal/{jadwal}/data-materi/{materi}/hapus', 'App\Http\Controllers\Admin\DataMateriController@postDelete');
 // Halaman Untuk Generate Data
 Route::get('/generator/siswa', "App\Http\Controllers\Generators\SiswaController@viewAdd");
 Route::post('/generator/siswa', "App\Http\Controllers\Generators\SiswaController@processAdd");
