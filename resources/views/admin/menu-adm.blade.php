@@ -33,7 +33,7 @@
                 <label class="nav-link fa fa-user-circle-o" > {{auth()->user()->username}}</label>
             </li>
             <li class="nav-item">
-                <a class="nav-link fa fa-sign-out" href="/admin">Keluar</a>
+                <a class="nav-link fa fa-sign-out" href="/admin/logout">Keluar</a>
             </li>
 
         </ul>

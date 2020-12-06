@@ -29,7 +29,7 @@
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <a class="dropdown-item" href="/guru/profile">Profile</a>
     <a class="dropdown-item" href="#">Nilai</a>
-    <a class="dropdown-item" href="/logout">Keluar</a>
+    <a class="dropdown-item" href="/guru/logout">Keluar</a>
   </div>
 </div>
 
