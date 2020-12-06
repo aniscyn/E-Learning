@@ -12,44 +12,11 @@
     <li class="breadcrumb-item active" aria-current="page"> Tambah Data Materi</li>
      </ol>
     </nav>
-    <form action="/admin/data-materi/tambah" method="post">
+    <form action="/admin/data-jadwal/{{$jadwal->id_jadwal}}/data-materi/tambah" method="post">
         @csrf
         <div class="card">
             <h5 class="card-header font-weight bg-info" style="color: white;">Tambah Data Materi</h5>
             <div class="card-body">
-
-            <div class="form-group row">
-            <label class="col-2 col-form-label"> Nama Guru</label>
-             <div class="col-10">
-                <select name="guru" id="guru" class="form-control">
-                    @foreach ($dataGuru as $guru)
-                    <option value="{{$guru->user->id}}">{{$guru->nm_lengkap}}</option>
-                    @endforeach
-                    </select>
-            </div>
-            </div>
-
-            <div class="form-group row">
-            <label class="col-2 col-form-label">Kelas</label>
-            <div class="col-10">
-                <select name="kelas" id="kelas" class="form-control">
-                    @foreach ($dataKelas as $kelas)
-                    <option value="{{$kelas->id_kelas}}">{{$kelas->nm_kelas}}</option>
-                    @endforeach
-                    </select>
-            </div>
-            </div>
-
-            <div class="form-group row">
-            <label class="col-2 col-form-label">Mata Pelajaran</label>
-            <div class="col-10">
-                <select name="mapel" id="mapel" class="form-control">
-                    @foreach ($dataMapel as $mapel)
-                    <option value="{{$mapel->id_mapel}}">{{$mapel->nm_mapel}}</option>
-                    @endforeach
-                    </select>
-            </div>
-            </div>
 
             <div class="form-group row">
             <label class="col-2 col-form-label"> Nama Materi</label>

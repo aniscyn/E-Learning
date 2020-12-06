@@ -17,7 +17,7 @@
         <div class="card">
             <h5 class="card-header font-weight bg-info" style="color: white;">Data Materi</h5>
             <div class="card-body">
-            <a href="/admin/data-materi/tambah"> <button type="button" class="btn btn-secondary"> Tambah Data Materi</button> </a><br><br>
+            <a href="/admin/data-jadwal/{{$jadwal->id_jadwal}}/data-materi/tambah"> <button type="button" class="btn btn-secondary"> Tambah Data Materi</button> </a><br><br>
             @if (session('success'))
             <div class="alert alert-success alert-dismissible" style="width: 30%;margin-left:70%;margin-top:-40px">
                 <button type="button" class="close" data-dismiss="alert">&times;</button>
@@ -30,13 +30,16 @@
                 {{session('error')}}</div>
             @endif
 
+    <div>
+        Kelas : {{$jadwal->kelas->nm_kelas}}<br />
+        Guru : {{$jadwal->userGuru->guru->nm_lengkap}}<br />
+        Mata Pelajaran : {{$jadwal->mataPelajaran->nm_mapel}}<br />
+    </div>
+    <br />
     <table class="table table-bordered table-striped table-responsive">
     <thead class="text-center">
       <tr>
         <th>No</th>
-        <th>Nama Guru </th>
-        <th>Kelas</th>
-        <th>Mata Pelajaran</th>
         <th>Nama Materi</th>
         <th>Jenis Materi</th>
         <th>Ringkasan Materi</th>
@@ -49,20 +52,17 @@
 @foreach ($data as $materi)
 
         <tr>
-            <td class="text-center" width="5%">1</td>
-            <td> Yuni </td>
-            <td> XII - MIPA 2 </td>
-            <td> Biologi </td>
+            <td class="text-center" width="5%">{{$loop->iteration + (($data->currentPage() - 1) * $data->perPage())}}</td>
             <td>{{$materi->nm_materi}}</td>
             <td>{{$materi->js_materi}}</td>
             <td>{!!$materi->rs_materi!!}</td>
             <td>{{$materi->keterangan}}</td>
             <td class="text-center" width="10%">
-                <a href="/admin/data-materi/{{$materi->id_materi}}/ubah">
+                <a href="/admin/data-jadwal/{{$jadwal->id_jadwal}}/data-materi/{{$materi->id_materi}}/ubah">
                     <button type="button" class="btn btn-outline-primary"> Ubah </button></a></td>
                     <td class="text-center" width="10%">
 
-                    <form action="/admin/data-materi/{{$materi->id_materi}}/hapus" method="post">
+                    <form action="/admin/data-jadwal/{{$jadwal->id_jadwal}}/data-materi/{{$materi->id_materi}}/hapus" method="post">
                      @csrf
                     <button type="submit"  onclick="jadwalFunction()" name="jadwal" class="btn btn-outline-danger" > Hapus</button></td>
                 </form>
