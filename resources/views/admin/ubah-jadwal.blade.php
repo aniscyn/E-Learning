@@ -12,7 +12,7 @@
     <li class="breadcrumb-item active" aria-current="page"> Tambah Data Ubah</li>
      </ol>
     </nav>
-    <form action="/admin/data-jadwal/ubah" method="post">
+    <form action="/admin/data-jadwal/{{$jadwal->id_jadwal}}/ubah" method="post">
         @csrf
         <div class="card">
             <h5 class="card-header font-weight bg-info" style="color: white;">Tambah Data Ubah</h5>
@@ -21,77 +21,58 @@
             <div class="form-group row">
             <label class="col-2 col-form-label"> Nama Guru</label>
              <div class="col-10">
-            <input class="form-control" type="text" value="" id="nm_lengkap" name="nm_lengkap"
-            placeholder="Masukkan Nama Guru" onkeypress='return harusHuruf(event)'>
-            </div>
-            </div>
-
-            <div class="form-group row">
-            <label class="col-2 col-form-label"> NIP</label>
-             <div class="col-10">
-            <input class="form-control" type="text" value="" name="nip" id="nip"
-            readonly>
+                <select name="guru" id="guru" class="form-control">
+                    @foreach ($dataGuru as $guru)
+                    <option value="{{$guru->user->id}}" {{($guru->user->id == $jadwal->id_guru) ? 'selected' : ''}}>{{$guru->nm_lengkap}}</option>
+                    @endforeach
+                    </select>
             </div>
             </div>
 
             <div class="form-group row">
             <label class="col-2 col-form-label">Kelas</label>
             <div class="col-10">
-            <select name="kelas" id="kelas" class="form-control">
-            @foreach ($dataKelas as $kelas)
-            <option value="{{$kelas->id_kelas}}">{{$kelas->nm_kelas}}</option>
-            @endforeach
-            </select>
+                <select name="kelas" id="kelas" value="{{$jadwal->id_kelas}}" class="form-control">
+                    @foreach ($dataKelas as $kelas)
+                    <option value="{{$kelas->id_kelas}}" {{($kelas->id_kelas == $jadwal->id_kelas) ? 'selected' : ''}}>{{$kelas->nm_kelas}}</option>
+                    @endforeach
+                    </select>
             </div>
             </div>
-
-            <div class="form-group row">
-                <label class="col-2 col-form-label">Jurusan</label>
-                <div class="col-10">
-                <select name="kelas" id="kelas" class="form-control">
-                @foreach ($dataKelas as $kelas)
-                <option value="{{$kelas->id_kelas}}">{{$kelas->jurusan}}</option>
-                @endforeach
-                </select>
-                </div>
-                </div>
 
             <div class="form-group row">
             <label class="col-2 col-form-label">Mata Pelajaran</label>
             <div class="col-10">
-            <select name="mapel" id="mapel" class="form-control">
-            @foreach ($dataMapel as $mapel)
-            <option value="{{$mapel->id_mapel}}">{{$mapel->nm_mapel}}</option>
-            @endforeach
-            </select>
+                <select name="mapel" id="mapel" class="form-control">
+                    @foreach ($dataMapel as $mapel)
+                    <option value="{{$mapel->id_mapel}}" {{($mapel->id_mapel == $jadwal->id_mapel) ? 'selected' : ''}}>{{$mapel->nm_mapel}}</option>
+                    @endforeach
+                    </select>
             </div>
             </div>
 
             <div class="form-group row">
             <label class="col-2 col-form-label"> Hari</label>
             <div class="col-10">
-            <input class="form-control" type="text" value="" name="nama_hari" id="nama_hari" placeholder="Masukkan Hari">
-            </div>
+                <select name="hari" id="hari" class="form-control">
+                    @foreach ($dataHari as $hari)
+                    <option value="{{$hari['urutan']}}" {{($hari['urutan'] == $jadwal->urutan_hari) ? 'selected' : ''}}>{{$hari['nama']}}</option>
+                    @endforeach
+                    </select>
+                 </div>
             </div>
 
             <div class="form-group row">
             <label class="col-2 col-form-label"> Jam Masuk</label>
             <div class="col-10">
-            <input class="form-control" type="time" value="" name="jm_masuk" id="jm_masuk" placeholder="Masukkan Jam Masuk">
+            <input class="form-control" type="time" value="{{$jadwal->jm_mulai}}" name="jm_mulai" id="jm_masuk" placeholder="Masukkan Jam Masuk">
             </div>
             </div>
 
             <div class="form-group row">
             <label class="col-2 col-form-label"> Jam Keluar</label>
             <div class="col-10">
-            <input class="form-control" type="time" value="" name="jm_keluar" id="jm_keluar"  placeholder="Masukkan Jam Keluar">
-            </div>
-            </div>
-
-            <div class="form-group row">
-            <label class="col-2 col-form-label"> Jam Masuk</label>
-            <div class="col-10">
-            <input class="form-control" type="text" value="" name="hari" id="hari" placeholder="Masukkan Hari">
+            <input class="form-control" type="time"  value="{{$jadwal->jm_selesai}}" name="jm_selesai" id="jm_keluar"  placeholder="Masukkan Jam Keluar">
             </div>
             </div>
 

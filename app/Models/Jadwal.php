@@ -47,6 +47,7 @@ class Jadwal extends Model
     protected $guarded = [];
 
     // Relations
+
     public function mataPelajaran() {
         return $this->hasOne(MataPelajaran::class, 'id_mapel', 'id_mapel');
     }
@@ -59,5 +60,30 @@ class Jadwal extends Model
     public function materi()
     {
         return $this->hasMany(Materi::class, 'id_jadwal', 'id_jadwal');
+    }
+
+    public function userGuru(){
+        return $this->hasOne(User::class, 'id', 'id_guru');
+    }
+
+
+    public static function getListHari()
+    {
+        return [
+            self::MINGGU,
+            self::SENIN,
+            self::SELASA,
+            self::RABU,
+            self::KAMIS,
+            self::JUMAT,
+            self::SABTU,
+        ];
+    }
+
+    public static function getHari($urutan)
+    {
+        $listHari = collect(self::getListHari());
+
+        return $listHari->where('urutan', $urutan)->first();
     }
 }

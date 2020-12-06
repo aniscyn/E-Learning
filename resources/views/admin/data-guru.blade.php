@@ -4,7 +4,7 @@
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
 
 @include('admin.menu-adm')
-<div class="container"style="margin-top: -49%;margin-left:15%">
+<div class="container"style="margin-top: -46%;margin-left:15%">
   <!-- MAIN -->
   <div class="col p-4">
 

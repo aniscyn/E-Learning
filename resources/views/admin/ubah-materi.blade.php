@@ -12,7 +12,7 @@
     <li class="breadcrumb-item active" aria-current="page"> Tambah Data Materi</li>
      </ol>
     </nav>
-    <form action="/admin/data-materi/tambah" method="post">
+    <form action="/admin/data-materi/{{$materi->id_materi}}/ubah" method="post">
         @csrf
         <div class="card">
             <h5 class="card-header font-weight bg-info" style="color: white;">Tambah Data Materi</h5>
@@ -21,30 +21,33 @@
             <div class="form-group row">
             <label class="col-2 col-form-label"> Nama Guru</label>
              <div class="col-10">
-            <input class="form-control" type="text" id="nm_lengkap" name="nm_lengkap"
-            placeholder="Masukkan Nama Guru" value="" onkeypress='return harusHuruf(event)'>
+                <select name="guru" id="guru" class="form-control">
+                    @foreach ($dataGuru as $guru)
+                    <option value="{{$guru->user->id}}" {{($guru->user->id == $jadwal->id_guru) ? 'selected' : ''}}>{{$guru->nm_lengkap}}</option>
+                    @endforeach
+                    </select>
             </div>
             </div>
 
             <div class="form-group row">
             <label class="col-2 col-form-label">Kelas</label>
             <div class="col-10">
-            <select name="kelas" id="kelas" class="form-control">
-            @foreach ($dataKelas as $kelas)
-            <option value="{{$kelas->id_kelas}}">{{$kelas->nm_kelas}}</option>
-            @endforeach
-            </select>
+                <select name="kelas" id="kelas" value="{{$jadwal->id_kelas}}" class="form-control">
+                    @foreach ($dataKelas as $kelas)
+                    <option value="{{$kelas->id_kelas}}" {{($kelas->id_kelas == $jadwal->id_kelas) ? 'selected' : ''}}>{{$kelas->nm_kelas}}</option>
+                    @endforeach
+                    </select>
             </div>
             </div>
 
             <div class="form-group row">
             <label class="col-2 col-form-label">Mata Pelajaran</label>
             <div class="col-10">
-            <select name="mapel" id="mapel" class="form-control">
-            @foreach ($dataMapel as $mapel)
-            <option value="{{$mapel->id_mapel}}">{{$mapel->nm_mapel}}</option>
-            @endforeach
-            </select>
+                <select name="mapel" id="mapel" class="form-control">
+                    @foreach ($dataMapel as $mapel)
+                    <option value="{{$mapel->id_mapel}}" {{($mapel->id_mapel == $jadwal->id_mapel) ? 'selected' : ''}}>{{$mapel->nm_mapel}}</option>
+                    @endforeach
+                    </select>
             </div>
             </div>
 
@@ -58,7 +61,7 @@
             <div class="form-group row">
             <label class="col-2 col-form-label"> Jenis Materi</label>
             <div class="col-10">
-            <input class="form-control" type="text" name="js_materi" id="js_materi" value="{{$materi->nm_materi}}">
+            <input class="form-control" type="text" name="js_materi" id="js_materi" value="{{$materi->js_materi}}">
             </div>
             </div>
 
@@ -84,22 +87,3 @@
 </div><!-- body-row END -->
 
 @include('admin.footer-adm')
-
-<script>
-    function hanyaAngka(evt) {
-      var charCode = (evt.which) ? evt.which : event.keyCode
-       if (charCode > 31 && (charCode < 48 || charCode > 57))
-
-        return false;
-      return true;
-    }
-</script>
-
-<script>
-    function harusHuruf(evt){
-            var charCode = (evt.which) ? evt.which : event.keyCode
-            if ((charCode < 65 || charCode > 90)&&(charCode < 97 || charCode > 122)&&charCode>32)
-                return false;
-            return true;
-    }
-</script>

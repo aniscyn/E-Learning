@@ -53,14 +53,14 @@
 
       <tr>
         <td class="text-center" width="5%">{{$loop->iteration + (($data->currentPage() - 1) * $data->perPage())}}</td>
-        <td>{{$jadwal->nm_lengkap}} </td>
-        <td>{{$jadwal->nip}} </td>
-        <td>XI-MIPA 3</td>
-        <td>MIPA</td>
-        <td>Biologi</td>
+        <td>{{$jadwal->userGuru->guru->nm_lengkap}} </td>
+        <td>{{$jadwal->userGuru->guru->nip}} </td>
+        <td>{{$jadwal->kelas->nm_kelas}}</td>
+        <td>{{$jadwal->kelas->jurusan}}</td>
+        <td>{{$jadwal->mataPelajaran->nm_mapel}}</td>
         <td>{{$jadwal->nama_hari}} </td>
         <td>{{$jadwal->jm_mulai}} </td>
-        <td>{{$jadwal->jm_selesai}} /td>
+        <td>{{$jadwal->jm_selesai}} </td>
         <td class="text-center" width="10%">
             <a href="/admin/data-jadwal/{{$jadwal->id_jadwal}}/ubah">
             <button type="button" class="btn btn-outline-primary"> Ubah </button></a></td>

@@ -21,16 +21,11 @@
             <div class="form-group row">
             <label class="col-2 col-form-label"> Nama Guru</label>
              <div class="col-10">
-            <input class="form-control" type="text" id="nm_lengkap" name="nm_lengkap"
-            placeholder="Masukkan Nama Guru" onkeypress='return harusHuruf(event)'>
-            </div>
-            </div>
-
-            <div class="form-group row">
-            <label class="col-2 col-form-label"> NIP</label>
-             <div class="col-10">
-            <input class="form-control" type="text" name="nip" id="nip"
-            placeholder="Masukkan NIP" onkeypress="return hanyaAngka(event)">
+                <select name="guru" id="guru" class="form-control">
+                    @foreach ($dataGuru as $guru)
+                    <option value="{{$guru->user->id}}">{{$guru->nm_lengkap}}</option>
+                    @endforeach
+                    </select>
             </div>
             </div>
 
@@ -46,17 +41,6 @@
             </div>
 
             <div class="form-group row">
-                <label class="col-2 col-form-label">Jurusan</label>
-                <div class="col-10">
-                <select name="jurusan" id="jurusan" class="form-control">
-                @foreach ($dataKelas as $kelas)
-                <option value="{{$kelas->id_kelas}}">{{$kelas->jurusan}}</option>
-                @endforeach
-                </select>
-                </div>
-                </div>
-
-            <div class="form-group row">
             <label class="col-2 col-form-label">Mata Pelajaran</label>
             <div class="col-10">
             <select name="mapel" id="mapel" class="form-control">
@@ -70,7 +54,11 @@
             <div class="form-group row">
             <label class="col-2 col-form-label"> Hari</label>
             <div class="col-10">
-            <input class="form-control" type="text" name="nama_hari" id="nama_hari" placeholder="Masukkan Hari">
+                <select name="hari" id="hari" class="form-control">
+                    @foreach ($dataHari as $hari)
+                    <option value="{{$hari['urutan']}}">{{$hari['nama']}}</option>
+                    @endforeach
+                    </select>
             </div>
             </div>
 
@@ -88,14 +76,6 @@
             </div>
             </div>
 
-            <div class="form-group row">
-            <label class="col-2 col-form-label"> Jam Masuk</label>
-            <div class="col-10">
-            <input class="form-control" type="text" name="hari" id="hari" placeholder="Masukkan Hari">
-            </div>
-            </div>
-
-
             <button type="submit" class="btn btn-info" style="margin-left: 17%"> Simpan Data</button>
     </form>
     </div>
@@ -104,22 +84,3 @@
 </div><!-- body-row END -->
 
 @include('admin.footer-adm')
-
-<script>
-    function hanyaAngka(evt) {
-      var charCode = (evt.which) ? evt.which : event.keyCode
-       if (charCode > 31 && (charCode < 48 || charCode > 57))
-
-        return false;
-      return true;
-    }
-</script>
-
-<script>
-    function harusHuruf(evt){
-            var charCode = (evt.which) ? evt.which : event.keyCode
-            if ((charCode < 65 || charCode > 90)&&(charCode < 97 || charCode > 122)&&charCode>32)
-                return false;
-            return true;
-    }
-</script>

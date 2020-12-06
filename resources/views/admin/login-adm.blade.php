@@ -31,7 +31,7 @@
         <h2 class="text-center"> SMA HUTAMA</h2>
         <img
         src="https://st2.depositphotos.com/1688079/5662/i/600/depositphotos_56620495-stock-photo-member-icon-purple-button.jpg"
-        style="width: 50%;height:40%;margin-left:25%">
+        style="width: 40%;height:30%;margin-left:30%">
 
         <form class="login-form" action="/admin/login" method="post">
         @csrf

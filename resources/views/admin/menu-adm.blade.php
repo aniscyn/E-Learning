@@ -30,10 +30,10 @@
                 <?php echo date('H:i:s'); ?></label>
             </li>
             <li class="nav-item">
-                <label class="nav-link fa fa-user-circle-o" > Nama Admin</label>
+                <label class="nav-link fa fa-user-circle-o" > {{auth()->user()->username}}</label>
             </li>
             <li class="nav-item">
-                <a class="nav-link fa fa-sign-out" href="#top">Keluar</a>
+                <a class="nav-link fa fa-sign-out" href="/admin">Keluar</a>
             </li>
 
         </ul>

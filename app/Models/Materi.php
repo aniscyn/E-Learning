@@ -22,4 +22,18 @@ class Materi extends Model
     {
         return $this->hasOne(Jadwal::class, 'id_jadwal', 'id_jadwal');
     }
+
+    public function mataPelajaran() {
+        return $this->hasOne(MataPelajaran::class, 'id_mapel', 'id_mapel');
+    }
+
+    public function kelas()
+    {
+        return $this->hasOne(Kelas::class, 'id_kelas', 'id_kelas');
+    }
+    public function userGuru(){
+        return $this->hasOne(User::class, 'id', 'id_guru');
+    }
+
 }
+

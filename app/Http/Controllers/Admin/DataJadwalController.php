@@ -1,16 +1,21 @@
 <?php
 
 namespace App\Http\Controllers\Admin;
-use App\Http\Controllers\Controller;
-use App\Models\Jadwal;
+use App\Models\Guru;
 use App\Models\User;
+use App\Models\Kelas;
+use App\Models\Jadwal;
+use App\Models\MataPelajaran;
+use App\Http\Controllers\Controller;
 
 class DataJadwalController extends Controller
 {
     public function viewDataJadwal()
     {
         $dataJadwal = Jadwal::query()
-        ->orderBy('nm_lengkap', 'asc')
+        ->whereHas('userGuru.guru', function ($query) {
+            $query->orderBy('nm_lengkap', 'asc');
+        })
         ->Paginate(5);
 
         return view('admin/data-jadwal', [
@@ -20,20 +25,30 @@ class DataJadwalController extends Controller
 
     public function viewTambah()
     {
-        return view('admin/tambah-jadwal');
+        $dataKelas = Kelas::all();
+        $dataMapel = MataPelajaran::all();
+        $dataGuru = Guru::all();
+        $dataHari = Jadwal::getListHari();
+
+        return view('admin/tambah-jadwal', [
+            'dataKelas' => $dataKelas,
+            'dataMapel' => $dataMapel,
+            'dataGuru' => $dataGuru,
+            'dataHari' => $dataHari,
+        ]);
     }
 
     public function postTambah()
     {
         $request = request()->all();
+        $hari = Jadwal::getHari($request['hari']);
 
         $user = Jadwal::create([
-            'nm_lengkap' => $request['nm_lengkap'],
-            'nip' => $request['nip'],
-            'nm_kelas' => $request['nm_kelas'],
-            'jurusan' => $request['jurusan'],
-            'nm_mapel' => $request['nm_mapel'],
-            'nama_hari' => $request['nama_hari'],
+            'id_guru' => $request['guru'],
+            'id_kelas' => $request['kelas'],
+            'id_mapel' => $request['mapel'],
+            'nama_hari' => $hari['nama'],
+            'urutan_hari' => $hari['urutan'],
             'jm_mulai' => $request['jm_mulai'],
             'jm_selesai' => $request['jm_selesai'],
         ]);
@@ -43,23 +58,31 @@ class DataJadwalController extends Controller
 
     public function viewEdit(Jadwal $jadwal)
     {
+        $dataKelas = Kelas::all();
+        $dataMapel = MataPelajaran::all();
+        $dataGuru = Guru::all();
+        $dataHari = Jadwal::getListHari();
+
         return view('admin/ubah-jadwal', [
-            'data' => $jadwal,
+            'dataKelas' => $dataKelas,
+            'dataMapel' => $dataMapel,
+            'dataGuru' => $dataGuru,
+            'dataHari' => $dataHari,
+            'jadwal' => $jadwal,
         ]);
     }
 
     public function postEdit(Jadwal $jadwal)
     {
         $request = request()->all();
-        $jadwal ->nm_lengkap = request()->get('nm_lengkap');
-        $jadwal ->nip = request()->get('nip');
-        $jadwal ->nm_kelas = request()->get('nm_kelas');
-        $jadwal ->jurusan = request()->get('jurusan');
-        $jadwal ->nm_mapel = request()->get('nm_mapel');
-        $jadwal ->nama_hari = request()->get('nama_hari');
+        $hari = Jadwal::getHari($request['hari']);
+        $jadwal ->id_guru = request()->get('guru');
+        $jadwal ->id_kelas = request()->get('kelas');
+        $jadwal ->id_mapel = request()->get('mapel');
+        $jadwal ->nama_hari = $hari['nama'];
+        $jadwal ->urutan_hari = $hari['urutan'];
         $jadwal ->jm_mulai = request()->get('jm_mulai');
         $jadwal ->jm_selesai = request()->get('jm_selesai');
-
         $jadwal->save();
 
         return redirect('/admin/data-jadwal');
