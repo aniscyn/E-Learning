@@ -34,11 +34,11 @@
          <label for="nis" class="lb-profile">NIS</label>
          <input type="text" class="form-control" readonly id="nis" value={{$user->siswa->nis}}>
         </div>
-        Tolong cek nama lengkap ini di text box tidak muncul nama belakangnya: harusnya {{$user->siswa->nm_lengkap}}
+
         <div class="form-group">
-         <label class="lb-profile">Nama Lengkap</label>
-         <input type="text" class="form-control" id="nm_lengkap" name="nm_siswa" value={{$user->siswa->nm_lengkap}}>
-        </div>
+            <label for="nm" class="lb-profile">Nama Lengkap</label>
+            <textarea name="nm_lengkap"cols="10" rows="1" class="form-control">{{$user->siswa->nm_lengkap}}</textarea>
+           </div>
 
         <div class="form-group">
          <label for="tgl-lahir"class="lb-profile">Tanggal Lahir</label>

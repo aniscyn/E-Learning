@@ -34,12 +34,11 @@
       <div class="form-group">
          <label for="nip" class="lb-profile">NIP</label>
          <input type="text" class="form-control" readonly id="nip" value={{$user->guru->nip}}>
-        </div>
 
         <div class="form-group">
-         <label for="Nama" class="lb-profile">Nama Lengkap</label>
-         <input type="text" class="form-control"  id="nm_guru" name="nm_guru" value={{$user->guru->nm_lengkap}}>
-        </div>
+            <label for="nm" class="lb-profile">Nama Lengkap</label>
+            <textarea name="nm_lengkap"cols="10" rows="1" class="form-control">{{$user->guru->nm_lengkap}}</textarea>
+           </div>
 
         <div class="form-group">
          <label for="tgl-lahir"class="lb-profile">Tanggal Lahir</label>

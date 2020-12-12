@@ -11,7 +11,7 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="#">Beranda</a></li>
     <li class="breadcrumb-item"><a href="#">Jadwal</a></li>
-    <li class="breadcrumb-item active"><a href=""> Bahasa Indonesia</li>
+    <li class="breadcrumb-item active"> nm mapel</li>
   </ol>
 </nav>
 

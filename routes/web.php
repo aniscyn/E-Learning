@@ -55,12 +55,17 @@ Route::group([
         return view('siswa/belajar-siswa');
     });
 
+
     //Absensi Siswa
     Route::get('/siswa/absensi', "App\Http\Controllers\Siswa\AbsenController@viewAbsen");
     Route::post('/siswa/absensi/{absen}/masuk', "App\Http\Controllers\Siswa\AbsenController@postAbsenMasuk");
     Route::post('/siswa/absensi/{absen}/keluar', "App\Http\Controllers\Siswa\AbsenController@postAbsenKeluar");
     Route::get('/siswa/profile', function(){
         return view('siswa/profile-siswa');
+    });
+
+    Route::get('/siswa/latihan-soal', function(){
+        return view('siswa/latihan-soal');
     });
 
     //Profile Siswa

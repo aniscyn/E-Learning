@@ -16,7 +16,7 @@
 <div class="container-fluid">
 <div class="row">
 <div class="card card-absen" style="width: 100%;">
-<div class="card-header bg-light"><h3>{{date("l, d F Y")}} - {{auth()->user()->siswa->kelas->nm_kelas}}</h3></div>
+<div class="card-header bg-light"><h3>{{(new \Carbon\Carbon(now()))->translatedFormat("l, d F Y")}} - {{auth()->user()->siswa->kelas->nm_kelas}}</h3></div>
   <div class="card-body">
   <table class="table table-striped text-center">
   <thead>

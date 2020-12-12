@@ -47,7 +47,7 @@
     <div class="form-group row">
     <label class="col-2 col-form-label"> Keterangan</label>
     <div class="col-10">
-    <textarea class="form-control" value="{{$materi->keterangan}}" name="keterangan"></textarea>
+    <textarea class="form-control" name="keterangan">{{$materi->keterangan}}</textarea>
     </div>
     </div>
 

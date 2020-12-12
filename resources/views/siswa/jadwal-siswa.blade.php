@@ -23,7 +23,7 @@
 
     @foreach ($jadwal as $key => $item)
     <div class="col-sm-6">
-        <div class="card card-course" style="width: 30rem;">
+        <div class="card card-course" style="width: 30rem; margin-top:20px">
         <div class="card-header bg-light"><h2>{{ $key }}</h2></div>
           <div class="card-body">
           <table class="table table-striped">
@@ -39,7 +39,7 @@
               <tr>
                 <th scope="row">{{$loop->iteration}}</th>
                 <td>{{$mapel->jm_mulai}} - {{$mapel->jm_selesai}}</td>
-                <td><a href=""> <button type="button" class="btn btn-primary" >{{$mapel->mataPelajaran->nm_mapel}}</button></a></td>
+                <td><a href="/siswa/jadwal/belajar"> <button type="button" class="btn btn-primary" >{{$mapel->mataPelajaran->nm_mapel}}</button></a></td>
               </tr>
               @endforeach
           </tbody>

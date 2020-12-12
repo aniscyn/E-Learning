@@ -84,7 +84,13 @@ class JadwalController extends Controller
     public function postHapusMateri(Jadwal $jadwal, Materi $materi)
     {
         $materi->delete();
-
+        if($materi){
+            //redirect dengan pesan sukses
+            return back()->with(['success' => 'Data Berhasil Dihapus!']);
+         }else{
+           //redirect dengan pesan error
+           return back()->with(['error' => 'Data Gagal Dihapus!']);
+         }
         return back();
     }
 }

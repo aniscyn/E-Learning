@@ -16,6 +16,7 @@ class TbMateri extends Migration
         Schema::create('tb_materi', function(Blueprint $table){
             $table->integer('id_materi')->autoIncrement();
             $table->integer('id_jadwal');
+            $table->date('tanggal');
             $table->string('nm_materi', 50);
             $table->string('js_materi', 15);
             $table->text('rs_materi');

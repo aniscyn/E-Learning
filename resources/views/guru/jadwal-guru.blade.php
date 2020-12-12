@@ -7,7 +7,7 @@
 <!-- konten -- jadwalku -->
 
 <!-- Senin -->
-<div class="col p-4" style="margin-top: 40px;">
+<div class="col p-4" style="margin-top: 30px;">
 <div class="card border-dark card-container">
 <div class="container-fluid">
 
@@ -23,7 +23,7 @@
 
     @foreach ($jadwal as $key => $item)
     <div class="col-sm-6">
-        <div class="card card-course" style="width: 30rem;">
+        <div class="card card-course" style="width: 30rem;margin-top:15px">
         <div class="card-header bg-light"><h2>{{ $key }}</h2></div>
           <div class="card-body">
           <table class="table table-striped">
@@ -32,7 +32,6 @@
               <th scope="col">Jam Ke </th>
               <th scope="col">Kelas </th>
               <th scope="col">keterangan </th>
-              <th scope="col">Kode </th>
               <th scope="col">Mata Pelajaran</th>
             </tr>
           </thead>
@@ -42,7 +41,6 @@
                 <th scope="row">{{$loop->iteration}}</th>
                 <td>{{ $mapel->kelas->nm_kelas }}</td>
                 <td>{{$mapel->jm_mulai}} - {{$mapel->jm_selesai}}</td>
-                <td>{{$mapel->mataPelajaran->kd_mapel}}
                 <td><a href="/guru/jadwal/{{$mapel->id_jadwal}}/materi"> <button type="button" class="btn btn-primary" >{{$mapel->mataPelajaran->nm_mapel}}</button></a></td>
               </tr>
               @endforeach

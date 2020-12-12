@@ -1,8 +1,8 @@
 
-<link href="{{ asset('css/footer.css') }}" rel="stylesheet" type="text/css"> 
+<link href="{{ asset('css/footer.css') }}" rel="stylesheet" type="text/css">
 
 <!-- Footer -->
-<section id="footer" class="bg-info">
+<section id="footer" class="bg-info" style="margin-top:20px">
 		<div class="container">
 			<div class="row text-center text-xs-center text-sm-left text-md-left" style="color: white;padding:10px">
 				<div class="col-xs-12 col-sm-4 col-md-4">
@@ -14,7 +14,7 @@
 				<div class="col-xs-12 col-sm-4 col-md-4">
 					<h5> Telepone </h5>
 					<ul class="list-unstyled quick-links">
-                        <li><i class="fa fa-phone"></i> (021) 8475461</li>				
+                        <li><i class="fa fa-phone"></i> (021) 8475461</li>
                     </ul>
 				</div>
 				<div class="col-xs-12 col-sm-4 col-md-4">
@@ -34,14 +34,14 @@
 					</ul>
 				</div>
 				<hr>
-			</div>	
+			</div>
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-12 mt-2 mt-sm-2 text-center text-white">
 					<p class="h6"><strong>© Yayasan Pendidikan Delapan Delapan (YP'88) <br>
                 SMA Hutama</strong></p>
 				</div>
 				<hr>
-			</div>	
+			</div>
 		</div>
 	</section>
 	<!-- ./Footer -->
