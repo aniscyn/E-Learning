@@ -6,20 +6,25 @@
 .card-body {
     margin-left: 10%;
 }
-.row-sl{
-    margin-left:-9%
+
+.row-sl {
+    margin-left: -10%
 }
-.row-sl-1{
-    margin-left:-2%
+
+.row-sl-1 {
+    margin-left: -2%
 }
-.isl{
-     margin-left:-9%;
-     margin-top:-2%;
+
+.isl {
+    margin-left: -9%;
+    margin-top: -2%;
 }
-.isl-1{
-     margin-left:-2%;
-     margin-top:-1%;
+
+.isl-1 {
+    margin-left: -2%;
+    margin-top: -1%;
 }
-.btn-sl{
-    margin-left:-11%
+
+.btn-sl {
+    margin-left: -11%
 }

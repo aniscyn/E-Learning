@@ -58,12 +58,14 @@
 .logo-side {
     align-content: center;
 }
-.mn-awal{
-    margin-top:5%;
+
+.mn-awal {
+    margin-top: 5%;
 }
-.mn-tgl{
-    margin-left:65%;
-    color:white;
-    font-size:13pt;
-    margin-top:5px;
+
+.mn-tgl {
+    margin-left: 60%;
+    color: white;
+    font-size: 13pt;
+    margin-top: 5px;
 }

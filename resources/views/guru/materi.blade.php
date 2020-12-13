@@ -20,10 +20,10 @@
     <h5 class="card-header font-weight bg-primary" style="color: white;"> {{$jadwal->kelas->nm_kelas}} - {{$jadwal->mataPelajaran->nm_mapel}} -
     {{auth()->user()->guru->nm_lengkap}} {{auth()->user()->guru->nip}} </h5>
     <div class="card-body">
-
-    <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/tambah"> <button type="button" class="btn btn-secondary"> Tambah Materi</button> </a> <br><br>
-    <a href=""> <button type="button" class="btn btn-primary"> Buat Soal</button> </a> <br><br>
-
+        <div class="col-sm-6" style="margin-left: -10px">
+    <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/tambah"> <button type="button" class="btn btn-secondary"> Tambah Materi</button> </a>
+    <a href=""> <button type="button" class="btn btn-warning"> Buat Soal</button> </a> </div>
+<br>
 
     @if (session('success'))
     <div class="alert alert-success alert-dismissible" style="width: 30%;margin-left:70%;margin-top:-40px">

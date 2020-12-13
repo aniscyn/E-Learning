@@ -64,8 +64,15 @@ Route::group([
         return view('siswa/profile-siswa');
     });
 
+    //Soal
     Route::get('/siswa/latihan-soal', function(){
         return view('siswa/latihan-soal');
+    });
+    Route::get('/siswa/latihan-soal-lihat', function(){
+        return view('siswa/review-soal');
+    });
+    Route::get('/siswa/latihan-soal-ubah', function(){
+        return view('siswa/ubah-latihan');
     });
 
     //Profile Siswa
@@ -98,6 +105,22 @@ Route::group([
     Route::post('/guru/jadwal/{jadwal}/materi/{materi}/ubah', "App\Http\Controllers\Guru\JadwalController@postEditMateri");
     Route::post('/guru/jadwal/{jadwal}/materi/{materi}/hapus', "App\Http\Controllers\Guru\JadwalController@postHapusMateri");
 
+    //soal
+    Route::get('/guru/jadwal/soal', function() {
+        return view('guru/view-soal');
+    });
+    Route::get('/guru/jadwal/tambah-soal-pg', function() {
+        return view('guru/tambah-soal-pg');
+    });
+    Route::get('/guru/jadwal/tambah-soal-essai', function() {
+        return view('guru/tambah-soal-essay');
+    });
+    Route::get('/guru/jadwal/ubah-soal-pg', function() {
+        return view('guru/tambah-soal-pg');
+    });
+    Route::get('/guru/jadwal/ubah-soal-essai', function() {
+        return view('guru/tambah-soal-essay');
+    });
 
     //Profile Guru
     Route::get('/guru/profile', "App\Http\Controllers\Guru\ProfileGuruController@viewProfile");

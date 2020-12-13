@@ -41,7 +41,7 @@
         </div>
         <br>
         <div class="form-group row-sl">
-        <button type="submit" class="btn btn-primary" >Lanjut</button></a>
+        <button type="submit" class="btn btn-primary" >Simpan</button></a>
         </div>
 
         </div>
