@@ -19,7 +19,7 @@
         <h5 class="card-header font-weight bg-secondary" style="color: white;">Ubah Kata Sandi</h5>
     <!-- Control the column width, and how they should appear on different devices -->
 
-      <form action="" method="post" class="form-sandi">
+      <form action="/siswa/ubah-sandi" method="post" class="form-sandi">
       @csrf
         <div class="form-group"> <br>
          <label for="sandi" class="col-2 col-form-label">Kata Sandi Baru</label>

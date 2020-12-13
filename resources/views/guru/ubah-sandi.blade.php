@@ -1,7 +1,7 @@
 <title>Ubah Kata Sandi - Guru</title>
 
 <!-- Navbar -->
-@include('navbar')
+@include('guru.nav-guru')
 
 <div class="col p-4" style="margin-top: 40px;">
 <div class="card border-dark card-profile">
@@ -19,12 +19,12 @@
         <h5 class="card-header font-weight bg-secondary" style="color: white;">Ubah Kata Sandi</h5>
     <!-- Control the column width, and how they should appear on different devices -->
 
-      <form action="" method="post" class="form-sandi">
+      <form action="/guru/ubah-sandi" method="post" class="form-sandi">
       @csrf
         <div class="form-group"> <br>
          <label for="sandi" class="col-2 col-form-label">Kata Sandi Baru</label>
          <div class="col-10">
-         <input type="text" class="form-control" placeholder="Masukkan Kata Sandi Baru" name="sandi" id="myInput" >
+         <input type="password" class="form-control" placeholder="Masukkan Kata Sandi Baru" name="password" id="myInput" >
         </div>
         </div>
 

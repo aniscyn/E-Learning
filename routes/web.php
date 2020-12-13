@@ -79,10 +79,11 @@ Route::group([
     Route::get('/siswa/profile', "App\Http\Controllers\Siswa\ProfileController@viewProfile");
     Route::get('/siswa/profile/ubah', "App\Http\Controllers\Siswa\ProfileController@viewEdit");
     Route::post('/siswa/profile/ubah/{user}/process', "App\Http\Controllers\Siswa\ProfileController@postEdit");
-});
 
-Route::get('/siswa/ubah-sandi', function () {
-    return view('siswa/ubah-sandi');
+    Route::get('/siswa/ubah-sandi', function () {
+        return view('siswa/ubah-sandi');
+    });
+    Route::post('/siswa/ubah-sandi', "App\Http\Controllers\LoginController@processChangPassword");
 });
 
 // Route untuk guru yang telah login
@@ -126,10 +127,15 @@ Route::group([
     Route::get('/guru/profile', "App\Http\Controllers\Guru\ProfileGuruController@viewProfile");
     Route::get('/guru/profile/ubah', "App\Http\Controllers\Guru\ProfileGuruController@viewEdit");
     Route::post('/guru/profile/ubah/{user}/process', "App\Http\Controllers\Guru\ProfileGuruController@postEdit");
+
+    Route::get('/guru/ubah-sandi', function () {
+        return view('guru/ubah-sandi');
+    });
+    Route::post('/guru/ubah-sandi', "App\Http\Controllers\LoginController@processChangPassword");
 });
 
 
-// Route untuk guru yang telah login
+// Route untuk admin yang telah login
 Route::group([
     'middleware' => [
         'auth.admin',
@@ -196,10 +202,3 @@ Route::group([
     Route::post('/admin/data-jadwal/{jadwal}/data-materi/{materi}/ubah', 'App\Http\Controllers\Admin\DataMateriController@postEdit');
     Route::post('/admin/data-jadwal/{jadwal}/data-materi/{materi}/hapus', 'App\Http\Controllers\Admin\DataMateriController@postDelete');
 });
-// Halaman Untuk Generate Data
-Route::get('/generator/siswa', "App\Http\Controllers\Generators\SiswaController@viewAdd");
-Route::post('/generator/siswa', "App\Http\Controllers\Generators\SiswaController@processAdd");
-
-// TODO: Guru belum berfungsi
-Route::get('/generator/guru', "App\Http\Controllers\Generators\GuruController@viewAdd");
-Route::post('/generator/guru', "App\Http\Controllers\Generators\GuruController@processAdd");

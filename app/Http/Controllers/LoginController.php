@@ -40,4 +40,17 @@ class LoginController extends Controller
 
         return redirect('/login');
     }
+
+    public function processChangPassword()
+    {
+        /**
+         * @var User
+         */
+        $user = auth()->user();
+
+        $user->password = bcrypt(request()->get('password'));
+        $user->save();
+
+        return back();
+    }
 }
