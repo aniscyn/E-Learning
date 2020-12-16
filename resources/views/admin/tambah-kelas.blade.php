@@ -22,14 +22,14 @@
     <div class="form-group row">
     <label class="col-2 col-form-label"> Nama Kelas</label>
      <div class="col-10">
-    <input class="form-control" type="text" name="nm_kelas" id="nm_kelas" placeholder="Masukkan Nama Kelas">
+    <input class="form-control" type="text" name="nm_kelas" id="nm_kelas" placeholder="Masukkan Nama Kelas" required>
     </div>
     </div>
 
     <div class="form-group row">
     <label class="col-2 col-form-label"> Jurusan</label>
      <div class="col-10">
-    <input class="form-control" type="text" name="jurusan" id="jurusan" placeholder="Masukkan Jurusan">
+    <input class="form-control" type="text" name="jurusan" id="jurusan" placeholder="Masukkan Jurusan" required>
     </div>
     </div>
 

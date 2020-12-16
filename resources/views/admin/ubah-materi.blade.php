@@ -21,28 +21,28 @@
             <div class="form-group row">
             <label class="col-2 col-form-label"> Nama Materi</label>
             <div class="col-10">
-            <input class="form-control" type="text" name="nm_materi" id="nm_materi" value="{{$materi->nm_materi}}">
+            <input class="form-control" type="text" name="nm_materi" id="nm_materi" value="{{$materi->nm_materi}}" required>
             </div>
             </div>
 
             <div class="form-group row">
             <label class="col-2 col-form-label"> Jenis Materi</label>
             <div class="col-10">
-            <input class="form-control" type="text" name="js_materi" id="js_materi" value="{{$materi->js_materi}}">
+            <input class="form-control" type="text" name="js_materi" id="js_materi" value="{{$materi->js_materi}}" required>
             </div>
             </div>
 
             <div class="form-group row">
             <label class="col-2 col-form-label">Ringkasan Materi</label>
             <div class="col-10">
-            <textarea class="form-control" name="rs_materi">  {{$materi->rs_materi}} </textarea>
+            <textarea class="form-control" name="rs_materi" required>  {{$materi->rs_materi}} </textarea>
             </div>
             </div>
 
             <div class="form-group row">
             <label class="col-2 col-form-label"> Keterangan</label>
             <div class="col-10">
-            <input class="form-control" type="text" name="keterangan" id="keterangan" value="{{$materi->keterangan}}">
+            <input class="form-control" type="text" name="keterangan" id="keterangan" value="{{$materi->keterangan}}" required>
             </div>
             </div>
 

@@ -65,14 +65,14 @@
             <div class="form-group row">
             <label class="col-2 col-form-label"> Jam Mulai</label>
             <div class="col-10">
-            <input class="form-control" type="time" name="jm_mulai" id="jm_mulai" placeholder="Masukkan Jam Mulai">
+            <input class="form-control" type="time" name="jm_mulai" id="jm_mulai" placeholder="Masukkan Jam Mulai" required>
             </div>
             </div>
 
             <div class="form-group row">
             <label class="col-2 col-form-label"> Jam Selesai</label>
             <div class="col-10">
-            <input class="form-control" type="time" name="jm_selesai" id="jm_selesai"  placeholder="Masukkan Jam Selesai">
+            <input class="form-control" type="time" name="jm_selesai" id="jm_selesai"  placeholder="Masukkan Jam Selesai" required>
             </div>
             </div>
 

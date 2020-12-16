@@ -21,7 +21,7 @@
     <div class="form-group row">
     <label class="col-2 col-form-label"> Mata Pelajaran</label>
      <div class="col-10">
-    <input class="form-control" type="text" name="nm_mapel" value="{{$data->nm_mapel}}" id="nm_mapel">
+    <input class="form-control" type="text" name="nm_mapel" value="{{$data->nm_mapel}}" id="nm_mapel" required>
     </div>
     </div>
 

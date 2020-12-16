@@ -24,21 +24,21 @@
     <div class="form-group row">
     <label class="col-2 col-form-label"> Nama Materi</label>
      <div class="col-10">
-    <input class="form-control" type="text" name="nm_materi" value="{{$materi->nm_materi}}" id="nm_materi">
+    <input class="form-control" type="text" name="nm_materi" value="{{$materi->nm_materi}}" id="nm_materi" required>
     </div>
     </div>
 
     <div class="form-group row">
     <label class="col-2 col-form-label"> Jenis Materi</label>
      <div class="col-10">
-    <input class="form-control" type="text" name="js_materi" value="{{$materi->nm_materi}}" id="js_materi">
+    <input class="form-control" type="text" name="js_materi" value="{{$materi->nm_materi}}" id="js_materi" required>
     </div>
     </div>
 
     <div class="form-group row">
     <label class="col-2 col-form-label"> Ringkasan Materi</label>
      <div class="col-10">
-     <textarea id="konten" class="form-control" name="rs_materi" rows="10" cols="50">
+     <textarea id="konten" class="form-control" name="rs_materi" rows="10" cols="50" required>
          {{$materi->rs_materi}}
      </textarea>
     </div>
@@ -47,14 +47,14 @@
     <div class="form-group row">
     <label class="col-2 col-form-label"> Keterangan</label>
     <div class="col-10">
-    <textarea class="form-control" name="keterangan">{{$materi->keterangan}}</textarea>
+    <textarea class="form-control" name="keterangan" required>{{$materi->keterangan}}</textarea>
     </div>
     </div>
 
     <div class="form-group row">
     <label class="col-2 col-form-label"> Upload Materi</label>
      <div class="col-10">
-    <input type="file" value="" name="upload_materi" id="file-materi">
+    <input type="file" value="" name="upload_materi" id="file-materi" required>
     </div>
     </div>
 

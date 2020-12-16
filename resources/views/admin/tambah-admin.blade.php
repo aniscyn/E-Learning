@@ -21,14 +21,14 @@
             <div class="form-group row">
             <label class="col-2 col-form-label"> Username</label>
              <div class="col-10">
-            <input class="form-control" type="text" value="" id="user_admin" name="username" placeholder="Masukkan Username">
+            <input class="form-control" type="text" value="" id="user_admin" name="username" placeholder="Masukkan Username" required>
             </div>
             </div>
 
             <div class="form-group row">
             <label class="col-2 col-form-label"> Kata Sandi</label>
              <div class="col-10">
-            <input class="form-control" type="password" value="" name="password" id="pas_admin" placeholder="Masukkan Kata Sandi">
+            <input class="form-control" type="password" value="" name="password" id="pas_admin" placeholder="Masukkan Kata Sandi" required>
             </div>
             </div>
             <button type="submit" class="btn btn-info" style="margin-left: 17%"> Simpan Data</button>

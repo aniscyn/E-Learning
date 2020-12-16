@@ -36,13 +36,13 @@
         <form class="login-form" action="/admin/login" method="post">
         @csrf
         <div class="form-group"><br>
-        <input type="text" class="form-control" name="username" placeholder="Masukkan Username" >
+        <input type="text" class="form-control" name="username" placeholder="Masukkan Username" required>
        </div>
 
     <div class="form-group">
       <span class="btn-show-pass">
       <input type="password" class="form-control" name="password" id="myInput" placeholder="Masukkan Kata Sandi"><br>
-      <input type="checkbox" onclick="myFunction()"> Lihat Kata Sandi
+      <input type="checkbox" onclick="myFunction()" required> Lihat Kata Sandi
       </div>
     <button type="submit" class="btn btn-primary btn-masuk">Login</button>
 </form>

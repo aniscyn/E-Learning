@@ -24,7 +24,7 @@
     <label class="col-2 col-form-label"> NIS</label>
      <div class="col-10">
     <input class="form-control" type="text" name="nis" id="nis"
-    placeholder="Masukkan NIS Siswa" onkeypress="return hanyaAngka(event)">
+    placeholder="Masukkan NIS Siswa" onkeypress="return hanyaAngka(event)" required>
     </div>
     </div>
 
@@ -32,28 +32,28 @@
     <label class="col-2 col-form-label"> Nama Lengkap</label>
      <div class="col-10">
     <input class="form-control" type="text" name="nm_lengkap" id="nm-lengkap"
-    placeholder="Masukkan Nama Lengkap" onkeypress='return harusHuruf(event)'>
+    placeholder="Masukkan Nama Lengkap" onkeypress='return harusHuruf(event)' required>
     </div>
     </div>
 
     <div class="form-group row">
     <label class="col-2 col-form-label"> Tanggal Lahir</label>
     <div class="col-10">
-    <input class="form-control" type="date" name="tgl_lahir" id="tgl_lahir" placeholder="Masukkan Tanggal Lahir">
+    <input class="form-control" type="date" name="tgl_lahir" id="tgl_lahir" placeholder="Masukkan Tanggal Lahir" required>
     </div>
     </div>
 
     <div class="form-group row">
     <label class="col-2 col-form-label"> Jenis Kelamin</label>
     <div class="col-10">
-    <input class="form-control" type="text" name="jk" id="jk" placeholder="Masukkan Jenis Kelamin">
+    <input class="form-control" type="text" name="jk" id="jk" placeholder="Masukkan Jenis Kelamin" required>
     </div>
     </div>
 
     <div class="form-group row">
     <label class="col-2 col-form-label"> Alamat</label>
     <div class="col-10">
-    <textarea class="form-control" placeholder="Masukkan Alamat" name="alamat_siswa"> </textarea>
+    <textarea class="form-control" placeholder="Masukkan Alamat" name="alamat_siswa" required> </textarea>
     </div>
     </div>
 
@@ -61,7 +61,7 @@
     <div class="form-group row">
     <label class="col-2 col-form-label">Email</label>
     <div class="col-10">
-    <input class="form-control" type="email" name="email" id="email" placeholder="Masukkan Email">
+    <input class="form-control" type="email" name="email" id="email" placeholder="Masukkan Email" required>
     </div>
     </div>
 
@@ -80,7 +80,7 @@
     <label class="col-2 col-form-label">Kata Sandi</label>
     <div class="col-10">
     <input class="form-control" type="password" name="password" id="pass" placeholder="Masukkan Kata Sandi">
-    <input type="checkbox" onclick="myFunction()"> Lihat Kata Sandi
+    <input type="checkbox" onclick="myFunction()" required> Lihat Kata Sandi
     </div>
     </div>
 
@@ -89,7 +89,7 @@
         <label class="col-2 col-form-label"> Telepon</label>
         <div class="col-10">
         <input class="form-control" type="text" name="tlp" id="tlp" placeholder="Masukkan Telepon" maxlength="13"
-        onkeypress="return hanyaAngka(event)">
+        onkeypress="return hanyaAngka(event)" required>
 
         </div>
         </div>

@@ -24,7 +24,7 @@
         <div class="form-group"> <br>
          <label for="sandi" class="col-2 col-form-label">Kata Sandi Baru</label>
          <div class="col-10">
-         <input type="password" class="form-control" placeholder="Masukkan Kata Sandi Baru" name="password" id="myInput" >
+         <input type="password" class="form-control" placeholder="Masukkan Kata Sandi Baru" name="password" id="myInput" required >
         </div>
         </div>
 

@@ -22,7 +22,7 @@
     <div class="form-group row">
     <label class="col-2 col-form-label"> Nama Kelas</label>
      <div class="col-10">
-    <input class="form-control" type="text" name="nm_kelas" value="{{$data->nm_kelas}}" id="nm_kelas">
+    <input class="form-control" type="text" name="nm_kelas" value="{{$data->nm_kelas}}" id="nm_kelas" required>
     </div>
     </div>
 

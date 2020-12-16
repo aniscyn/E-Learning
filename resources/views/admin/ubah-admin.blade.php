@@ -23,14 +23,14 @@
     <div class="form-group row">
     <label class="col-2 col-form-label"> Username</label>
      <div class="col-10">
-    <input class="form-control" type="text" name="username" value="{{$data->username}}" id="user_admin">
+    <input class="form-control" type="text" name="username" value="{{$data->username}}" id="user_admin" required>
     </div>
     </div>
 
     <div class="form-group row">
     <label class="col-2 col-form-label"> Kata Sandi</label>
      <div class="col-10">
-    <input class="form-control" type="password" name="password" value="" id="pas_admin">
+    <input class="form-control" type="password" name="password" value="" id="pas_admin" required>
     </div>
     </div>
 

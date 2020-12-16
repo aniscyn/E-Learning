@@ -23,7 +23,7 @@
     <label class="col-2 col-form-label"> NIP</label>
      <div class="col-10">
     <input class="form-control" type="text" name="nip" id="nip"
-    value="{{$data->nip}}" onkeypress="return hanyaAngka(event)">
+    value="{{$data->nip}}" onkeypress="return hanyaAngka(event)" required>
     </div>
     </div>
 
@@ -31,28 +31,28 @@
     <label class="col-2 col-form-label"> Nama Lengkap</label>
      <div class="col-10">
     <input class="form-control" type="text" name="nm_lengkap" id="nm-lengkap"
-    value="{{$data->nm_lengkap}}" onkeypress='return harusHuruf(event)'>
+    value="{{$data->nm_lengkap}}" onkeypress='return harusHuruf(event)' required>
     </div>
     </div>
 
     <div class="form-group row">
     <label class="col-2 col-form-label"> Tanggal Lahir</label>
     <div class="col-10">
-    <input class="form-control" type="date" name="tgl_lahir" id="tgl_lahir" value="{{$data->tgl_lahir}}">
+    <input class="form-control" type="date" name="tgl_lahir" id="tgl_lahir" value="{{$data->tgl_lahir}}" required>
     </div>
     </div>
 
     <div class="form-group row">
     <label class="col-2 col-form-label"> Jenis Kelamin</label>
     <div class="col-10">
-    <input class="form-control" type="text" name="jk" id="jk" value="{{$data->jk}}">
+    <input class="form-control" type="text" name="jk" id="jk" value="{{$data->jk}}" required>
     </div>
     </div>
 
     <div class="form-group row">
     <label class="col-2 col-form-label"> Alamat</label>
     <div class="col-10">
-    <textarea class="form-control" name="alamat_guru"> {{$data->alamat_guru}}</textarea>
+    <textarea class="form-control" name="alamat_guru" required> {{$data->alamat_guru}}</textarea>
     </div>
     </div>
 
@@ -60,7 +60,7 @@
     <div class="form-group row">
     <label class="col-2 col-form-label">Email</label>
     <div class="col-10">
-    <input class="form-control" type="email" name="email" id="email" value="{{$data->email}}">
+    <input class="form-control" type="email" name="email" id="email" value="{{$data->email}}" required>
     </div>
     </div>
 
@@ -68,7 +68,7 @@
         <label class="col-2 col-form-label"> Telepon</label>
         <div class="col-10">
         <input class="form-control" type="text" name="tlp" id="tlp" value="{{$data->tlp}}" maxlength="13"
-        onkeypress="return hanyaAngka(event)">
+        onkeypress="return hanyaAngka(event)" required>
 
         </div>
         </div>
