@@ -26,10 +26,6 @@
     {{auth()->user()->siswa->kelas->nm_kelas}} - {{auth()->user()->siswa->nm_lengkap}}
   </a>
 
-  <div class="mn-tgl">
-    <label>{{(new \Carbon\Carbon(now()))->translatedFormat("l, d F Y")}}</label>
-    </div>
-
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <a class="dropdown-item" href="/siswa/profile">Profile</a>
     <a class="dropdown-item" href="/siswa/ubah-sandi">Ubah Kata Sandi</a>

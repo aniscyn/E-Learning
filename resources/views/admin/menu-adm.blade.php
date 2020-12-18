@@ -1,5 +1,6 @@
       <!-- Scripts -->
       <script src="{{ asset('js/app.js') }}" defer></script>
+      <script src="{{ asset('js/menu-adm.js') }}" defer></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/admin/menu-adm.css') }}" rel="stylesheet" type="text/css">
@@ -23,11 +24,10 @@
         <ul class="navbar-nav ml-auto">
             <li class="nav-item">
                 <label class="fa fa-calendar nav-link">
-                <?php echo date  ('l, d F Y'); ?></label>
+              {{(new \Carbon\Carbon(now()))->translatedFormat("l, d F Y")}}</label>
             </li>
             <li class="nav-item">
-                <label class="nav-link fa fa-clock-o" >
-                <?php echo date('H:i:s'); ?></label>
+                <label class="nav-link fa fa-clock-o" id="clock"> </label>
             </li>
             <li class="nav-item">
                 <label class="nav-link fa fa-user-circle-o" > {{auth()->user()->username}}</label>
@@ -127,3 +127,5 @@
 
         </ul><!-- List Group END-->
     </div><!-- sidebar-container END -->
+
+

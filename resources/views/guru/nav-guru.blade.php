@@ -18,9 +18,6 @@
     <a class="navbar-brand" href="#">
         <img src="{{ asset ('img/logo.png') }}" width="30" height="30" class="d-inline-block align-top" alt="">
     </a>
-    <div class="mn-tgl">
-        <label>{{(new \Carbon\Carbon(now()))->translatedFormat("l, d F Y")}}</label>
-        </div>
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">

@@ -42,7 +42,7 @@
     <div class="form-group">
       <span class="btn-show-pass">
       <input type="password" class="form-control" name="password" id="myInput" placeholder="Masukkan Kata Sandi"><br>
-      <input type="checkbox" onclick="myFunction()" required> Lihat Kata Sandi
+      <input type="checkbox" onclick="myFunction()"> Lihat Kata Sandi
       </div>
     <button type="submit" class="btn btn-primary btn-masuk">Login</button>
 </form>
@@ -52,15 +52,5 @@
 </div>
 </section>
 
-<script>
-function myFunction() {
-  var x = document.getElementById("myInput");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
-</script>
 </body>
 </html>

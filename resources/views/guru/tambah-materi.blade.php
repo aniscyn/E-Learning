@@ -1,4 +1,5 @@
 <title> Tambah Materi </title>
+
 <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
 
 @include('guru.nav-guru')
@@ -67,9 +68,9 @@
 
 @include('footer')
 <script>
-  var konten = document.getElementById("konten");
+    var konten = document.getElementById("konten");
     CKEDITOR.replace(konten,{
     language:'en-gb'
-  });
-  CKEDITOR.config.allowedContent = true;
-</script>
+    });
+    CKEDITOR.config.allowedContent = true;
+    </script>

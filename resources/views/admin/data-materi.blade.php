@@ -2,6 +2,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+<script src="{{ asset('js/tombol.js') }}"></script>
 
 @include('admin.menu-adm')
 
@@ -80,27 +81,3 @@
 
     @include('admin.footer-adm')
 
-    <script>
-        function jadwalFunction() {
-        event.preventDefault(); // prevent form submit
-        var form = event.target.form; // storing the form
-                swal({
-          title: "Anda yakin ingin hapus?",
-          text: "Data anda akan dihapus secara permanen.",
-          type: "warning",
-          showCancelButton: true,
-          confirmButtonColor: "#DD6B55",
-          confirmButtonText: "Iya",
-          cancelButtonText: "Tidak",
-          closeOnConfirm: false,
-          closeOnCancel: false
-        },
-        function(isConfirm){
-          if (isConfirm) {
-            form.submit();          // submitting the form when user press yes
-          } else {
-            swal("Batal", "Data anda aman", "error");
-          }
-        });
-        }
-        </script>

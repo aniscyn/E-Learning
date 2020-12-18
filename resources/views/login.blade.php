@@ -51,15 +51,7 @@
 </div>
     </div>
 </section>
-<script>
-function myFunction() {
-  var x = document.getElementById("myInput");
-  if (x.type === "password") {
-    x.type = "text";
-  } else {
-    x.type = "password";
-  }
-}
-</script>
+
+
 </body>
 </html>

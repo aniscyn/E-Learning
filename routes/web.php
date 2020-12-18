@@ -202,3 +202,7 @@ Route::group([
     Route::post('/admin/data-jadwal/{jadwal}/data-materi/{materi}/ubah', 'App\Http\Controllers\Admin\DataMateriController@postEdit');
     Route::post('/admin/data-jadwal/{jadwal}/data-materi/{materi}/hapus', 'App\Http\Controllers\Admin\DataMateriController@postDelete');
 });
+// Data Soal
+Route::get('/admin/data-soal', function(){
+    return view('admin/data-soal');
+});

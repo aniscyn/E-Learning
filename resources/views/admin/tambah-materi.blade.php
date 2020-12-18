@@ -1,5 +1,7 @@
 <title> Tambah Data Materi </title>
 
+<script src="{{asset('ckeditor/ckeditor.js')}}"></script>
+
 @include('admin.menu-adm')
 
     <!-- MAIN -->
@@ -35,7 +37,7 @@
             <div class="form-group row">
             <label class="col-2 col-form-label">Ringkasan Materi</label>
             <div class="col-10">
-            <textarea class="form-control" name='rs_materi' required></textarea>
+            <textarea id="konten" class="form-control" name="rs_materi" rows="10" cols="50" required></textarea>
             </div>
             </div>
 
@@ -62,3 +64,10 @@
 
 @include('admin.footer-adm')
 
+<script>
+    var konten = document.getElementById("konten");
+    CKEDITOR.replace(konten,{
+    language:'en-gb'
+    });
+    CKEDITOR.config.allowedContent = true;
+    </script>

@@ -1,12 +1,13 @@
-<title> Soal </title>
+<title> Data Soal </title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
 <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
+<script src="{{ asset('js/tombol.js') }}"></script>
 
-@include('guru.nav-guru')
+@include('admin.menu-adm')
 
     <!-- MAIN -->
-    <div class="col p-4" style="margin-top: 40px;">
+    <div class="col p-4">
 
     <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
@@ -17,7 +18,7 @@
     </nav>
 
     <div class="card">
-    <h5 class="card-header font-weight bg-primary" style="color: white;"> kelas - mapel - nama guru nip </h5>
+    <h5 class="card-header font-weight bg-primary" style="color: white;"> Data Soal</h5>
     <div class="card-body">
     <div class="col-sm-6" style="margin-left: -10px">
     <label> Jenis Soal : </label>
@@ -62,28 +63,5 @@
     </div><!-- Main Col END -->
 </div><!-- body-row END -->
 
-@include('footer')
-<script>
-    function archiveFunction() {
-    event.preventDefault(); // prevent form submit
-    var form = event.target.form; // storing the form
-            swal({
-      title: "Anda yakin ingin hapus?",
-      text: "Data anda akan dihapus secara permanen.",
-      type: "warning",
-      showCancelButton: true,
-      confirmButtonColor: "#DD6B55",
-      confirmButtonText: "Iya",
-      cancelButtonText: "Tidak",
-      closeOnConfirm: false,
-      closeOnCancel: false
-    },
-    function(isConfirm){
-      if (isConfirm) {
-        form.submit();          // submitting the form when user press yes
-      } else {
-        swal("Batal", "Data anda aman", "error");
-      }
-    });
-    }
-    </script>
+@include('admin.footer-adm')
+
