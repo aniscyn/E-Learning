@@ -35,5 +35,11 @@ class Materi extends Model
         return $this->hasOne(User::class, 'id', 'id_guru');
     }
 
+    public static function getMateriByJadwal($jadwalId) {
+        return self::query()
+        ->where('id_jadwal', $jadwalId)
+        ->get();
+    }
+
 }
 

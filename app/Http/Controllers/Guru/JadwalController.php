@@ -54,7 +54,8 @@ class JadwalController extends Controller
             'rs_materi' => $request['rs_materi'],
             'keterangan'  => $request['keterangan'],
             'id_jadwal' => $jadwal->id_jadwal,
-            'upload_materi' => 'file upload dummy'
+            'upload_materi' => 'file upload dummy',
+            'tanggal' => now(),
         ]);
 
         return redirect("/guru/jadwal/{$jadwal->id_jadwal}/materi");

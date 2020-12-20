@@ -22,7 +22,7 @@
     <div class="card-body">
         <div class="col-sm-6" style="margin-left: -10px">
     <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/tambah"> <button type="button" class="btn btn-secondary"> Tambah Materi</button> </a>
-    <a href=""> <button type="button" class="btn btn-warning"> Buat Soal</button> </a> </div>
+    <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal"> <button type="button" class="btn btn-warning"> Buat Soal</button> </a> </div>
 <br>
 
     @if (session('success'))
@@ -57,7 +57,10 @@
             <td>{!!$materi->rs_materi!!}</td>
             <td>{{$materi->keterangan}}</td>
             </td>
-            <td class="text-center"><a href="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/{{$materi->id_materi}}/ubah"><button type="button" class="btn btn-outline-primary"> Ubah </button></a> <br><br>
+            <td class="text-center">
+                <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/{{$materi->id_materi}}/ubah">
+                    <button type="button" class="btn btn-outline-primary"> Ubah </button>
+                </a> <br><br>
             <form action="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/{{$materi->id_materi}}/hapus" method="post">
                 @csrf
                 <button type="submit"  onclick="archiveFunction()" name="archive" class="btn btn-outline-danger" > Hapus</button></td>
