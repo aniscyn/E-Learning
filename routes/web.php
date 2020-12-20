@@ -99,6 +99,13 @@ Route::group([
         return view('guru/beranda-guru');
     });
     Route::get('/guru/jadwal', "App\Http\Controllers\Guru\JadwalController@viewJadwal");
+
+    // Soal
+    Route::get('/guru/jadwal/{jadwal}/soal', "App\Http\Controllers\Guru\SoalController@viewSoal");
+    Route::get('/guru/jadwal/{jadwal}/soal/tambah', "App\Http\Controllers\Guru\SoalController@viewTambahSoal");
+    Route::post('/guru/jadwal/{jadwal}/soal/tambah', "App\Http\Controllers\Guru\SoalController@postTambahSoal");
+
+    //Materi
     Route::get('/guru/jadwal/{jadwal}/materi', "App\Http\Controllers\Guru\JadwalController@viewMateri");
     Route::get('/guru/jadwal/{jadwal}/materi/tambah', "App\Http\Controllers\Guru\JadwalController@viewTambahMateri");
     Route::post('/guru/jadwal/{jadwal}/materi/tambah', "App\Http\Controllers\Guru\JadwalController@postTambahMateri");
@@ -107,21 +114,18 @@ Route::group([
     Route::post('/guru/jadwal/{jadwal}/materi/{materi}/hapus', "App\Http\Controllers\Guru\JadwalController@postHapusMateri");
 
     //soal
-    Route::get('/guru/jadwal/soal', function() {
-        return view('guru/view-soal');
-    });
-    Route::get('/guru/jadwal/tambah-soal-pg', function() {
-        return view('guru/tambah-soal-pg');
-    });
-    Route::get('/guru/jadwal/tambah-soal-essai', function() {
-        return view('guru/tambah-soal-essay');
-    });
-    Route::get('/guru/jadwal/ubah-soal-pg', function() {
-        return view('guru/tambah-soal-pg');
-    });
-    Route::get('/guru/jadwal/ubah-soal-essai', function() {
-        return view('guru/tambah-soal-essay');
-    });
+    // Route::get('/guru/jadwal/tambah-soal-pg', function() {
+    //     return view('guru/tambah-soal-pg');
+    // });
+    // Route::get('/guru/jadwal/tambah-soal-essai', function() {
+    //     return view('guru/tambah-soal-essay');
+    // });
+    // Route::get('/guru/jadwal/ubah-soal-pg', function() {
+    //     return view('guru/tambah-soal-pg');
+    // });
+    // Route::get('/guru/jadwal/ubah-soal-essai', function() {
+    //     return view('guru/tambah-soal-essay');
+    // });
 
     //Profile Guru
     Route::get('/guru/profile', "App\Http\Controllers\Guru\ProfileGuruController@viewProfile");

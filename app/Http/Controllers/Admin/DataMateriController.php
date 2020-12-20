@@ -48,6 +48,7 @@ class DataMateriController extends Controller
             'rs_materi' => $request['rs_materi'],
             'keterangan' => $request['keterangan'],
             'upload_materi' => 'dummy data',
+            'tanggal' => now(),
         ]);
 
         return redirect("/admin/data-jadwal/{$jadwal->id_jadwal}/data-materi");

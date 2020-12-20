@@ -20,9 +20,7 @@
     <h5 class="card-header font-weight bg-primary" style="color: white;"> kelas - mapel - nama guru nip </h5>
     <div class="card-body">
     <div class="col-sm-6" style="margin-left: -10px">
-    <label> Jenis Soal : </label>
-    <a href=""> <button type="button" class="btn btn-dark"> Buat Soal Pilihan Ganda </button> </a>
-    <a href=""> <button type="button" class="btn btn-success"> Buat Soal Essai </button>  </a> </div>
+    <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/tambah"> <button type="button" class="btn btn-dark"> Buat Soal</button> </a>
     <hr>
      <br>
 
@@ -30,17 +28,17 @@
     <thead class="text-center">
       <tr>
         <th>No</th>
-        <th>Jenis Soal</th>
+        <th>Nama Soal</th>
         <th>Jumlah Soal</th>
         <th colspan="4">Aksi</th>
       </tr>
     </thead>
     <tbody>
-
+        @foreach ($dataSoal as $soal)
         <tr>
             <td class="text-center" width="5%">1. </td>
-            <td>Pilihan ganda</td>
-            <td>20 Soal</td>
+            <td>{{$soal->nama_soal}}</td>
+            <td>{{$soal->jumlah_soal}} Soal</td>
 
             <td class="text-center"  width="10%" colspan="2">
             <a href="">
@@ -53,6 +51,7 @@
 
             </form>
           </tr>
+        @endforeach
 
     </tbody>
   </table>
