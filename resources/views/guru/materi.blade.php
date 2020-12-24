@@ -22,7 +22,7 @@
     <div class="card-body">
         <div class="col-sm-6" style="margin-left: -10px">
     <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/tambah"> <button type="button" class="btn btn-secondary"> Tambah Materi</button> </a>
-    <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal"> <button type="button" class="btn btn-warning"> Buat Soal</button> </a> </div>
+    </div>
 <br>
 
     @if (session('success'))
@@ -63,8 +63,12 @@
                 </a> <br><br>
             <form action="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/{{$materi->id_materi}}/hapus" method="post">
                 @csrf
-                <button type="submit"  onclick="archiveFunction()" name="archive" class="btn btn-outline-danger" > Hapus</button></td>
+                <button type="submit"  onclick="archiveFunction()" name="archive" class="btn btn-outline-danger" > Hapus</button>
             </form>
+            <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/{{$materi->id_materi}}/soal">
+                <button type="button" class="btn btn-warning">Soal</button>
+            </a>
+        </td>
           </tr>
         @endforeach
     </tbody>
