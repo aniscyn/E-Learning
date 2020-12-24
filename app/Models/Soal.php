@@ -8,6 +8,6 @@ class Soal extends Model
 {
 
     protected $table = 'tb_soal';
-    protected $primaryKey = 'id';
+    protected $primaryKey = 'id_soal';
     protected $guarded = [];
 }
