@@ -20,7 +20,7 @@
     <h5 class="card-header font-weight bg-primary" style="color: white;"> kelas - mapel - nama guru nip </h5>
     <div class="card-body">
     <div class="col-sm-6" style="margin-left: -10px">
-    <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/{{$materi->id_materi}}/soal/tambah"> <button type="button" class="btn btn-dark"> Buat Soal</button> </a>
+    <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/tambah"> <button type="button" class="btn btn-dark"> Buat Soal</button> </a>
     <hr>
      <br>
 
@@ -29,6 +29,7 @@
       <tr>
         <th>No</th>
         <th>Nama Soal</th>
+        <th>Materi</th>
         <th>Jumlah Soal</th>
         <th colspan="4">Aksi</th>
       </tr>
@@ -38,18 +39,22 @@
         <tr>
             <td class="text-center" width="5%">{{$loop->iteration + (($dataSoal->currentPage() - 1) * $dataSoal->perPage())}}</td>
             <td>{{$soal->nama_soal}}</td>
+            <td>{{$soal->getNamaMateri()}}</td>
             <td>{{$soal->jumlah_soal}} Soal</td>
 
             <td class="text-center"  width="10%" colspan="2">
                 <a href=""><button type="button" class="btn btn-outline-warning"> Detail Soal </button></a>
-                <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/{{$materi->id_materi}}/soal/{{$soal->id_soal}}/ubah"><button type="button" class="btn btn-outline-primary"> Ubah </button></a></td>
-                <td class="text-center" width="10%">
-                <form action="">
-                @csrf
+            </td>
+                @if (!$soal->is_uts && !$soal->is_uas)
+                    <td>
+                    <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/ubah"><button type="button" class="btn btn-outline-primary"> Ubah </button></a></td>
+                    <td class="text-center" width="10%">
+                    <form action="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/hapus" method="POST">
+                    @csrf
 
-                <button type="submit"  onclick="archiveFunction()" name="archive" class="btn btn-outline-danger" > Hapus</button></td>
-
-            </form>
+                    <button type="submit"  onclick="archiveFunction()" name="archive" class="btn btn-outline-danger" > Hapus</button></td>
+                    </form>
+                @endif
           </tr>
         @endforeach
 

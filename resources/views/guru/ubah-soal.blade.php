@@ -19,7 +19,7 @@
     <h5 class="card-header font-weight bg-info" style="color: white;">Tambah Soal</h5>
     <div class="card-body">
 
-    <form action="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/{{$materi->id_materi}}/soal/{{$soal->id_soal}}/ubah" method="POST">
+    <form action="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/ubah" method="POST">
     @csrf
     <div class="form-group row">
     <label class="col-2 col-form-label"> Nama Soal</label>

@@ -8,44 +8,49 @@ use App\Http\Controllers\Controller;
 
 class SoalController extends Controller
 {
-    public function viewSoal(Jadwal $jadwal, Materi $materi)
+    public function viewSoal(Jadwal $jadwal)
     {
         $soal = Soal::query()
-        ->where('id_materi', $materi->id_materi)
+        ->whereHas('materi', function ($query) use ($jadwal) {
+            $query->where('id_jadwal', $jadwal->id_jadwal);
+        })
         ->paginate(5);
 
         return view('guru/view-soal', [
             'jadwal' => $jadwal,
-            'materi' => $materi,
             'dataSoal' => $soal,
         ]);
     }
 
-    public function viewTambahSoal(Jadwal $jadwal, Materi $materi)
+    public function viewTambahSoal(Jadwal $jadwal)
     {
+        $materi = $jadwal->materi;
+
         return view('guru/tambah-soal', [
             'jadwal' => $jadwal,
-            'materi' => $materi,
+            'dataMateri' => $materi,
         ]);
     }
 
-    public function postTambahSoal(Jadwal $jadwal, Materi $materi)
+    public function postTambahSoal(Jadwal $jadwal)
     {
         $jumlahSoal = Soal::query()
-        ->where('id_materi', $materi->id_materi)
+        ->whereHas('materi', function ($query) use ($jadwal) {
+            $query->where('id_jadwal', $jadwal->id_jadwal);
+        })
         ->count();
 
         if ($jumlahSoal <= 0) {
             Soal::create([
                 'nama_soal' => "UTS",
                 'jumlah_soal' => 0,
-                'id_materi' => $materi->id_materi,
+                'id_materi' => request()->get('id_materi'),
                 'is_uts' => 1,
             ]);
             Soal::create([
                 'nama_soal' => "UAS",
                 'jumlah_soal' => 0,
-                'id_materi' => $materi->id_materi,
+                'id_materi' => request()->get('id_materi'),
                 'is_uas' => 1,
             ]);
         }
@@ -53,30 +58,29 @@ class SoalController extends Controller
         $soal = Soal::create([
             'nama_soal' => request()->get('nama_soal'),
             'jumlah_soal' => 0,
-            'id_materi' => $materi->id_materi
+            'id_materi' => request()->get('id_materi'),
         ]);
 
-        return redirect("/guru/jadwal/{$jadwal->id_jadwal}/materi/{$materi->id_materi}/soal");
+        return redirect("/guru/jadwal/{$jadwal->id_jadwal}/soal");
     }
 
-    public function viewEditSoal(Jadwal $jadwal, Materi $materi, Soal $soal)
+    public function viewEditSoal(Jadwal $jadwal, Soal $soal)
     {
         return view('guru/ubah-soal', [
             'jadwal' => $jadwal,
-            'materi' => $materi,
             'soal' => $soal,
         ]);
     }
 
-    public function postEditSoal(Jadwal $jadwal, Materi $materi, Soal $soal)
+    public function postEditSoal(Jadwal $jadwal, Soal $soal)
     {
         $soal->nama_soal = request()->get('nama_soal');
         $soal->save();
 
-        return redirect("/guru/jadwal/{$jadwal->id_jadwal}/materi/{$materi->id_materi}/soal");
+        return redirect("/guru/jadwal/{$jadwal->id_jadwal}}/soal");
     }
 
-    public function postHapusSoal(Jadwal $jadwal, Materi $materi, Soal $soal)
+    public function postHapusSoal(Jadwal $jadwal, Soal $soal)
     {
         if($soal->delete()){
             //redirect dengan pesan sukses
