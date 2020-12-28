@@ -101,12 +101,12 @@ Route::group([
     Route::get('/guru/jadwal', "App\Http\Controllers\Guru\JadwalController@viewJadwal");
 
     // Soal
-    Route::get('/guru/jadwal/{jadwal}/materi/{materi}/soal', "App\Http\Controllers\Guru\SoalController@viewSoal");
-    Route::get('/guru/jadwal/{jadwal}/materi/{materi}/soal/tambah', "App\Http\Controllers\Guru\SoalController@viewTambahSoal");
-    Route::post('/guru/jadwal/{jadwal}/materi/{materi}/soal/tambah', "App\Http\Controllers\Guru\SoalController@postTambahSoal");
-    Route::get('/guru/jadwal/{jadwal}/materi/{materi}/soal/{soal}/ubah', "App\Http\Controllers\Guru\SoalController@viewEditSoal");
-    Route::post('/guru/jadwal/{jadwal}/materi/{materi}/soal/{soal}/ubah', "App\Http\Controllers\Guru\SoalController@postEditSoal");
-    Route::post('/guru/jadwal/{jadwal}/materi/{materi}/soal/{soal}/hapus', "App\Http\Controllers\Guru\SoalController@postHapusSoal");
+    Route::get('/guru/jadwal/{jadwal}/soal', "App\Http\Controllers\Guru\SoalController@viewSoal");
+    Route::get('/guru/jadwal/{jadwal}/soal/tambah', "App\Http\Controllers\Guru\SoalController@viewTambahSoal");
+    Route::post('/guru/jadwal/{jadwal}/soal/tambah', "App\Http\Controllers\Guru\SoalController@postTambahSoal");
+    Route::get('/guru/jadwal/{jadwal}/soal/{soal}/ubah', "App\Http\Controllers\Guru\SoalController@viewEditSoal");
+    Route::post('/guru/jadwal/{jadwal}/soal/{soal}/ubah', "App\Http\Controllers\Guru\SoalController@postEditSoal");
+    Route::post('/guru/jadwal/{jadwal}/soal/{soal}/hapus', "App\Http\Controllers\Guru\SoalController@postHapusSoal");
 
     //Materi
     Route::get('/guru/jadwal/{jadwal}/materi', "App\Http\Controllers\Guru\JadwalController@viewMateri");

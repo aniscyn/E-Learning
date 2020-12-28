@@ -19,7 +19,7 @@
     <h5 class="card-header font-weight bg-info" style="color: white;">Tambah Soal</h5>
     <div class="card-body">
 
-    <form action="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/{{$materi->id_materi}}/soal/tambah" method="POST">
+    <form action="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/tambah" method="POST">
     @csrf
     <div class="form-group row">
     <label class="col-2 col-form-label"> Nama Soal</label>
@@ -28,16 +28,17 @@
     </div>
     </div>
 
-    {{-- <div class="form-group row">
-        <label class="col-2 col-form-label"> Ujian Khusus</label>
+    <div class="form-group row">
+        <label class="col-2 col-form-label"> Materi</label>
          <div class="col-10">
-        <select name="ujian khusus" id="">
+        <select name="id_materi" id="">
             <option value="">-</option>
-            <option value="uts">UTS</option>
-            <option value="uas">UAS</option>
+            @foreach ($dataMateri as $materi)
+                <option value="{{$materi->id_materi}}">{{$materi->nm_materi}}</option>
+            @endforeach
         </select>
         </div>
-        </div> --}}
+        </div>
 
     <button type="submit" class="btn btn-primary" style="margin-left: 17%"> Simpan Data</button>
 
