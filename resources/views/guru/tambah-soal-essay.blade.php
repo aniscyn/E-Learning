@@ -19,12 +19,12 @@
     <h5 class="card-header font-weight bg-info" style="color: white;">Tambah Soal Pilihan Essai</h5>
     <div class="card-body">
 
-    <form action="">
+    <form action="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/detail/tambah?tipe_soal=essay" method="POST">
     @csrf
     <div class="form-group row">
-    <label class="col-2 col-form-label"> Pertanyaan No. 1</label>
+    <label class="col-2 col-form-label"> Pertanyaan</label>
     <div class="col-10">
-    <textarea class="form-control" name="" rows="5"></textarea>
+    <textarea class="form-control" name="pertanyaan" rows="5"></textarea>
     </div>
     </div>
     <button type="submit" class="btn btn-primary" style="margin-left: 17%"> Simpan Data</button>

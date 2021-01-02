@@ -5,6 +5,7 @@ use App\Models\Soal;
 use App\Models\Jadwal;
 use App\Models\Materi;
 use App\Http\Controllers\Controller;
+use App\Models\DetailSoal;
 
 class SoalController extends Controller
 {
