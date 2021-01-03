@@ -16,6 +16,11 @@ class Soal extends Model
         return $this->hasOne(Materi::class, 'id_materi', 'id_materi');
     }
 
+    public function detailSoal()
+    {
+        return $this->hasMany(DetailSoal::class, 'id_soal', 'id_soal');
+    }
+
     public function getNamaMateri()
     {
         if (!$this->is_uts && !$this->is_uas) {
@@ -23,5 +28,13 @@ class Soal extends Model
         }
 
         return "Ujian";
+    }
+
+    public function refreshJumlahSoal()
+    {
+        $jumlahSoal = $this->detailSoal()->count();
+
+        $this->jumlah_soal = $jumlahSoal;
+        $this->save();
     }
 }

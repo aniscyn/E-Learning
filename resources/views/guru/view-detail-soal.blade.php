@@ -20,7 +20,8 @@
     <h5 class="card-header font-weight bg-primary" style="color: white;"> kelas - mapel - nama guru nip </h5>
     <div class="card-body">
     <div class="col-sm-6" style="margin-left: -10px">
-    <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/tambah"> <button type="button" class="btn btn-dark"> Buat Soal</button> </a>
+    <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/detail/tambah?tipe_soal=pg"> <button type="button" class="btn btn-dark"> Buat Pertanyaan Pilihan Ganda</button> </a>
+    <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/detail/tambah?tipe_soal=essay"> <button type="button" class="btn btn-dark"> Buat Pertanyaan Essay</button> </a>
     <hr>
      <br>
 
@@ -28,33 +29,29 @@
     <thead class="text-center">
       <tr>
         <th>No</th>
-        <th>Nama Soal</th>
-        <th>Materi</th>
-        <th>Jumlah Soal</th>
+        <th>Tipe</th>
+        <th>Pertanyaan</th>
         <th colspan="4">Aksi</th>
       </tr>
     </thead>
     <tbody>
-        @foreach ($dataSoal as $soal)
+        @foreach ($dataSoal as $detailSoal)
         <tr>
             <td class="text-center" width="5%">{{$loop->iteration + (($dataSoal->currentPage() - 1) * $dataSoal->perPage())}}</td>
-            <td>{{$soal->nama_soal}}</td>
-            <td>{{$soal->getNamaMateri()}}</td>
-            <td>{{$soal->jumlah_soal}} Soal</td>
+            <td>{{$detailSoal->type}}</td>
+            <td>{{$detailSoal->pertanyaan}}</td>
 
             <td class="text-center"  width="10%" colspan="2">
                 <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/detail"><button type="button" class="btn btn-outline-warning"> Detail Soal </button></a>
             </td>
-                @if (!$soal->is_uts && !$soal->is_uas)
-                    <td>
-                    <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/ubah"><button type="button" class="btn btn-outline-primary"> Ubah </button></a></td>
-                    <td class="text-center" width="10%">
-                    <form action="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/hapus" method="POST">
-                    @csrf
+                <td>
+                <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/detail/{{$detailSoal->id_detail_soal}}/ubah"><button type="button" class="btn btn-outline-primary"> Ubah </button></a></td>
+                <td class="text-center" width="10%">
+                <form action="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/detail/{{$detailSoal->id_detail_soal}}/hapus" method="POST">
+                @csrf
 
-                    <button type="submit"  onclick="archiveFunction()" name="archive" class="btn btn-outline-danger" > Hapus</button></td>
-                    </form>
-                @endif
+                <button type="submit"  onclick="archiveFunction()" name="archive" class="btn btn-outline-danger" > Hapus</button></td>
+                </form>
           </tr>
         @endforeach
 

@@ -19,10 +19,10 @@
     <h5 class="card-header font-weight bg-info" style="color: white;">Tambah Soal Pilihan Ganda</h5>
     <div class="card-body">
 
-    <form action="">
+    <form action="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/detail/tambah?tipe_soal=pg" method="POST">
     @csrf
     <div class="form-group row">
-    <label class="col-2 col-form-label"> Pertanyaan No. 1</label>
+    <label class="col-2 col-form-label"> Pertanyaan</label>
      <div class="col-10">
     <input class="form-control" type="text" value="" name="pertanyaan" id="pertanyaan" placeholder="Masukkan Pertanyaan">
     </div>
@@ -53,6 +53,18 @@
     <label class="col-2 col-form-label"> Pilihan D</label>
     <div class="col-10">
     <input class="form-control" type="text" value="" name="pilihan-d" placeholder="Masukkan Pilihan">
+    </div>
+    </div>
+
+    <div class="form-group row">
+    <label class="col-2 col-form-label"> Jawaban Benar</label>
+    <div class="col-10">
+    <select name="jawaban_benar" id="">
+        <option value="A">Pilihan A</option>
+        <option value="B">Pilihan B</option>
+        <option value="C">Pilihan C</option>
+        <option value="D">Pilihan D</option>
+    </select>
     </div>
     </div>
 
