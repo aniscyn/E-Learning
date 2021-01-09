@@ -39,7 +39,7 @@
         <tr>
             <td class="text-center" width="5%">{{$loop->iteration + (($dataSoal->currentPage() - 1) * $dataSoal->perPage())}}</td>
             <td>{{$detailSoal->type}}</td>
-            <td>{{$detailSoal->pertanyaan}}</td>
+            <td>{!!$detailSoal->pertanyaan!!}</td>
 
             <td class="text-center"  width="10%" colspan="2">
                 <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/detail"><button type="button" class="btn btn-outline-warning"> Detail Soal </button></a>
@@ -57,6 +57,8 @@
 
     </tbody>
   </table>
+
+  {{$dataSoal->links()}}
 
     </div>
     </div>
