@@ -24,7 +24,7 @@
     <div class="form-group row">
     <label class="col-2 col-form-label"> Pertanyaan</label>
     <div class="col-10">
-    <textarea class="form-control" name="pertanyaan" rows="5"></textarea>
+    <textarea id="ktn" class="form-control" name="pertanyaan" rows="10" cols="50" required></textarea>
     </div>
     </div>
     <button type="submit" class="btn btn-primary" style="margin-left: 17%"> Simpan Data</button>
@@ -37,3 +37,11 @@
     </div><!-- body-row END -->
 
 @include('footer')
+
+<script>
+    var konten = document.getElementById("ktn");
+      CKEDITOR.replace(ktn,{
+      language:'en-gb'
+    });
+    CKEDITOR.config.allowedContent = true;
+  </script>

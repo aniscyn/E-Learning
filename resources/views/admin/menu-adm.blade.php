@@ -1,6 +1,6 @@
       <!-- Scripts -->
       <script src="{{ asset('js/app.js') }}" defer></script>
-      <script src="{{ asset('js/menu-adm.js') }}" defer></script>
+      <script src="{{ asset('js/menu-admj.js') }}" defer></script>
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet" type="text/css">
     <link href="{{ asset('css/admin/menu-adm.css') }}" rel="stylesheet" type="text/css">

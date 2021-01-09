@@ -1,4 +1,5 @@
 <title> Tambah Soal Pilihan Ganda </title>
+
 <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
 
 @include('guru.nav-guru')
@@ -24,7 +25,7 @@
     <div class="form-group row">
     <label class="col-2 col-form-label"> Pertanyaan</label>
      <div class="col-10">
-    <input class="form-control" type="text" value="" name="pertanyaan" id="pertanyaan" placeholder="Masukkan Pertanyaan">
+    <textarea id="ktn" class="form-control" name="pertanyaan" rows="10" cols="50" required></textarea>
     </div>
     </div>
 
@@ -79,8 +80,8 @@
 
 @include('footer')
 <script>
-  var konten = document.getElementById("konten");
-    CKEDITOR.replace(konten,{
+  var konten = document.getElementById("ktn");
+    CKEDITOR.replace(ktn,{
     language:'en-gb'
   });
   CKEDITOR.config.allowedContent = true;
