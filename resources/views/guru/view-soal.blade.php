@@ -61,6 +61,8 @@
     </tbody>
   </table>
 
+  {{$dataSoal->links()}}
+
     </div>
     </div>
     </div><!-- Main Col END -->
