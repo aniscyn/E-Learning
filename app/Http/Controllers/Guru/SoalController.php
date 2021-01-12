@@ -45,13 +45,13 @@ class SoalController extends Controller
             Soal::create([
                 'nama_soal' => "UTS",
                 'jumlah_soal' => 0,
-                'id_materi' => request()->get('id_materi'),
+                'id_materi' => null,
                 'is_uts' => 1,
             ]);
             Soal::create([
                 'nama_soal' => "UAS",
                 'jumlah_soal' => 0,
-                'id_materi' => request()->get('id_materi'),
+                'id_materi' => null,
                 'is_uas' => 1,
             ]);
         }
@@ -84,6 +84,7 @@ class SoalController extends Controller
     public function postHapusSoal(Jadwal $jadwal, Soal $soal)
     {
         if($soal->delete()){
+            $soal->detailSoal()->delete();
             //redirect dengan pesan sukses
             return back()->with(['success' => 'Data Berhasil Dihapus!']);
          }else{

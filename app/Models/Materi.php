@@ -31,8 +31,14 @@ class Materi extends Model
     {
         return $this->hasOne(Kelas::class, 'id_kelas', 'id_kelas');
     }
+
     public function userGuru(){
         return $this->hasOne(User::class, 'id', 'id_guru');
+    }
+
+    public function soal()
+    {
+        return $this->hasOne(Soal::class, 'id_materi', 'id_materi');
     }
 
     public static function getMateriByJadwal($jadwalId) {

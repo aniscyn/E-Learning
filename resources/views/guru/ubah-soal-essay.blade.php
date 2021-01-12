@@ -1,4 +1,4 @@
-<title> Ubah Soal Essai </title>
+<title> Tambah Soal Essai </title>
 <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
 
 @include('guru.nav-guru')
@@ -16,15 +16,15 @@
     </nav>
 
     <div class="card">
-    <h5 class="card-header font-weight bg-info" style="color: white;">Ubah Soal Pilihan Essai</h5>
+    <h5 class="card-header font-weight bg-info" style="color: white;">Tambah Soal Pilihan Essai</h5>
     <div class="card-body">
 
-    <form action="">
+    <form action="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/detail/{{$detail->id_detail_soal}}/ubah?tipe_soal=essay" method="POST">
     @csrf
     <div class="form-group row">
-    <label class="col-2 col-form-label"> Pertanyaan No. 1</label>
+    <label class="col-2 col-form-label"> Pertanyaan</label>
     <div class="col-10">
-    <textarea class="form-control" name="" rows="5"></textarea>
+    <textarea id="ktn" class="form-control" name="pertanyaan" rows="10" cols="50" required>{{$detail->pertanyaan}}</textarea>
     </div>
     </div>
     <button type="submit" class="btn btn-primary" style="margin-left: 17%"> Simpan Data</button>
@@ -37,3 +37,11 @@
     </div><!-- body-row END -->
 
 @include('footer')
+
+<script>
+    var konten = document.getElementById("ktn");
+      CKEDITOR.replace(ktn,{
+      language:'en-gb'
+    });
+    CKEDITOR.config.allowedContent = true;
+  </script>

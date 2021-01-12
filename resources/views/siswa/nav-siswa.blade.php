@@ -71,15 +71,16 @@
                 </div>
             </a>
 
-
+            @foreach ($dataMateri as $materi)
             <a href="/siswa" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                 <span class="fa fa-files-o fa-fw mr-3"></span>
-                    <span class="menu-collapsed">PERTEMUAN 1</span>
+                    <span class="menu-collapsed">{{$materi->nm_materi}}</span>
                 </div>
             </a>
+            @endforeach
 
-            <a href="#" class="bg-light list-group-item list-group-item-action">
+            {{-- <a href="#" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                 <span class="fa fa-files-o fa-fw mr-3"></span>
                     <span class="menu-collapsed">PERTEMUAN 2</span>
@@ -140,7 +141,7 @@
                 <span class="fa fa-files-o fa-fw mr-3"></span>
                     <span class="menu-collapsed">PERTEMUAN 10 </span>
                 </div>
-            </a>
+            </a> --}}
 
         </ul><!-- List Group END-->
     </div><!-- sidebar-container END -->
