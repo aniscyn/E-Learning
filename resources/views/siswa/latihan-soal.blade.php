@@ -16,34 +16,37 @@
 </div>
 
   <div class="card-body">
-    <form action="">
+    <form action="/siswa/jadwal/{{$jadwal->id_jadwal}}/belajar/{{$materi->id_materi}}/soal" method="POST">
         @csrf
-        <div class="form-group row-sl">
-        <label> 1.
-        <label> Apa warna laut??</label> </label> </div>
 
-        <div class="form-check isl">
-        <input type="radio" class="form-check-input" name="">Putih<br>
-        <input type="radio" class="form-check-input" name="">Biru<br>
-        <input type="radio" class="form-check-input" name="">Hijau<br>
-        <input type="radio" class="form-check-input" name="">Kuning<br>
-        <input type="radio" class="form-check-input" name="">Merah<br>
-        </div>
+        @if ($detailPengerjaanSoal->detailSoal->type == 'PG')
+            <div class="form-group row-sl">
+                <label> 1.
+                <label>{!!$detailPengerjaanSoal->detailSoal->pertanyaan!!}</label> </label> </div>
 
-        <br>
+                <div class="form-check isl">
+                <input type="radio" class="form-check-input" name="pilihan_jawaban" value="A">{{$detailPengerjaanSoal->detailSoal->pilihan_a}}<br>
+                <input type="radio" class="form-check-input" name="pilihan_jawaban" value="B">{{$detailPengerjaanSoal->detailSoal->pilihan_b}}<br>
+                <input type="radio" class="form-check-input" name="pilihan_jawaban" value="C">{{$detailPengerjaanSoal->detailSoal->pilihan_c}}<br>
+                <input type="radio" class="form-check-input" name="pilihan_jawaban" value="D">{{$detailPengerjaanSoal->detailSoal->pilihan_d}}<br>
+            </div>
 
-        <div class ="form-group row-sl">
-        <label> 2.
-        <label> Jelaskan bentuk awan seperti apa??</label> </label> </div>
+            <br>
+        @endif
 
-        <div class="form group isl">
-        <textarea name="isi-essay" id="isl" cols="50" rows="5" class="form-control"> </textarea>
-        </div>
-        <br>
-        <div class="form-group row-sl">
+        @if ($detailPengerjaanSoal->detailSoal->type == 'ESSAY')
+            <div class ="form-group row-sl">
+                <label> 1.
+                <label>{!!$detailPengerjaanSoal->detailSoal->pertanyaan!!}</label> </label> </div>
+
+                <div class="form group isl">
+                <textarea name="isi_essay" id="isl" cols="50" rows="5" class="form-control"> </textarea>
+                </div>
+                <br>
+                <div class="form-group row-sl">
+            </div>
+        @endif
         <button type="submit" class="btn btn-primary" >Lanjut</button></a>
-        </div>
-
         </div>
   </div><br>
 

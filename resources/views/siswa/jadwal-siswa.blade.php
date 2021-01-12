@@ -39,7 +39,7 @@
               <tr>
                 <th scope="row">{{$loop->iteration}}</th>
                 <td>{{$mapel->jm_mulai}} - {{$mapel->jm_selesai}}</td>
-                <td><a href="/siswa/jadwal/belajar"> <button type="button" class="btn btn-primary" >{{$mapel->mataPelajaran->nm_mapel}}</button></a></td>
+                <td><a href="/siswa/jadwal/{{$mapel->id_jadwal}}/belajar"> <button type="button" class="btn btn-primary" >{{$mapel->mataPelajaran->nm_mapel}}</button></a></td>
               </tr>
               @endforeach
           </tbody>

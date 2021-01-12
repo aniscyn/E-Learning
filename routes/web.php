@@ -51,9 +51,12 @@ Route::group([
         return view('beranda');
     });
     Route::get('/siswa/jadwal', "App\Http\Controllers\Siswa\JadwalController@viewJadwal");
-    Route::get('/siswa/jadwal/belajar', function(){
-        return view('siswa/belajar-siswa');
-    });
+
+    // Belajar
+    Route::get('/siswa/jadwal/{jadwal}/belajar', "App\Http\Controllers\Siswa\BelajarController@index");
+    Route::get('/siswa/jadwal/{jadwal}/belajar/{materi}/soal', "App\Http\Controllers\Siswa\BelajarController@latihanSoal");
+    Route::post('/siswa/jadwal/{jadwal}/belajar/{materi}/soal', "App\Http\Controllers\Siswa\BelajarController@postLatihanSoal");
+    Route::get('/siswa/jadwal/{jadwal}/belajar/{materi}/soal/review', "App\Http\Controllers\Siswa\BelajarController@viewReviewSoal");
 
 
     //Absensi Siswa
