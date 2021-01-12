@@ -84,6 +84,7 @@ class SoalController extends Controller
     public function postHapusSoal(Jadwal $jadwal, Soal $soal)
     {
         if($soal->delete()){
+            $soal->detailSoal()->delete();
             //redirect dengan pesan sukses
             return back()->with(['success' => 'Data Berhasil Dihapus!']);
          }else{

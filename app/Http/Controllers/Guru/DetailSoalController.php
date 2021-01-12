@@ -71,16 +71,56 @@ class DetailSoalController extends Controller
 
     public function viewEdit(Jadwal $jadwal, Soal $soal, DetailSoal $detail)
     {
+        $tipeSoal = strtolower($detail->type);
 
+        if ($tipeSoal == 'pg') {
+            return view('guru.ubah-soal-pg', [
+                'jadwal' => $jadwal,
+                'soal' => $soal,
+                'detail' => $detail,
+            ]);
+        }
+        else {
+            return view('guru.ubah-soal-essay', [
+                'jadwal' => $jadwal,
+                'soal' => $soal,
+                'detail' => $detail,
+            ]);
+        }
     }
 
     public function postEdit(Jadwal $jadwal, Soal $soal, DetailSoal $detail)
     {
+        $tipeSoal = strtolower($detail->type);
 
+        if ($tipeSoal == 'pg') {
+            $detail->pertanyaan = request()->get('pertanyaan');
+            $detail->pilihan_a = request()->get('pilihan-a');
+            $detail->pilihan_b = request()->get('pilihan-b');
+            $detail->pilihan_c = request()->get('pilihan-c');
+            $detail->pilihan_d = request()->get('pilihan-d');
+            $detail->jawaban_pilihan = request()->get('jawaban_benar');
+        }
+        else {
+            $detail->pertanyaan = request()->get('pertanyaan');
+        }
+
+        $detail->save();
+
+        return redirect("/guru/jadwal/{$jadwal->id_jadwal}/soal/{$soal->id_soal}/detail");
     }
+
 
     public function postHapus(Jadwal $jadwal, Soal $soal, DetailSoal $detail)
     {
-
+        if($detail->delete()){
+            $soal->refreshJumlahSoal();
+            //redirect dengan pesan sukses
+            return back()->with(['success' => 'Data Berhasil Dihapus!']);
+         }else{
+           //redirect dengan pesan error
+           return back()->with(['error' => 'Data Gagal Dihapus!']);
+         }
+        return back();
     }
 }
