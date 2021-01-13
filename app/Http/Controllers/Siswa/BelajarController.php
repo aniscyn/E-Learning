@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\Models\DetailPengerjaanSoal;
 use App\Models\DetailSoal;
 use App\Models\PengerjaanSoal;
+use App\Models\Soal;
 
 class BelajarController extends Controller
 {
@@ -106,8 +107,26 @@ class BelajarController extends Controller
         return back();
     }
 
-    public function viewReviewSoal()
+    public function viewReviewSoal(Jadwal $jadwal, Materi $materi, Soal $soal)
     {
-        return view('siswa/review-soal');
+        $siswa = auth()->user();
+        $soal = $materi->soal;
+
+        $pengerjaanSoal = PengerjaanSoal::query()
+        ->where('id_siswa', $siswa->id)
+        ->where('id_soal', $soal->id_soal)
+        ->first();
+
+        $detailPengerjaanSoal = DetailPengerjaanSoal::query()
+        ->where('id_pengerjaan_soal', $pengerjaanSoal->id_pengerjaan_soal)
+        ->get();
+
+        return view('siswa/review-soal', [
+            'jadwal' => $jadwal,
+            'materi' => $materi,
+            'soal' => $soal,
+            'pengerjaanSoal' => $pengerjaanSoal,
+            'detailPengerjaanSoal' => $detailPengerjaanSoal,
+        ]);
     }
 }

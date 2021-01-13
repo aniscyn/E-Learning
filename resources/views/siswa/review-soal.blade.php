@@ -17,19 +17,33 @@
   <div class="card-body">
     <form action="">
         @csrf
+        @foreach ($detailPengerjaanSoal as $detail)
         <div class="form-group row-sl">
-        <label> 1. </label>
-        <label> Apa warna laut?? </label>
-        <button type="submit" class="btn btn-success" style="margin-left: 80%">Ubah</button>
-    </div>
-
-        <div class="form-group isl">
-        <label> Biru </label>
-        <hr>
+            <label> {{$loop->iteration}}. </label>
+            <label> {!!$detail->detailSoal->pertanyaan!!} </label>
+            <button type="submit" class="btn btn-success" style="margin-left: 80%">Ubah</button>
         </div>
 
+            <div class="form-group isl">
+                @if ($detail->detailSoal->type == 'PG')
+                    @if ($detail->pilihan_jawaban == 'A')
+                        {{$detail->detailSoal->pilihan_a}}
+                    @elseif($detail->pilihan_jawaban == 'B')
+                        {{$detail->detailSoal->pilihan_b}}
+                    @elseif($detail->pilihan_jawaban == 'C')
+                        {{$detail->detailSoal->pilihan_c}}
+                    @elseif($detail->pilihan_jawaban == 'C')
+                        {{$detail->detailSoal->pilihan_c}}
+                    @endif
+                @else
+                    {!!$detail->jawaban_essay!!}
+                @endif
+            <hr>
+            </div>
+        @endforeach
+
 <!-- No 2 --->
-        <div class ="form-group row-sl">
+        {{-- <div class ="form-group row-sl">
         <label> 2.</label>
         <label> Jelaskan bentuk awan seperti apa??</label>
         <button type="submit" class="btn btn-success" style="margin-left: 91.5%; margin-top:-3%">Ubah</button>
@@ -45,7 +59,7 @@
         <br>
         <div class="form-group row-sl">
         <button type="submit" class="btn btn-primary" >Selesai</button></a>
-        </div>
+        </div> --}}
 
         </div>
   </div><br>
