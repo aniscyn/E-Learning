@@ -16,6 +16,11 @@ class Soal extends Model
         return $this->hasOne(Materi::class, 'id_materi', 'id_materi');
     }
 
+    public function jadwal()
+    {
+        return $this->hasOne(Jadwal::class, 'id_jadwal', 'id_jadwal');
+    }
+
     public function detailSoal()
     {
         return $this->hasMany(DetailSoal::class, 'id_soal', 'id_soal');

@@ -20,6 +20,7 @@ class CreatePengerjaanSoal extends Migration
             $table->integer('jumlah_benar')->default(0);
             $table->integer('jumlah_salah')->default(0);
             $table->integer("nilai")->default(0);
+            $table->tinyInteger("is_finish")->default(0);
             $table->timestamps();
         });
     }

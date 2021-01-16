@@ -53,10 +53,15 @@ Route::group([
     Route::get('/siswa/jadwal', "App\Http\Controllers\Siswa\JadwalController@viewJadwal");
 
     // Belajar
-    Route::get('/siswa/jadwal/{jadwal}/belajar', "App\Http\Controllers\Siswa\BelajarController@index");
+    Route::get('/siswa/jadwal/{jadwal}/belajar', "App\Http\Controllers\Siswa\BelajarController@index")->name('siswa.home.belajar');
     Route::get('/siswa/jadwal/{jadwal}/belajar/{materi}/soal', "App\Http\Controllers\Siswa\BelajarController@latihanSoal");
     Route::post('/siswa/jadwal/{jadwal}/belajar/{materi}/soal', "App\Http\Controllers\Siswa\BelajarController@postLatihanSoal");
+
+    // Review Latihan Soal
     Route::get('/siswa/jadwal/{jadwal}/belajar/{materi}/soal/review', "App\Http\Controllers\Siswa\BelajarController@viewReviewSoal");
+    Route::post('/siswa/jadwal/{jadwal}/belajar/{materi}/soal/review', "App\Http\Controllers\Siswa\BelajarController@postReviewSoal");
+    Route::get('/siswa/jadwal/{jadwal}/belajar/{materi}/soal/review/{detail}/ubah', "App\Http\Controllers\Siswa\BelajarController@postReviewSoal")->name('siswa.review.edit');
+    Route::post('/siswa/jadwal/{jadwal}/belajar/{materi}/soal/review/{detail}/ubah', "App\Http\Controllers\Siswa\BelajarController@postReviewSoal")->name('siswa.review.edit.post');
 
 
     //Absensi Siswa
