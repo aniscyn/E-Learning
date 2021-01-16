@@ -12,9 +12,7 @@ class SoalController extends Controller
     public function viewSoal(Jadwal $jadwal)
     {
         $soal = Soal::query()
-        ->whereHas('materi', function ($query) use ($jadwal) {
-            $query->where('id_jadwal', $jadwal->id_jadwal);
-        })
+        ->where('id_jadwal', $jadwal->id_jadwal)
         ->paginate(5);
 
         return view('guru/view-soal', [
@@ -45,12 +43,14 @@ class SoalController extends Controller
             Soal::create([
                 'nama_soal' => "UTS",
                 'jumlah_soal' => 0,
+                'id_jadwal' => $jadwal->id_jadwal,
                 'id_materi' => null,
                 'is_uts' => 1,
             ]);
             Soal::create([
                 'nama_soal' => "UAS",
                 'jumlah_soal' => 0,
+                'id_jadwal' => $jadwal->id_jadwal,
                 'id_materi' => null,
                 'is_uas' => 1,
             ]);
@@ -60,6 +60,7 @@ class SoalController extends Controller
             'nama_soal' => request()->get('nama_soal'),
             'jumlah_soal' => 0,
             'id_materi' => request()->get('id_materi'),
+            'id_jadwal' => $jadwal->id_jadwal,
         ]);
 
         return redirect("/guru/jadwal/{$jadwal->id_jadwal}/soal");

@@ -15,13 +15,18 @@
 </div>
 
   <div class="card-body">
-    <form action="">
+    <form action="" method="POST">
         @csrf
+        <div style="margin-left:40%">
+            <button class="btn btn-primary" type="Submit">Selesai</button>
+        </div>
         @foreach ($detailPengerjaanSoal as $detail)
         <div class="form-group row-sl">
             <label> {{$loop->iteration}}. </label>
             <label> {!!$detail->detailSoal->pertanyaan!!} </label>
-            <button type="submit" class="btn btn-success" style="margin-left: 80%">Ubah</button>
+            <a href="/siswa/jadwal/{{$jadwal->id_jadwal}}/belajar/{{$materi->id_materi}}/soal/review/{{$detail->id_detail_pengerjaan_soal}}/ubah">
+                <button class="btn btn-success" style="margin-left: 80%">Ubah</button>
+            </a>
         </div>
 
             <div class="form-group isl">
@@ -41,6 +46,9 @@
             <hr>
             </div>
         @endforeach
+        <div style="margin-left:40%">
+            <button class="btn btn-primary" type="Submit">Selesai</button>
+        </div>
 
 <!-- No 2 --->
         {{-- <div class ="form-group row-sl">

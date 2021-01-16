@@ -17,6 +17,7 @@ class CreateTbSoal extends Migration
             $table->id('id_soal');
             $table->string('nama_soal');
             $table->integer('jumlah_soal')->default(0);
+            $table->integer('id_jadwal')->nullable();
             $table->integer('id_materi')->nullable();
             $table->boolean('is_uts')->default(0);
             $table->boolean('is_uas')->default(0);

@@ -33,6 +33,12 @@ class BelajarController extends Controller
         ->where('id_soal', $soal->id_soal)
         ->first();
 
+        if ($pengerjaanSoal->is_finish == 1) {
+            return redirect()->route('siswa.home.belajar', [
+                'jadwal' => $jadwal,
+            ]);
+        }
+
         if (!$pengerjaanSoal) {
             $pengerjaanSoal = PengerjaanSoal::create([
                 'id_siswa' => $siswa->id,
@@ -107,7 +113,7 @@ class BelajarController extends Controller
         return back();
     }
 
-    public function viewReviewSoal(Jadwal $jadwal, Materi $materi, Soal $soal)
+    public function viewReviewSoal(Jadwal $jadwal, Materi $materi)
     {
         $siswa = auth()->user();
         $soal = $materi->soal;
@@ -127,6 +133,24 @@ class BelajarController extends Controller
             'soal' => $soal,
             'pengerjaanSoal' => $pengerjaanSoal,
             'detailPengerjaanSoal' => $detailPengerjaanSoal,
+        ]);
+    }
+
+    public function postReviewSoal(Jadwal $jadwal, Materi $materi)
+    {
+        $siswa = auth()->user();
+        $soal = $materi->soal;
+
+        $pengerjaanSoal = PengerjaanSoal::query()
+        ->where('id_siswa', $siswa->id)
+        ->where('id_soal', $soal->id_soal)
+        ->first();
+
+        $pengerjaanSoal->is_finish = 1;
+        $pengerjaanSoal->save();
+
+        return redirect()->route('siswa.home.belajar', [
+            'jadwal' => $jadwal,
         ]);
     }
 }
