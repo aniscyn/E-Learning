@@ -68,20 +68,20 @@ Route::group([
     Route::get('/siswa/absensi', "App\Http\Controllers\Siswa\AbsenController@viewAbsen");
     Route::post('/siswa/absensi/{absen}/masuk', "App\Http\Controllers\Siswa\AbsenController@postAbsenMasuk");
     Route::post('/siswa/absensi/{absen}/keluar', "App\Http\Controllers\Siswa\AbsenController@postAbsenKeluar");
-    Route::get('/siswa/profile', function(){
-        return view('siswa/profile-siswa');
-    });
+    // Route::get('/siswa/profile', function(){
+    //     return view('siswa/profile-siswa');
+    // });]
 
     //Soal
-    Route::get('/siswa/latihan-soal', function(){
-        return view('siswa/latihan-soal');
-    });
-    Route::get('/siswa/latihan-soal-lihat', function(){
-        return view('siswa/review-soal');
-    });
-    Route::get('/siswa/latihan-soal-ubah', function(){
-        return view('siswa/ubah-latihan');
-    });
+    // Route::get('/siswa/latihan-soal', function(){
+    //     return view('siswa/latihan-soal');
+    // });
+    // Route::get('/siswa/latihan-soal-lihat', function(){
+    //     return view('siswa/review-soal');
+    // });
+    // Route::get('/siswa/latihan-soal-ubah', function(){
+    //     return view('siswa/ubah-latihan');
+    // });
 
     //Profile Siswa
     Route::get('/siswa/profile', "App\Http\Controllers\Siswa\ProfileController@viewProfile");

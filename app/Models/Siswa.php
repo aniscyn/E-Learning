@@ -22,4 +22,13 @@ class Siswa extends Model
     protected $primaryKey = 'nis';
     protected $keyType = 'string';
     protected $guarded = [];
+
+    public function getProfilePhotoNameFile()
+    {
+        $path = $this->profile_photo;
+
+        $exploded = explode('/', $path);
+
+        return $exploded[count($exploded) - 1];
+    }
 }
