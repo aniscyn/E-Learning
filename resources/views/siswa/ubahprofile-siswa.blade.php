@@ -24,7 +24,7 @@
     @csrf
     <div class="row">
       <div class="col-sm-6">
-          <div><img src="{{asset('storage/profile_photos/' . $user->siswa->getProfilePhotoNameFile())}}"
+          <div><img src="{{$user->siswa->getPhotoProfilePath()}}"
              class="img-rounded foto-profile" alt="profile"></div><br>
              <input type="file" name="profile_photo" class="btn-upload">
       </div>
