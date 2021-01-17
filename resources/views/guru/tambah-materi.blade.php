@@ -20,7 +20,7 @@
     <h5 class="card-header font-weight bg-info" style="color: white;">Tambah Materi</h5>
     <div class="card-body">
 
-    <form method="POST" action="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/tambah">
+    <form method="POST" action="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/tambah" enctype="multipart/form-data">
     @csrf
     <div class="form-group row">
     <label class="col-2 col-form-label"> Nama Materi</label>

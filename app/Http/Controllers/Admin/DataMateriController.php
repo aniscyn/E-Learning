@@ -4,10 +4,11 @@ namespace App\Http\Controllers\Admin;
 use App\Models\Guru;
 use App\Models\User;
 use App\Models\Kelas;
+use App\Models\Jadwal;
 use App\Models\Materi;
 use App\Models\MataPelajaran;
 use App\Http\Controllers\Controller;
-use App\Models\Jadwal;
+use Illuminate\Support\Facades\Storage;
 
 class DataMateriController extends Controller
 {
@@ -41,13 +42,19 @@ class DataMateriController extends Controller
     public function postTambah(Jadwal $jadwal)
     {
         $request = request()->all();
+
+        //Uplaod
+        if (request()->has('upload_materi')) {
+            $path = request()->file('upload_materi')->store('public/materi');
+        }
+
         $user = Materi::create([
             'id_jadwal' => $jadwal->id_jadwal,
             'nm_materi' => $request['nm_materi'],
             'js_materi' => $request['js_materi'],
             'rs_materi' => $request['rs_materi'],
             'keterangan' => $request['keterangan'],
-            'upload_materi' => 'dummy data',
+            'upload_materi' => $path,
             'tanggal' => now(),
         ]);
 
@@ -72,6 +79,16 @@ class DataMateriController extends Controller
     public function postEdit(Jadwal $jadwal, Materi $materi)
     {
         $request = request()->all();
+        //Uplaod
+        if (request()->has('upload_materi')) {
+            if  ($materi->upload_materi) {
+                Storage::delete($materi->upload_materi);
+            }
+
+            $path = request()->file('upload_materi')->store('public/materi');
+            $materi->upload_materi = $path;
+        }
+
         $materi ->nm_materi = request()->get('nm_materi');
         $materi ->js_materi = request()->get('js_materi');
         $materi ->rs_materi = request()->get('rs_materi');
@@ -86,6 +103,9 @@ class DataMateriController extends Controller
     {
         $materi->delete();
         if($materi){
+            if  ($materi->upload_materi) {
+                Storage::delete($materi->upload_materi);
+            }
             //redirect dengan pesan sukses
             return back()->with(['success' => 'Data Berhasil Dihapus!']);
          }else{

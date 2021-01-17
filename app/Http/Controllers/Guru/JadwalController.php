@@ -2,8 +2,9 @@
 namespace App\Http\Controllers\Guru;
 
 use App\Models\Jadwal;
-use App\Http\Controllers\Controller;
 use App\Models\Materi;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class JadwalController extends Controller
 {
@@ -48,13 +49,18 @@ class JadwalController extends Controller
     {
         $request = request()->all();
 
+        //Uplaod
+        if (request()->has('upload_materi')) {
+            $path = request()->file('upload_materi')->store('public/materi');
+        }
+
         $materi = Materi::create([
             'nm_materi' => $request['nm_materi'],
             'js_materi' => $request['js_materi'],
             'rs_materi' => $request['rs_materi'],
             'keterangan'  => $request['keterangan'],
             'id_jadwal' => $jadwal->id_jadwal,
-            'upload_materi' => 'file upload dummy',
+            'upload_materi' => $path,
             'tanggal' => now(),
         ]);
 
@@ -73,6 +79,16 @@ class JadwalController extends Controller
     {
         $request = request()->all();
 
+        //Uplaod
+        if (request()->has('upload_materi')) {
+            if  ($materi->upload_materi) {
+                Storage::delete($materi->upload_materi);
+            }
+
+            $path = request()->file('upload_materi')->store('public/materi');
+            $materi->upload_materi = $path;
+        }
+
         $materi->nm_materi  = $request['nm_materi'];
         $materi->js_materi  = $request['js_materi'];
         $materi->rs_materi  = $request['rs_materi'];
@@ -86,6 +102,10 @@ class JadwalController extends Controller
     {
         $materi->delete();
         if($materi){
+            if  ($materi->upload_materi) {
+                Storage::delete($materi->upload_materi);
+            }
+
             //redirect dengan pesan sukses
             return back()->with(['success' => 'Data Berhasil Dihapus!']);
          }else{

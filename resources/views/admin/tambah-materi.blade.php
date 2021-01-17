@@ -14,7 +14,7 @@
     <li class="breadcrumb-item active" aria-current="page"> Tambah Data Materi</li>
      </ol>
     </nav>
-    <form action="/admin/data-jadwal/{{$jadwal->id_jadwal}}/data-materi/tambah" method="post">
+    <form action="/admin/data-jadwal/{{$jadwal->id_jadwal}}/data-materi/tambah" method="post" enctype="multipart/form-data">
         @csrf
         <div class="card">
             <h5 class="card-header font-weight bg-info" style="color: white;">Tambah Data Materi</h5>

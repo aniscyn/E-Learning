@@ -47,5 +47,23 @@ class Materi extends Model
         ->get();
     }
 
+    public function getMateriFileName()
+    {
+        $path = $this->upload_materi;
+
+        $exploded = explode('/', $path);
+
+        return $exploded[count($exploded) - 1];
+    }
+
+    public function getMateriFilePath()
+    {
+        if ($this->upload_materi) {
+            return asset('storage/materi/' . $this->getMateriFileName());
+        }
+
+        return '';
+    }
+
 }
 

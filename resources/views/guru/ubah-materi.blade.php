@@ -19,7 +19,7 @@
     <h5 class="card-header font-weight bg-info" style="color: white;">Ubah Materi</h5>
     <div class="card-body">
 
-    <form method="POST" action="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/{{$materi->id_materi}}/ubah">
+    <form method="POST" action="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/{{$materi->id_materi}}/ubah" enctype="multipart/form-data">
     @csrf
     <div class="form-group row">
     <label class="col-2 col-form-label"> Nama Materi</label>
@@ -54,7 +54,7 @@
     <div class="form-group row">
     <label class="col-2 col-form-label"> Upload Materi</label>
      <div class="col-10">
-    <input type="file" value="" name="upload_materi" id="file-materi" required>
+    <input type="file" name="upload_materi" id="file-materi">
     </div>
     </div>
 

@@ -30,7 +30,7 @@
         <h5><i class="fa fa-file-text" aria-hidden="true"> Rangkuman Materi </i></h5>
         {!!$materi->rs_materi!!}
         <br />
-        <a href="#" class="btn btn-primary"> Unduh Materi</a>
+        <a href="{{$materi->getMateriFilePath()}}" download class="btn btn-primary"> Unduh Materi</a>
         <br /><br />
         @if ($materi->soal != null)
             <div class="lth-bljr">
