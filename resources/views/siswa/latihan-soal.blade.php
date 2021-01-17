@@ -16,7 +16,7 @@
 </div>
 
   <div class="card-body">
-    <form action="/siswa/jadwal/{{$jadwal->id_jadwal}}/belajar/{{$materi->id_materi}}/soal" method="POST">
+    <form action="" method="POST">
         @csrf
 
         @if ($detailPengerjaanSoal->detailSoal->type == 'PG')
@@ -25,10 +25,10 @@
                 <label>{!!$detailPengerjaanSoal->detailSoal->pertanyaan!!}</label> </label> </div>
 
                 <div class="form-check isl">
-                <input type="radio" class="form-check-input" name="pilihan_jawaban" value="A">{{$detailPengerjaanSoal->detailSoal->pilihan_a}}<br>
-                <input type="radio" class="form-check-input" name="pilihan_jawaban" value="B">{{$detailPengerjaanSoal->detailSoal->pilihan_b}}<br>
-                <input type="radio" class="form-check-input" name="pilihan_jawaban" value="C">{{$detailPengerjaanSoal->detailSoal->pilihan_c}}<br>
-                <input type="radio" class="form-check-input" name="pilihan_jawaban" value="D">{{$detailPengerjaanSoal->detailSoal->pilihan_d}}<br>
+                <input type="radio" {{($detailPengerjaanSoal->pilihan_jawaban && $detailPengerjaanSoal->pilihan_jawaban == 'A') ? "checked" : ""}} class="form-check-input" name="pilihan_jawaban" value="A">{{$detailPengerjaanSoal->detailSoal->pilihan_a}}<br>
+                <input type="radio" {{($detailPengerjaanSoal->pilihan_jawaban && $detailPengerjaanSoal->pilihan_jawaban == 'B') ? "checked" : ""}} class="form-check-input" name="pilihan_jawaban" value="B">{{$detailPengerjaanSoal->detailSoal->pilihan_b}}<br>
+                <input type="radio" {{($detailPengerjaanSoal->pilihan_jawaban && $detailPengerjaanSoal->pilihan_jawaban == 'C') ? "checked" : ""}} class="form-check-input" name="pilihan_jawaban" value="C">{{$detailPengerjaanSoal->detailSoal->pilihan_c}}<br>
+                <input type="radio" {{($detailPengerjaanSoal->pilihan_jawaban && $detailPengerjaanSoal->pilihan_jawaban == 'D') ? "checked" : ""}} class="form-check-input" name="pilihan_jawaban" value="D">{{$detailPengerjaanSoal->detailSoal->pilihan_d}}<br>
             </div>
 
             <br>
@@ -40,7 +40,7 @@
                 <label>{!!$detailPengerjaanSoal->detailSoal->pertanyaan!!}</label> </label> </div>
 
                 <div class="form group isl">
-                <textarea name="isi_essay" id="isl" cols="50" rows="5" class="form-control"> </textarea>
+                <textarea name="isi_essay" id="isl" cols="50" rows="5" class="form-control">{{($detailPengerjaanSoal->jawaban_essay) ?? ""}}</textarea>
                 </div>
                 <br>
                 <div class="form-group row-sl">

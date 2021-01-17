@@ -25,7 +25,7 @@
             <label> {{$loop->iteration}}. </label>
             <label> {!!$detail->detailSoal->pertanyaan!!} </label>
             <a href="/siswa/jadwal/{{$jadwal->id_jadwal}}/belajar/{{$materi->id_materi}}/soal/review/{{$detail->id_detail_pengerjaan_soal}}/ubah">
-                <button class="btn btn-success" style="margin-left: 80%">Ubah</button>
+                <button type="button" class="btn btn-success" style="margin-left: 80%">Ubah</button>
             </a>
         </div>
 
@@ -37,7 +37,7 @@
                         {{$detail->detailSoal->pilihan_b}}
                     @elseif($detail->pilihan_jawaban == 'C')
                         {{$detail->detailSoal->pilihan_c}}
-                    @elseif($detail->pilihan_jawaban == 'C')
+                    @elseif($detail->pilihan_jawaban == 'D')
                         {{$detail->detailSoal->pilihan_c}}
                     @endif
                 @else
