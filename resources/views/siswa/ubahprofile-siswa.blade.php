@@ -20,16 +20,16 @@
 <div class="container-fluid card-fluid">
     <div class="card card-profile-isi">
     <!-- Control the column width, and how they should appear on different devices -->
+    <form action="/siswa/profile/ubah/{{$user->id}}/process" method="post" class="form-profile" enctype="multipart/form-data">
+    @csrf
     <div class="row">
       <div class="col-sm-6">
-          <div><img src="https://mpng.subpng.com/20180404/sqe/kisspng-computer-icons-user-profile-clip-art-big-5ac5283827d286.2570974715228703281631.jpg"
+          <div><img src="{{$user->siswa->getPhotoProfilePath()}}"
              class="img-rounded foto-profile" alt="profile"></div><br>
-             <input type="file" class="btn-upload">
+             <input type="file" name="profile_photo" class="btn-upload">
       </div>
 
       <div class="col-sm-6">
-      <form action="/siswa/profile/ubah/{{$user->id}}/process" method="post" class="form-profile">
-      @csrf
       <div class="form-group">
          <label for="nis" class="lb-profile">NIS</label>
          <input type="text" class="form-control" readonly id="nis" value={{$user->siswa->nis}}>
@@ -37,7 +37,7 @@
 
         <div class="form-group">
             <label for="nm" class="lb-profile">Nama Lengkap</label>
-            <textarea name="nm_lengkap"cols="10" rows="1" class="form-control"  onkeypress='return harusHuruf(event)' required>{{$user->siswa->nm_lengkap}}</textarea>
+            <textarea name="nm_lengkap" cols="10" rows="1" class="form-control"  onkeypress='return harusHuruf(event)' required>{{$user->siswa->nm_lengkap}}</textarea>
            </div>
 
         <div class="form-group">

@@ -18,18 +18,18 @@
 </nav>
 
 <div class="container-fluid card-fluid">
+    <form action="/guru/profile/ubah/{{$user->id}}/process" method="post" class="form-profile" enctype="multipart/form-data">
+        @csrf
     <div class="card card-profile-isi">
     <!-- Control the column width, and how they should appear on different devices -->
     <div class="row">
       <div class="col-sm-6">
-          <div><img src="https://mpng.subpng.com/20180404/sqe/kisspng-computer-icons-user-profile-clip-art-big-5ac5283827d286.2570974715228703281631.jpg"
+        <div><img src="{{$user->guru->getPhotoProfilePath()}}"
              class="img-rounded foto-profile" alt="profile"></div><br>
-             <input type="file" class="btn-upload">
+             <input name="profile_photo" type="file" class="btn-upload">
       </div>
 
       <div class="col-sm-6">
-      <form action="/guru/profile/ubah/{{$user->id}}/process" method="post" class="form-profile">
-      @csrf
 
       <div class="form-group">
          <label for="nip" class="lb-profile">NIP</label>
@@ -37,7 +37,7 @@
 
         <div class="form-group">
             <label for="nm" class="lb-profile">Nama Lengkap</label>
-            <textarea name="nm_lengkap"cols="10" rows="1" class="form-control" onkeypress='return harusHuruf(event)' required>{{$user->guru->nm_lengkap}}</textarea>
+            <textarea name="nm_guru"cols="10" rows="1" class="form-control" onkeypress='return harusHuruf(event)' required>{{$user->guru->nm_lengkap}}</textarea>
            </div>
 
         <div class="form-group">

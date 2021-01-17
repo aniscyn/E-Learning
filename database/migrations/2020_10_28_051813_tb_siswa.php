@@ -23,6 +23,7 @@ class TbSiswa extends Migration
             $table->text('alamat_siswa');
             $table->string('email' , 50)->nullable();
             $table->string('tlp', 13)->nullable();
+            $table->text('profile_photo')->nullable();
         });
     }
 

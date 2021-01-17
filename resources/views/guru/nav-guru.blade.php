@@ -47,7 +47,7 @@
             <!-- Separator with title -->
             <li class="list-group-item bg-light" style="text-align: center;"> <small> {{auth()->user()->guru->nm_lengkap}}</small></li>
             <li class="list-group-item bg-light" style="text-align: center;">
-            <img src="https://mpng.subpng.com/20180404/sqe/kisspng-computer-icons-user-profile-clip-art-big-5ac5283827d286.2570974715228703281631.jpg"
+            <img src="{{$user->guru->getPhotoProfilePath()}}"
             width="100" height="100" class="rounded-circle" style="background-position:center center">
             </li>
             <!-- /END Separator -->

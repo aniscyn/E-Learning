@@ -22,6 +22,7 @@ class TbGuru extends Migration
             $table->text('alamat_guru');
             $table->string('email', 50)->nullable();
             $table->string('tlp', 15)->nullable();
+            $table->text('profile_photo')->nullable();
         });
     }
 
