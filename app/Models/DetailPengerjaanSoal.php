@@ -17,4 +17,9 @@ class DetailPengerjaanSoal extends Model
     {
         return $this->hasOne(DetailSoal::class, 'id_detail_soal', 'id_detail_soal');
     }
+
+    public function pengerjaanSoal()
+    {
+        return $this->hasOne(PengerjaanSoal::class, 'id_pengerjaan_soal', 'id_pengerjaan_soal');
+    }
 }

@@ -153,4 +153,35 @@ class BelajarController extends Controller
             'jadwal' => $jadwal,
         ]);
     }
+
+    public function viewEditReviewSoal(Jadwal $jadwal, Materi $materi, DetailPengerjaanSoal $detail)
+    {
+        $soal = $materi->soal;
+
+        $pengerjaanSoal = $detail->pengerjaanSoal;
+
+        return view('siswa/latihan-soal', [
+            'jadwal' => $jadwal,
+            'materi' => $materi,
+            'soal' => $soal,
+            'pengerjaanSoal' => $pengerjaanSoal,
+            'detailPengerjaanSoal' => $detail,
+        ]);
+    }
+
+    public function postEditReviewSoal(Jadwal $jadwal, Materi $materi, detailPengerjaanSoal $detail)
+    {
+        if ($detail->detailSoal->type == 'PG') {
+            $detail->pilihan_jawaban = request()->get('pilihan_jawaban');
+        } else {
+            $detail->jawaban_essay = request()->get('isi_essay');
+        }
+
+        $detail->save();
+
+        return redirect()->route('siswa.review.view', [
+            'jadwal' => $jadwal,
+            'materi' => $materi,
+        ]);
+    }
 }
