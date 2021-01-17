@@ -2,8 +2,9 @@
 
 namespace App\Http\Controllers\Guru;
 
-use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileGuruController extends Controller
 {
@@ -33,6 +34,17 @@ class ProfileGuruController extends Controller
         $guru ->email = request()->get('email_guru');
         $guru ->alamat_guru = request()->get('alamat_guru');
         $guru ->tlp = request()->get('tlp_guru');
+
+        //Uplaod
+        if (request()->has('profile_photo')) {
+            if  ($guru->profile_photo) {
+                Storage::delete($guru->profile_photo);
+            }
+
+            $path = request()->file('profile_photo')->store('public/profile_photos');
+            $guru->profile_photo = $path;
+        }
+
         $guru ->save();
 
         return back();
