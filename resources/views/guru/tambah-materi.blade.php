@@ -53,7 +53,7 @@
     <div class="form-group row">
     <label class="col-2 col-form-label"> Upload Materi</label>
      <div class="col-10">
-    <input type="file" value="" name="upload_materi" id="file-materi">
+    <input type="file" value="" name="upload_materi" id="file-materi" required>
     </div>
     </div>
 

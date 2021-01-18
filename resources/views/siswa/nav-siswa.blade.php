@@ -57,19 +57,6 @@
                 </div>
             </a>
 
-            <a href="#" class="bg-light list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-pencil-square fa-fw mr-3"></span>
-                    <span class="menu-collapsed">UTS</span>
-                </div>
-            </a>
-
-            <a href="#" class="bg-light list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-pencil-square fa-fw mr-3"></span>
-                    <span class="menu-collapsed">UAS</span>
-                </div>
-            </a>
 
             @foreach ($dataMateri as $materi)
             <a href="/siswa/jadwal/{{$jadwal->id_jadwal}}/belajar" class="bg-light list-group-item list-group-item-action">
