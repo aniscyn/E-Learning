@@ -229,3 +229,8 @@ Route::group([
 Route::get('/admin/data-soal', function(){
     return view('admin/data-soal');
 });
+
+//Laporan
+Route::get('/admin/laporan', function(){
+    return view('admin/laporan');
+});

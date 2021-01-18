@@ -91,26 +91,13 @@
                 </a>
             </div>
 
-            <a href="#submenu2" data-toggle="collapse" aria-expanded="false" class="bg-dark list-group-item list-group-item-action flex-column align-items-start">
+            <a href="/admin/laporan" class="bg-dark list-group-item list-group-item-action" target="_BLANK">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-file-text-o fa-fw mr-3"></span>
-                    <span class="menu-collapsed"> Laporan </span>
-                    <span class="submenu-icon ml-auto"></span>
+                    <span class="menu-collapsed"> Laporan</span>
                 </div>
             </a>
-            <!-- Submenu content -->
-            <div id='submenu2' class="collapse sidebar-submenu">
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                    <span class="menu-collapsed"> Laporan Data Siswa</span>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                    <span class="menu-collapsed"> Laporan Data Guru</span>
-                </a>
-                <a href="#" class="list-group-item list-group-item-action bg-dark text-white">
-                    <span class="menu-collapsed"> Laporan Data Nilai</span>
-                </a>
 
-            </div>
 
             <a href="#" class="bg-dark list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
