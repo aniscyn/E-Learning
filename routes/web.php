@@ -124,6 +124,9 @@ Route::group([
     Route::post('/guru/jadwal/{jadwal}/soal/{soal}/detail/{detail}/ubah', "App\Http\Controllers\Guru\DetailSoalController@postEdit");
     Route::post('/guru/jadwal/{jadwal}/soal/{soal}/detail/{detail}/hapus', "App\Http\Controllers\Guru\DetailSoalController@postHapus");
 
+    // Nilai Soal
+    Route::get('/guru/jadwal/{jadwal}/soal/{soal}/nilai', "App\Http\Controllers\Guru\NilaiController@index");
+
     //Materi
     Route::get('/guru/jadwal/{jadwal}/materi', "App\Http\Controllers\Guru\JadwalController@viewMateri");
     Route::get('/guru/jadwal/{jadwal}/materi/tambah', "App\Http\Controllers\Guru\JadwalController@viewTambahMateri");

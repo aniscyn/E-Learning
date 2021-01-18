@@ -37,4 +37,9 @@ class PengerjaanSoal extends Model
     {
         return $this->hasMany(DetailPengerjaanSoal::class, 'id_pengerjaan_soal', 'id_pengerjaan_soal');
     }
+
+    public function user()
+    {
+        return $this->hasOne(User::class, 'id', 'id_siswa');
+    }
 }
