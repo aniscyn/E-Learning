@@ -9,7 +9,7 @@
 <div class="card">
 <div class="card-header bg-dark" style="color: white">
 <div class="row">
-<div class="col-sm"><label>Mata Pelajaran </label> </div>
+<div class="col-sm"><label>Mapel</label> </div>
 <div class="col-sm" style="margin-left: 10%"><label>Pertanyaan 1 dari 10</label> </div>
 <div class="col-sm"><label>Sisa Waktu : </label></div>
 </div>
@@ -46,7 +46,7 @@
                 <div class="form-group row-sl">
             </div>
         @endif
-        <button type="submit" class="btn btn-primary" >Lanjut</button></a>
+        <button type="submit" class="btn btn-primary" style="margin-left:-100px">Lanjut</button></a>
         </div>
   </div><br>
 
