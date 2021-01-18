@@ -41,8 +41,9 @@ class BelajarController extends Controller
         }
 
         if ($pengerjaanSoal->is_finish == 1) {
-            return redirect()->route('siswa.home.belajar', [
+            return view('siswa.belajar-nilai', [
                 'jadwal' => $jadwal,
+                'pengerjaanSoal' => $pengerjaanSoal,
             ]);
         }
 
