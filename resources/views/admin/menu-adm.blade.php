@@ -91,7 +91,7 @@
                 </a>
             </div>
 
-            <a href="/admin/laporan" class="bg-dark list-group-item list-group-item-action" target="_BLANK">
+            <a href="/admin/laporan/jadwal" class="bg-dark list-group-item list-group-item-action" target="_BLANK">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-file-text-o fa-fw mr-3"></span>
                     <span class="menu-collapsed"> Laporan</span>

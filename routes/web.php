@@ -231,13 +231,11 @@ Route::group([
     Route::get('/admin/data-jadwal/{jadwal}/data-materi/{materi}/ubah', 'App\Http\Controllers\Admin\DataMateriController@viewEdit');
     Route::post('/admin/data-jadwal/{jadwal}/data-materi/{materi}/ubah', 'App\Http\Controllers\Admin\DataMateriController@postEdit');
     Route::post('/admin/data-jadwal/{jadwal}/data-materi/{materi}/hapus', 'App\Http\Controllers\Admin\DataMateriController@postDelete');
+
+    //Laporan
+    Route::get('/admin/laporan/jadwal', "App\Http\Controllers\Admin\LaporanController@laporanJadwal");
 });
 // Data Soal
 Route::get('/admin/data-soal', function(){
     return view('admin/data-soal');
-});
-
-//Laporan
-Route::get('/admin/laporan', function(){
-    return view('admin/laporan');
 });
