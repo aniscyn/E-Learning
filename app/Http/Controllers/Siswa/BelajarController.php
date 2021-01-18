@@ -146,6 +146,7 @@ class BelajarController extends Controller
         ->where('id_soal', $soal->id_soal)
         ->first();
 
+        $pengerjaanSoal->hitungNilai();
         $pengerjaanSoal->is_finish = 1;
         $pengerjaanSoal->save();
 
