@@ -40,4 +40,9 @@ class Siswa extends Model
 
         return 'https://mpng.subpng.com/20180404/sqe/kisspng-computer-icons-user-profile-clip-art-big-5ac5283827d286.2570974715228703281631.jpg';
     }
+
+    public function absenHariIni()
+    {
+        return $this->hasOne(Absen::class, 'id_user', 'user_id');
+    }
 }

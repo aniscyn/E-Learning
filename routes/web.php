@@ -132,6 +132,10 @@ Route::group([
     Route::post('/guru/jadwal/{jadwal}/materi/{materi}/ubah', "App\Http\Controllers\Guru\JadwalController@postEditMateri");
     Route::post('/guru/jadwal/{jadwal}/materi/{materi}/hapus', "App\Http\Controllers\Guru\JadwalController@postHapusMateri");
 
+    // Data Absen
+    Route::get('/guru/absen', "App\Http\Controllers\Guru\AbsenController@index");
+    Route::post('/guru/absen', "App\Http\Controllers\Guru\AbsenController@postIndex");
+
     //soal
     // Route::get('/guru/jadwal/tambah-soal-pg', function() {
     //     return view('guru/tambah-soal-pg');
