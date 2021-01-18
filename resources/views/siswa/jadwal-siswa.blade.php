@@ -13,7 +13,7 @@
 
 <nav aria-label="breadcrumb">
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Beranda</a></li>
+    <li class="breadcrumb-item"><a href="/siswa">Beranda</a></li>
     <li class="breadcrumb-item active" aria-current="page">Jadwalku</li>
   </ol>
 </nav>
@@ -54,7 +54,7 @@
 <div class="card card-course" style="width: 30rem;">
 <div class="card-header bg-light"><h2> Juma't </h2></div>
 <div class="card-body">
- <a href="#"> <button type="button" class="btn btn-primary" >Absen</button></a>
+ <a href="/siswa/absensi"> <button type="button" class="btn btn-primary" >Absen</button></a>
   </div>
 </div>
 </div>
@@ -63,7 +63,7 @@
 <div class="card card-course" style="width: 30rem;">
 <div class="card-header bg-light" > <h2> Sabtu </h2></div>
 <div class="card-body">
- <a href="#"> <button type="button" class="btn btn-primary" >Absen </button></a>
+<a href="/siswa/absensi"> <button type="button" class="btn btn-primary" >Absen </button></a>
 
   </div>
 </div>

@@ -24,7 +24,7 @@
     <!-- Control the column width, and how they should appear on different devices -->
     <div class="row">
       <div class="col-sm-6">
-          <div><img src="https://mpng.subpng.com/20180404/sqe/kisspng-computer-icons-user-profile-clip-art-big-5ac5283827d286.2570974715228703281631.jpg"
+          <div><img src="{{$user->siswa->getPhotoProfilePath()}}"
              class="img-rounded foto-profile" alt="profile"></div><br>
       </div>
 

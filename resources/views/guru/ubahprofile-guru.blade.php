@@ -6,7 +6,7 @@
 @include('guru.nav-guru')
 
 <div class="col p-4" style="margin-top: 40px;">
-<div class="card border-dark card-profile">
+<div class="card border-dark card-profile" style="height: 78%">
 <div class="container-fluid">
 <br>
 <nav aria-label="breadcrumb">
@@ -61,32 +61,32 @@
         </div>
 
          <button type="submit" class="btn btn-primary btn-ubah-profile"> Simpan</button>
-        </form><br>
+        </form><br> <br>
 
-      </div>
-      </div>
+    </div>
+    </div>
 
- </div></div>
+</div></div>
 </div></div></div>
 
 
 @include('footer')
 
 <script>
-    function hanyaAngka(evt) {
-      var charCode = (evt.which) ? evt.which : event.keyCode
-       if (charCode > 31 && (charCode < 48 || charCode > 57))
+  function hanyaAngka(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode
+     if (charCode > 31 && (charCode < 48 || charCode > 57))
 
-        return false;
-      return true;
-    }
+      return false;
+    return true;
+  }
 </script>
 
 <script>
-    function harusHuruf(evt){
-            var charCode = (evt.which) ? evt.which : event.keyCode
-            if ((charCode < 65 || charCode > 90)&&(charCode < 97 || charCode > 122)&&charCode>32)
-                return false;
-            return true;
-    }
+  function harusHuruf(evt){
+          var charCode = (evt.which) ? evt.which : event.keyCode
+          if ((charCode < 65 || charCode > 90)&&(charCode < 97 || charCode > 122)&&charCode>32)
+              return false;
+          return true;
+  }
 </script>

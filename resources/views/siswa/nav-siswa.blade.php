@@ -72,7 +72,7 @@
             </a>
 
             @foreach ($dataMateri as $materi)
-            <a href="/siswa" class="bg-light list-group-item list-group-item-action">
+            <a href="/siswa/jadwal/{{$jadwal->id_jadwal}}/belajar" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                 <span class="fa fa-files-o fa-fw mr-3"></span>
                     <span class="menu-collapsed">{{$materi->nm_materi}}</span>

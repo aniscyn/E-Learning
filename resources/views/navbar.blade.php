@@ -64,7 +64,7 @@
             <a href="/siswa/absensi" class="bg-light list-group-item list-group-item-action">
                 <div class="d-flex w-100 justify-content-start align-items-center">
                     <span class="fa fa-calendar fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Absensi</span>
+                    <span class="menu-collapsed">Absen</span>
                 </div>
             </a>
 

@@ -9,17 +9,11 @@
 
 <nav aria-label="breadcrumb"><br>
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Beranda</a></li>
-    <li class="breadcrumb-item"><a href="#">Jadwal</a></li>
-    <li class="breadcrumb-item active"> nm mapel</li>
+    <li class="breadcrumb-item"><a href="/siswa">Beranda</a></li>
+    <li class="breadcrumb-item"><a href="/siswa/jadwal">Jadwal</a></li>
   </ol>
 </nav>
 
-<div class="container">
-<div class="card text-center">
-    <a href=""> <label class="txt"> Jadwal - Kelas - Nama Guru</label></a>
-</div>
-</div>
 
 @foreach ($dataMateri as $materi)
 <div class="container"><br>

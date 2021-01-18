@@ -10,22 +10,22 @@
 
     <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Beranda</a></li>
-    <li class="breadcrumb-item"><a href="">Jadwal</a></li>
+        <li class="breadcrumb-item"><a href="/guru">Beranda</a></li>
+        <li class="breadcrumb-item"><a href="/guru/jadwal">Jadwal</a></li>
     <li class="breadcrumb-item active" aria-current="page"> Soal</li>
      </ol>
     </nav>
 
     <div class="card">
-    <h5 class="card-header font-weight bg-primary" style="color: white;"> kelas - mapel - nama guru nip </h5>
-    <div class="card-body">
+        <h5 class="card-header font-weight bg-primary" style="color: white;"> {{$jadwal->kelas->nm_kelas}} - {{$jadwal->mataPelajaran->nm_mapel}} -
+            {{auth()->user()->guru->nm_lengkap}} {{auth()->user()->guru->nip}} </h5>    <div class="card-body">
     <div class="col-sm-6" style="margin-left: -10px">
     <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/detail/tambah?tipe_soal=pg"> <button type="button" class="btn btn-dark"> Buat Pertanyaan Pilihan Ganda</button> </a>
     <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/detail/tambah?tipe_soal=essay"> <button type="button" class="btn btn-dark"> Buat Pertanyaan Essay</button> </a>
     <hr>
      <br>
 
-    <table class="table table-bordered table-striped ">
+    <table class="table table-bordered">
     <thead class="text-center">
       <tr>
         <th>No</th>

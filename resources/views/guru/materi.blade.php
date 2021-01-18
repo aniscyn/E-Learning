@@ -10,8 +10,8 @@
 
     <nav aria-label="breadcrumb">
     <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Beranda</a></li>
-    <li class="breadcrumb-item"><a href="">Jadwal</a></li>
+    <li class="breadcrumb-item"><a href="/guru">Beranda</a></li>
+    <li class="breadcrumb-item"><a href="/guru/jadwal">Jadwal</a></li>
     <li class="breadcrumb-item active" aria-current="page"> Materi</li>
      </ol>
     </nav>
@@ -20,12 +20,12 @@
     <h5 class="card-header font-weight bg-primary" style="color: white;"> {{$jadwal->kelas->nm_kelas}} - {{$jadwal->mataPelajaran->nm_mapel}} -
     {{auth()->user()->guru->nm_lengkap}} {{auth()->user()->guru->nip}} </h5>
     <div class="card-body">
-        <div class="col-sm-6" style="margin-left: -10px">
+        <div class="col-sm-3" style="margin-left: -10px">
     <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/materi/tambah"> <button type="button" class="btn btn-secondary"> Tambah Materi</button> </a>
-    </div>
+    </div> <br>
     <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal">
         <button type="button" class="btn btn-warning">Soal</button>
-    </a>
+    </a><br>
 <br>
 
     @if (session('success'))

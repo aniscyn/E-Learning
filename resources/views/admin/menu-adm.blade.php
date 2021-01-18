@@ -86,12 +86,6 @@
                 <a href="/admin/data-absen" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"> Data Absen</span>
                 </a>
-                <a href="/admin/data-materi" class="list-group-item list-group-item-action bg-dark text-white">
-                    <span class="menu-collapsed"> Data Materi</span>
-                </a>
-                <a href="/admin/data-soal" class="list-group-item list-group-item-action bg-dark text-white">
-                    <span class="menu-collapsed"> Data Soal</span>
-                </a>
                 <a href="/admin/data-nilai" class="list-group-item list-group-item-action bg-dark text-white">
                     <span class="menu-collapsed"> Data Nilai</span>
                 </a>

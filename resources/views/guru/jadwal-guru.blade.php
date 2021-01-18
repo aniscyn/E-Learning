@@ -13,7 +13,7 @@
 
 <nav aria-label="breadcrumb"> <br>
   <ol class="breadcrumb">
-    <li class="breadcrumb-item"><a href="#">Beranda</a></li>
+    <li class="breadcrumb-item"><a href="/guru">Beranda</a></li>
     <li class="breadcrumb-item active" aria-current="page">Jadwal</li>
   </ol>
 </nav>
