@@ -41,8 +41,9 @@ class BelajarController extends Controller
         }
 
         if ($pengerjaanSoal->is_finish == 1) {
-            return redirect()->route('siswa.home.belajar', [
+            return view('siswa.belajar-nilai', [
                 'jadwal' => $jadwal,
+                'pengerjaanSoal' => $pengerjaanSoal,
             ]);
         }
 
@@ -146,6 +147,7 @@ class BelajarController extends Controller
         ->where('id_soal', $soal->id_soal)
         ->first();
 
+        $pengerjaanSoal->hitungNilai();
         $pengerjaanSoal->is_finish = 1;
         $pengerjaanSoal->save();
 

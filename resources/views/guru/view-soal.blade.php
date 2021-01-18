@@ -32,7 +32,7 @@
         <th>Nama Soal</th>
         <th>Materi</th>
         <th>Jumlah Soal</th>
-        <th colspan="4">Aksi</th>
+        <th colspan="6">Aksi</th>
       </tr>
     </thead>
     <tbody>
@@ -46,9 +46,14 @@
             <td class="text-center"  width="10%" colspan="2">
                 <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/detail"><button type="button" class="btn btn-outline-warning"> Detail Soal </button></a>
             </td>
+
+            <td class="text-center"  width="10%" colspan="2">
+                <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/nilai"><button type="button" class="btn btn-outline-danger"> Nilai </button></a>
+            </td>
                 @if (!$soal->is_uts && !$soal->is_uas)
                     <td>
-                    <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/ubah"><button type="button" class="btn btn-outline-primary"> Ubah </button></a></td>
+                        <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/ubah"><button type="button" class="btn btn-outline-primary"> Ubah </button></a>
+                    </td>
                     <td class="text-center" width="10%">
                     <form action="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/hapus" method="POST">
                     @csrf

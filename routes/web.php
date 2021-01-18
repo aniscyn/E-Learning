@@ -124,6 +124,9 @@ Route::group([
     Route::post('/guru/jadwal/{jadwal}/soal/{soal}/detail/{detail}/ubah', "App\Http\Controllers\Guru\DetailSoalController@postEdit");
     Route::post('/guru/jadwal/{jadwal}/soal/{soal}/detail/{detail}/hapus', "App\Http\Controllers\Guru\DetailSoalController@postHapus");
 
+    // Nilai Soal
+    Route::get('/guru/jadwal/{jadwal}/soal/{soal}/nilai', "App\Http\Controllers\Guru\NilaiController@index");
+
     //Materi
     Route::get('/guru/jadwal/{jadwal}/materi', "App\Http\Controllers\Guru\JadwalController@viewMateri");
     Route::get('/guru/jadwal/{jadwal}/materi/tambah', "App\Http\Controllers\Guru\JadwalController@viewTambahMateri");
@@ -131,6 +134,10 @@ Route::group([
     Route::get('/guru/jadwal/{jadwal}/materi/{materi}/ubah', "App\Http\Controllers\Guru\JadwalController@viewEditMateri");
     Route::post('/guru/jadwal/{jadwal}/materi/{materi}/ubah', "App\Http\Controllers\Guru\JadwalController@postEditMateri");
     Route::post('/guru/jadwal/{jadwal}/materi/{materi}/hapus', "App\Http\Controllers\Guru\JadwalController@postHapusMateri");
+
+    // Data Absen
+    Route::get('/guru/absen', "App\Http\Controllers\Guru\AbsenController@index");
+    Route::post('/guru/absen', "App\Http\Controllers\Guru\AbsenController@postIndex");
 
     //soal
     // Route::get('/guru/jadwal/tambah-soal-pg', function() {
@@ -224,13 +231,11 @@ Route::group([
     Route::get('/admin/data-jadwal/{jadwal}/data-materi/{materi}/ubah', 'App\Http\Controllers\Admin\DataMateriController@viewEdit');
     Route::post('/admin/data-jadwal/{jadwal}/data-materi/{materi}/ubah', 'App\Http\Controllers\Admin\DataMateriController@postEdit');
     Route::post('/admin/data-jadwal/{jadwal}/data-materi/{materi}/hapus', 'App\Http\Controllers\Admin\DataMateriController@postDelete');
+
+    //Laporan
+    Route::get('/admin/laporan/jadwal', "App\Http\Controllers\Admin\LaporanController@laporanJadwal");
 });
 // Data Soal
 Route::get('/admin/data-soal', function(){
     return view('admin/data-soal');
-});
-
-//Laporan
-Route::get('/admin/laporan', function(){
-    return view('admin/laporan');
 });

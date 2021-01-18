@@ -16,7 +16,7 @@
         <img class="card-img-top"
         src="https://bridge24.com/wp-content/uploads/2019/07/checklists-workplace-image.png"
         alt="Card image" style="width:100%">
-        <a href="" class="btn btn-primary stretched-link" style="font-size: 20pt">Daftar Absen</a>
+        <a href="/guru/absen" class="btn btn-primary stretched-link" style="font-size: 20pt">Daftar Absen</a>
         </div>
         </div>
 
