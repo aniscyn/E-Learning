@@ -33,16 +33,16 @@ class BelajarController extends Controller
         ->where('id_soal', $soal->id_soal)
         ->first();
 
-        if ($pengerjaanSoal->is_finish == 1) {
-            return redirect()->route('siswa.home.belajar', [
-                'jadwal' => $jadwal,
-            ]);
-        }
-
         if (!$pengerjaanSoal) {
             $pengerjaanSoal = PengerjaanSoal::create([
                 'id_siswa' => $siswa->id,
                 'id_soal' => $soal->id_soal,
+            ]);
+        }
+
+        if ($pengerjaanSoal->is_finish == 1) {
+            return redirect()->route('siswa.home.belajar', [
+                'jadwal' => $jadwal,
             ]);
         }
 
