@@ -21,7 +21,7 @@
             {{auth()->user()->guru->nm_lengkap}} {{auth()->user()->guru->nip}} </h5>    <div class="card-body">
     <div class="col-sm-6" style="margin-left: -10px">
     <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/detail/tambah?tipe_soal=pg"> <button type="button" class="btn btn-dark"> Buat Pertanyaan Pilihan Ganda</button> </a>
-    <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/detail/tambah?tipe_soal=essay"> <button type="button" class="btn btn-dark"> Buat Pertanyaan Essay</button> </a>
+    {{-- <a href="/guru/jadwal/{{$jadwal->id_jadwal}}/soal/{{$soal->id_soal}}/detail/tambah?tipe_soal=essay"> <button type="button" class="btn btn-dark"> Buat Pertanyaan Essay</button> </a> --}}
     <hr>
      <br>
 
