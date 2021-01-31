@@ -11,7 +11,7 @@
 <div class="row">
 <div class="col-sm"><label>Mapel</label> </div>
 <div class="col-sm" style="margin-left: 10%"><label>Pertanyaan 1 dari 10</label> </div>
-<div class="col-sm"><label>Sisa Waktu : </label></div>
+<div class="col-sm"><label>Pengerjaan Sampai Jam : {{$pengerjaanSoal->timeout_at}}  </label></div>
 </div>
 </div>
 

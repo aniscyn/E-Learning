@@ -37,10 +37,20 @@ class BelajarController extends Controller
             $pengerjaanSoal = PengerjaanSoal::create([
                 'id_siswa' => $siswa->id,
                 'id_soal' => $soal->id_soal,
+                'start_at' => now(),
+                'timeout_at' => now()->addHour(),
             ]);
         }
 
+        if ($pengerjaanSoal->timeout_at <= now()) {
+            $pengerjaanSoal->hitungNilai();
+            $pengerjaanSoal->is_finish = 1;
+            $pengerjaanSoal->finish_at = $pengerjaanSoal->timeout_at;
+            $pengerjaanSoal->save();
+        }
+
         if ($pengerjaanSoal->is_finish == 1) {
+            $pengerjaanSoal->hitungNilai();
             return view('siswa.belajar-nilai', [
                 'jadwal' => $jadwal,
                 'pengerjaanSoal' => $pengerjaanSoal,
@@ -149,6 +159,7 @@ class BelajarController extends Controller
 
         $pengerjaanSoal->hitungNilai();
         $pengerjaanSoal->is_finish = 1;
+        $pengerjaanSoal->finish_at = now();
         $pengerjaanSoal->save();
 
         return redirect()->route('siswa.home.belajar', [
