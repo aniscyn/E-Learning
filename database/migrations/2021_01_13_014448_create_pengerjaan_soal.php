@@ -21,6 +21,9 @@ class CreatePengerjaanSoal extends Migration
             $table->integer('jumlah_salah')->default(0);
             $table->integer("nilai")->default(0);
             $table->tinyInteger("is_finish")->default(0);
+            $table->dateTime('start_at')->nullable();
+            $table->dateTime('finish_at')->nullable();
+            $table->dateTime('timeout_at')->nullable();
             $table->timestamps();
         });
     }

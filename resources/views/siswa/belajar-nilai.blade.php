@@ -19,6 +19,6 @@
         <button type="button" class="btn btn-primary">Kembali</button>
     </a>
     <h5  style="text-align: center">Nilai Anda</h5>
-    <h3 style="text-align: center">{{$pengerjaanSoal->jumlah_benar}} dari {{$pengerjaanSoal->detailPengerjaan->count()}} Soal</h3>
+    <h3 style="text-align: center">{{$pengerjaanSoal->jumlah_benar}} dari {{$pengerjaanSoal->soal->detailSoal->count()}} Soal</h3>
     <h1 style="text-align: center;font-size: 64pt;font-weight: bolder">{{$pengerjaanSoal->nilai}}</h1>
 </div>

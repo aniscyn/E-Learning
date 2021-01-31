@@ -15,7 +15,7 @@ class PengerjaanSoal extends Model
 
     public function hitungNilai()
     {
-        $jumlahSoal = $this->detailPengerjaan()->count();
+        $jumlahSoal = $this->soal->detailSoal->count();
         $jumlahBenar = 0;
         $detailPengerjaan = $this->detailPengerjaan;
 
@@ -36,6 +36,11 @@ class PengerjaanSoal extends Model
     public function detailPengerjaan()
     {
         return $this->hasMany(DetailPengerjaanSoal::class, 'id_pengerjaan_soal', 'id_pengerjaan_soal');
+    }
+
+    public function soal()
+    {
+        return $this->hasOne(Soal::class, 'id_soal', 'id_soal');
     }
 
     public function user()
