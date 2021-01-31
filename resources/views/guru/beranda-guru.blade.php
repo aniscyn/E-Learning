@@ -1,4 +1,5 @@
 @include('guru.nav-guru')
+<div class="container">
 <div class="col p-4" style="margin-top: 40px;">
     <div class="card-header bg-light"><h3>{{(new \Carbon\Carbon(now()))->translatedFormat("l, d F Y")}}
         -  {{auth()->user()->guru->nm_lengkap}}</h3></div> <br>
@@ -25,5 +26,5 @@
 
 </div>
 </div>
-
+</div>
 @include('footer')

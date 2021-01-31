@@ -21,15 +21,24 @@
 
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
         <ul class="navbar-nav ml-auto">
+            <li class="nav-item" >
+                <a class="nav-link" href="/guru" style="color:#fff">Beranda</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/guru/jadwal" style="color:#fff">Jadwal</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/guru/absen" style="color:#fff">Daftar Absen</a>
+              </li>
         <div class="dropdown show">
   <a class="btn btn-info dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     {{auth()->user()->guru->nip}} - {{auth()->user()->guru->nm_lengkap}}
   </a>
 
+
   <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
     <a class="dropdown-item" href="/guru/profile">Profile</a>
     <a class="dropdown-item" href="/guru/ubah-sandi">Ubah Kata Sandi</a>
-    <a class="dropdown-item" href="#">Nilai</a>
     <a class="dropdown-item" href="/guru/logout">Keluar</a>
   </div>
 </div>
@@ -37,46 +46,6 @@
 </nav><!-- NavBar END -->
 
 <br>
-<!-- Bootstrap row -->
-<div class="row" id="body-row">
-    <!-- Sidebar -->
-    <div id="sidebar-container" class="sidebar-expanded d-none d-md-block" style="background-color:white">
-        <!-- d-* hiddens the Sidebar in smaller devices. Its itens can be kept on the Navbar 'Menu' -->
-        <!-- Bootstrap List Group -->
-        <ul class="list-group bg-light" >
-            <!-- Separator with title -->
-            <li class="list-group-item bg-light" style="text-align: center;"> <small> {{auth()->user()->guru->nm_lengkap}}</small></li>
-            <li class="list-group-item bg-light" style="text-align: center;">
-            <img src="{{auth()->user()->guru->getPhotoProfilePath()}}"
-            width="100" height="100" class="rounded-circle" style="background-position:center center">
-            </li>
-            <!-- /END Separator -->
-
-            <a href="/guru" class="bg-light list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-dashboard fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Beranda</span>
-                </div>
-            </a>
-
-            <!-- /END Separator -->
-
-            <a href="/guru/jadwal" class="bg-light list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-file-text-o fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Jadwal </span>
-                </div>
-            </a>
-
-            <a href="#" class="bg-light list-group-item list-group-item-action">
-                <div class="d-flex w-100 justify-content-start align-items-center">
-                    <span class="fa fa-check-square-o fa-fw mr-3"></span>
-                    <span class="menu-collapsed">Absen Siswa</span>
-                </div>
-            </a>
-
-
-
 
         </ul><!-- List Group END-->
     </div><!-- sidebar-container END -->

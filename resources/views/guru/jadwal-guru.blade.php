@@ -18,8 +18,11 @@
   </ol>
 </nav>
 
+<div class="container">
 <div class="container-fluid">
+
 <div class="row">
+
 
     @foreach ($jadwal as $key => $item)
     <div class="col-sm-6">
@@ -53,6 +56,7 @@
 
 
 </div></div> <br>
-</div></div></div>
+</div></div> </div></div>
+
 
 @include('footer')

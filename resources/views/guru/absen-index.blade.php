@@ -1,5 +1,13 @@
 @include('guru.nav-guru')
-<div class="col p-4" style="margin-top: 40px;">
+<div class="col p-4" style="margin-top: 10px;">
+    <nav aria-label="breadcrumb"> <br>
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/guru">Beranda</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Daftar Absen</li>
+        </ol>
+      </nav>
+
+    <div class="card" style="padding: 20px">
     <form action="" method="get">
         @csrf
         <label for="">Kelas</label>
@@ -14,8 +22,10 @@
 
 
     <br><br><br>
+
     @if (!empty($dataSiswa))
-        <table class="table">
+
+        <table class="table table-bordered">
             <tr>
                 <th style="text-align: center">NIS</th>
                 <th style="text-align: center">Nama</th>
@@ -32,4 +42,5 @@
             @endforeach
         </table>
     @endif
+    </div>
 </div>
